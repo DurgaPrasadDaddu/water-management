@@ -20,41 +20,95 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 
 export default function CTASection() {
   return (
-    <section className="relative w-full h-[300px] md:h-[360px] lg:h-[420px] flex items-center justify-center text-center overflow-hidden">
-      
+    <section
+      className="
+        relative w-full 
+        min-h-[260px] sm:min-h-[320px] md:min-h-[380px] lg:min-h-[440px]
+        flex items-center justify-center text-center overflow-hidden
+      "
+    >
       {/* 🔥 Background Image */}
       <Image
-        src="/images/marketsegments/industrial.jpg" 
+        src="/images/marketsegments/industrial.jpg"
         alt="Water Treatment Plant"
         fill
-        className="object-cover"
         priority
+        className="object-cover scale-105"
       />
 
-      {/* 🔥 Dark Overlay */}
-      <div className="absolute inset-0 bg-[#001a3a]/80"></div>
+      {/* 🔥 Gradient Overlay (Premium Look) */}
+      <div className="absolute inset-0 bg-gradient-to-br from-[#001a3a]/90 via-[#001a3a]/80 to-[#001a3a]/60"></div>
+
+      {/* 🔥 Glow Effect */}
+      <div
+        className="absolute inset-0 opacity-30"
+        style={{
+          backgroundImage:
+            "radial-gradient(circle at 30% 50%, #00A3E033 0%, transparent 60%)",
+        }}
+      />
 
       {/* 🔥 Content */}
-      <div className="relative z-10 max-w-3xl px-6">
-        
+      <div
+        className="
+          relative z-10 
+          max-w-3xl 
+          px-4 sm:px-6 md:px-8
+        "
+      >
         {/* Heading */}
-        <h2 className="text-white text-xl sm:text-2xl md:text-3xl lg:text-4xl font-semibold leading-snug mb-2">
+        <h2
+          className="
+            text-white 
+            text-lg sm:text-xl md:text-2xl lg:text-4xl
+            font-semibold 
+            leading-snug 
+            mb-3 sm:mb-4
+          "
+        >
           13+ Years of Expertise Delivering Reliable Water Treatment Solutions
         </h2>
-
         {/* Description */}
-        <p className="text-gray-200 text-sm sm:text-base md:text-lg leading-relaxed mb-6">
-          Hyaline Enviro Engineers Pvt. Ltd. provides complete water and wastewater 
-          treatment solutions along with industrial fabrication services for industries across India.
+        <p
+          className="
+            text-gray-200 
+            text-xs sm:text-sm md:text-base lg:text-lg
+            leading-relaxed 
+            mb-5 sm:mb-6
+          "
+        >
+          Hyaline Enviro Engineers Pvt. Ltd. provides complete water and
+          wastewater treatment solutions along with industrial fabrication
+          services for industries across India.
         </p>
-
         {/* Button */}
-        <button className="bg-[#00A3E0] hover:bg-[#008ac2] transition px-6 py-3 text-white font-semibold text-sm md:text-base rounded-md shadow-lg">
-          CONTACT US TODAY
-        </button>
+        
+        <Link href="/contact">
+          <button
+            className="
+              bg-[#00A3E0] 
+              hover:bg-[#008ac2] 
+              transition-all duration-300
+              
+              px-5 py-2.5 sm:px-6 sm:py-3 md:px-8 md:py-3.5
+              
+              text-white 
+              text-xs sm:text-sm md:text-base 
+              font-semibold 
+              rounded-md 
+              shadow-lg
+              
+              hover:scale-105 active:scale-95
+              mb-3
+            "
+          >
+            CONTACT US TODAY
+          </button>
+        </Link>
       </div>
     </section>
   );

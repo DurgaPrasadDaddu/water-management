@@ -498,9 +498,11 @@ export default function SolutionTemplate({ data }) {
           1. HERO
       ═══════════════════════════════════════ */}
       <section
-        className="relative flex flex-col justify-end overflow-hidden"
-        style={{ height: "70svh", minHeight: "540px", maxHeight: "820px" }}
+        className="relative flex flex-col justify-center overflow-hidden
+      
+         min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh]"
       >
+       
         {/* BG Image */}
         <Image
           src={data.hero.image}
@@ -527,7 +529,7 @@ export default function SolutionTemplate({ data }) {
         {/* Accent Glow */}
         <div className="absolute top-1/2 left-[5%] -translate-y-1/2 w-72 h-72 bg-[#00A3E0] rounded-full blur-[120px] opacity-20 pointer-events-none" />
 
-        <div className="relative w-full pb-16 pt-32 sm:px-18">
+        <div className="relative w-full pb-16 pt-5 sm:px-18">
           <Container>
             <div className="max-w-2xl">
               {/* Tag */}

@@ -25,7 +25,7 @@ export default function FloatingActions() {
   return (
     <>
       {/* ================= LEFT SIDE ================= */}
-      <div className="fixed left-4 top-1/2 -translate-y-1/2 z-[9999] flex flex-col gap-4">
+      <div className="fixed bottom-22 right-6 md:top-1/2 md:left-4 md:-translate-y-1/2 z-[9999] flex flex-col gap-4">
         {/* WhatsApp */}
         <a
           href="https://wa.me/919390701234?text=Hello%20Hyaline,%20I%20am%20interested%20in%20your%20services."
@@ -47,7 +47,7 @@ export default function FloatingActions() {
       </div>
 
       {/* ================= RIGHT SIDE (BROCHURE) ================= */}
-      <div className="fixed right-4 top-1/2 -translate-y-1/2 z-[9999] flex items-center">
+      <div className="hidden md:flex fixed right-4 top-1/2 -translate-y-1/2 z-[9999] flex items-center">
         <div className="relative group flex items-center">
           {/* ===== TOOLTIP ===== */}
           <div className="absolute right-full mr-5 opacity-0 translate-x-6 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
