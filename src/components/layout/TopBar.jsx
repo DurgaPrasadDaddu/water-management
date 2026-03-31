@@ -63,7 +63,7 @@
 
 import { MdEmail } from "react-icons/md";
 import { FaPhoneAlt } from "react-icons/fa";
-import { FaFacebookF, FaLinkedinIn, FaTwitter, FaSkype } from "react-icons/fa6";
+import { FaFacebookF, FaLinkedinIn, FaTwitter, FaSkype } from "react-icons/fa";
 import { AiFillInstagram } from "react-icons/ai";
 import Link from "next/link";
 
