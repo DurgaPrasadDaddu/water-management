@@ -5,8 +5,6 @@ import Image from "next/image";
 import { products } from "@/data/products";
 import { solutions } from "@/data/solutions";
 import services from "@/data/services";
-import { FaFacebookF, FaLinkedinIn, FaTwitter, FaSkype } from "react-icons/fa6";
-import { AiFillInstagram } from "react-icons/ai";
 import { socialLinks } from "@/data/socialLinks";
 
 const Footer = () => {

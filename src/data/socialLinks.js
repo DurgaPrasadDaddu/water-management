@@ -1,3 +1,5 @@
+import { FaFacebookF, FaLinkedinIn, FaTwitter, FaSkype } from "react-icons/fa";
+import { AiFillInstagram } from "react-icons/ai";
 export const socialLinks = [
   { icon: FaFacebookF, url: "https://facebook.com/yourprofile" },
   { icon: FaLinkedinIn, url: "https://linkedin.com/in/yourprofile" },
