@@ -1,9 +1,13 @@
-import { FaFacebookF, FaLinkedinIn, FaTwitter, FaSkype } from "react-icons/fa";
-import { AiFillInstagram } from "react-icons/ai";
+import {
+  Facebook,
+  Linkedin,
+  Twitter,
+  Instagram,
+} from "lucide-react";
+
 export const socialLinks = [
-  { icon: FaFacebookF, url: "https://facebook.com/yourprofile" },
-  { icon: FaLinkedinIn, url: "https://linkedin.com/in/yourprofile" },
-  { icon: FaTwitter, url: "https://twitter.com/yourprofile" },
-  { icon: FaSkype, url: "https://skype.com/yourprofile" },
-  { icon: AiFillInstagram, url: "https://instagram.com/yourprofile" },
+  { icon: Facebook, url: "https://facebook.com/yourprofile" },
+  { icon: Linkedin, url: "https://linkedin.com/in/yourprofile" },
+  { icon: Twitter, url: "https://twitter.com/yourprofile" },
+  { icon: Instagram, url: "https://instagram.com/yourprofile" },
 ];

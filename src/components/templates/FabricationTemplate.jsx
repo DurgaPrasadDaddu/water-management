@@ -466,8 +466,6 @@ export default function FabricationTemplate({ data, relatedProducts = [] }) {
       <section className="section" style={{ background: "var(--color-white)" }}>
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-10 items-center">
-
-            {/* Image + Thumbnails */}
             <div className="space-y-3 min-w-0">
               <div
                 className="relative overflow-hidden shadow-md w-full"
@@ -477,6 +475,7 @@ export default function FabricationTemplate({ data, relatedProducts = [] }) {
                   src={images[activeImage] || "/images/placeholder.jpg"}
                   alt={data.title}
                   fill
+                  sizes="(max-width: 768px) 100vw, 50vw"
                   className="object-cover transition-opacity duration-400"
                 />
                 {/* Corner accent */}
@@ -489,26 +488,6 @@ export default function FabricationTemplate({ data, relatedProducts = [] }) {
                   }}
                 />
               </div>
-
-              {images.length > 1 && (
-                <div className="flex gap-2 flex-wrap">
-                  {images.map((img, i) => (
-                    <button
-                      key={i}
-                      onClick={() => setActiveImage(i)}
-                      className="relative w-16 h-12 overflow-hidden flex-shrink-0 transition-all duration-200"
-                      style={{
-                        borderRadius: "var(--radius-sm)",
-                        opacity: activeImage === i ? 1 : 0.45,
-                        outline: activeImage === i ? "2px solid var(--color-primary)" : "none",
-                        outlineOffset: "2px"
-                      }}
-                    >
-                      <Image src={img} alt="" fill className="object-cover" />
-                    </button>
-                  ))}
-                </div>
-              )}
             </div>
 
             {/* Content */}

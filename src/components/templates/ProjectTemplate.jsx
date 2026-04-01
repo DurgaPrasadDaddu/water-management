@@ -514,7 +514,7 @@ export default function ProjectTemplate({ project }) {
                   Let is engineer your solution.
                 </p>
                 <p className="text-blue-200 text-xs leading-relaxed mb-5">
-                  Our engineers have delivered 200+ plants. Reach out for a technical consultation.
+                  Our engineers have delivered 100+ plants. Reach out for a technical consultation.
                 </p>
                 <a
                   href="mailto:hr@hyalineenviro.com"

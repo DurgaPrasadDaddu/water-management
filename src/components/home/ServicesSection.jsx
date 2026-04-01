@@ -602,15 +602,15 @@ export default function ServicesSection() {
                   src={active.image}
                   alt={active.title}
                   fill
-                  className="object-cover transform transition-transform duration-[500ms] group-hover:scale-105"
+                  priority
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover will-change-transform group-hover:scale-105 transition-transform duration-500"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
 
                 <div className="absolute inset-0 flex flex-col justify-end p-10 z-10 text-white">
-                  <h3 className="text-2xl font-bold mb-2">
-                    {active.title}
-                  </h3>
+                  <h3 className="text-2xl font-bold mb-2">{active.title}</h3>
                   <p className="text-sm text-white/80 leading-relaxed max-w-lg">
                     {active.overview}
                   </p>
@@ -648,6 +648,7 @@ export default function ServicesSection() {
                     src={service.image}
                     alt={service.title}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-cover transform group-hover:scale-110 transition-transform duration-700"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-bluek/80  via-black/40 to-transparent" />

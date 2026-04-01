@@ -7,7 +7,7 @@ export const organizationSchema = {
   "@type": "Organization",
   name: "Hyaline Enviro Engineers Pvt Ltd",
   url: baseUrl,
-  logo: `${baseUrl}/logo.png`,
+  logo: `${baseUrl}/logo.webp`,
   sameAs: [
     "https://www.instagram.com/hyalineenviro",
     "https://www.youtube.com/@hyalineenviroengineerspvtl5146",

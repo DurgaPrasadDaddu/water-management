@@ -1,9 +1,8 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { FaWhatsapp } from "react-icons/fa";
-import { MdEmail } from "react-icons/md";
-import { Download, ArrowUp } from "lucide-react";
+import { Download, ArrowUp, MailIcon } from "lucide-react";
+import Image from "next/image";
 
 export default function FloatingActions() {
   const [showScroll, setShowScroll] = useState(false);
@@ -25,7 +24,7 @@ export default function FloatingActions() {
   return (
     <>
       {/* ================= LEFT SIDE ================= */}
-      <div className="fixed bottom-22 right-6 md:top-1/2 md:left-4 md:-translate-y-1/2 z-[9999] flex flex-col gap-4">
+      <div className="fixed bottom-22 right-6 md:top-1/2 md:left-4 md:-translate-y-1/2 z-[40] flex flex-col gap-4">
         {/* WhatsApp */}
         <a
           href="https://wa.me/919390701234?text=Hello%20Hyaline,%20I%20am%20interested%20in%20your%20services."
@@ -33,7 +32,14 @@ export default function FloatingActions() {
           rel="noopener noreferrer"
           className="group relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-110 transition"
         >
-          <FaWhatsapp size={20} />
+          <Image
+            src="/icons/whatsapp.svg"
+            alt="WhatsApp"
+            width={20}
+            height={20}
+            className="w-12 h-12"
+          />
+
           <span className="absolute inset-0 rounded-full bg-[#25D366]/30 animate-ping"></span>
         </a>
 
@@ -42,12 +48,12 @@ export default function FloatingActions() {
           href="mailto:info@hyalineenviro.com"
           className="group flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-110 transition"
         >
-          <MdEmail size={22} />
+          <MailIcon size={22}/>
         </a>
       </div>
 
       {/* ================= RIGHT SIDE (BROCHURE) ================= */}
-      <div className="hidden md:flex fixed right-4 top-1/2 -translate-y-1/2 z-[9999] flex items-center">
+      <div className="hidden md:flex fixed right-4 top-1/2 -translate-y-1/2 z-[40] flex items-center">
         <div className="relative group flex items-center">
           {/* ===== TOOLTIP ===== */}
           <div className="absolute right-full mr-5 opacity-0 translate-x-6 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300">
@@ -67,8 +73,8 @@ export default function FloatingActions() {
             className="relative w-[70px] h-[100px] group cursor-pointer animate-float"
           >
             {/* Drop Shape */}
-           <div
-            className="
+            <div
+              className="
                 absolute inset-0
                 bg-gradient-to-br from-blue-900/80 via-cyan-600/60 to-blue-400/50
                 backdrop-blur-2xl
@@ -76,10 +82,10 @@ export default function FloatingActions() {
                 transition-all duration-300
                 group-hover:scale-110
             "
-            style={{
+              style={{
                 clipPath:
-                "path('M35 0 C60 30 70 55 70 70 C70 90 55 100 35 100 C15 100 0 90 0 70 C0 55 10 30 35 0 Z')",
-            }}
+                  "path('M35 0 C60 30 70 55 70 70 C70 90 55 100 35 100 C15 100 0 90 0 70 C0 55 10 30 35 0 Z')",
+              }}
             />
             {/* Inner Glow */}
             <span className="absolute inset-0 rounded-full bg-white/20 blur-xl opacity-0 group-hover:opacity-100 transition"></span>
@@ -102,7 +108,7 @@ export default function FloatingActions() {
         <button
           onClick={scrollToTop}
           className="
-            fixed bottom-6 right-6 z-[9999]
+            fixed bottom-6 right-6 z-[40]
             group
             w-14 h-14 md:w-16 md:h-16
             rounded-full

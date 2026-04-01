@@ -469,8 +469,8 @@ const INDUSTRY_ICONS = {
 const TRUST_STATS = [
   { value: "13+", label: "Years Experience" },
   { value: "100+", label: "Projects Delivered" },
-  { value: "200+", label: "Clients Served" },
-  { value: "15+", label: "Industries" },
+  { value: "000+", label: "Clients Served" },
+  { value: "10+", label: "Industries" },
 ];
 
 /* ─────────────────────────────────────────────
@@ -502,14 +502,14 @@ export default function SolutionTemplate({ data }) {
       
          min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh]"
       >
-       
         {/* BG Image */}
         <Image
           src={data.hero.image}
           alt={data.name}
           fill
-          className="object-center scale-105"
           priority
+          sizes="100vw"
+          className="object-cover"
         />
 
         {/* Layered Overlay */}
@@ -628,20 +628,18 @@ export default function SolutionTemplate({ data }) {
                 {data.overview}
               </motion.p> */}
               <div className="space-y-5">
-                {data.overview
-                  .split(/\n\s*\n/) 
-                  .map((para, i) => (
-                    <motion.p
-                      key={i}
-                      initial={{ opacity: 0, y: 30 }}
-                      whileInView={{ opacity: 1, y: 0 }}
-                      transition={{ duration: 0.6, delay: i * 0.2 }}
-                      viewport={{ once: true }}
-                      className="text-gray-600 leading-[1.9]"
-                    >
-                      {para.trim()}
-                    </motion.p>
-                  ))}
+                {data.overview.split(/\n\s*\n/).map((para, i) => (
+                  <motion.p
+                    key={i}
+                    initial={{ opacity: 0, y: 30 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.6, delay: i * 0.2 }}
+                    viewport={{ once: true }}
+                    className="text-gray-600 leading-[1.9]"
+                  >
+                    {para.trim()}
+                  </motion.p>
+                ))}
               </div>
             </div>
 

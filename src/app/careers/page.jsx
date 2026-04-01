@@ -294,7 +294,7 @@ const workAreas = [
 
 const stats = [
   { value: "13+", label: "Years of Engineering Expertise" },
-  { value: "200+", label: "Plants Commissioned Across India" },
+  { value: "100+", label: "Plants Commissioned Across India" },
   { value: "10+", label: "Industry Sectors Served" },
   { value: "PAN India", label: "Project Footprint" },
 ];

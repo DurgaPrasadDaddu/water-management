@@ -317,10 +317,10 @@ export default function IndustryDetailsTemplate({ segment = "industrial", indust
           {/* Stat strip */}
           <div className="mt-5 p-5 border-t border-white/10 flex flex-wrap gap-x-12 gap-y-4">
             {[
-              { v: "200+", l: "Projects Delivered" },
+              { v: "100+", l: "Projects Delivered" },
               { v: "18+",  l: "States Covered"     },
               { v: "100%", l: "Compliance Rate"     },
-              { v: "15+",  l: "Years Experience"    },
+              { v: "13+",  l: "Years Experience"    },
             ].map(s => (
               <div key={s.l}>
                 <div style={{ fontFamily: "var(--font-poppins)" }}

@@ -25,7 +25,8 @@ export default function AboutHero() {
                 alt="Engineering Team"
                 width={500}
                 height={350}
-                className="object-cover w-full h-full transition duration-500 hover:scale-105"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 500px"
+                className="object-cover w-full h-auto transition-transform duration-500 hover:scale-105 will-change-transform"
               />
             </div>
 

@@ -3,8 +3,7 @@ import "../styles/globals.css"
 import Header from "@/components/layout/Header";
 import { Inter, Poppins } from "next/font/google";
 import { organizationSchema, localBusinessSchema } from "@/lib/schema";
-import FloatingActions from "@/components/FloatingActions";
-
+import FloatingWrapper from "@/components/FloatingWrapper";
 export const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
@@ -39,7 +38,7 @@ export default function RootLayout({ children }) {
         <Header />
         {children}
         <Footer/>
-         <FloatingActions />
+         <FloatingWrapper />
           {/* Global Schema */}
         <script
           type="application/ld+json"

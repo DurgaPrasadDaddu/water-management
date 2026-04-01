@@ -5,7 +5,7 @@ export const marketSegments = {
   industrial: {
     title: "Industrial Sector",
     slug: "industrial",
-    image: "/images/marketsegments/industrial.jpg",
+    image: "/images/marketsegments/industrial.webp",
     metaTitle:
       "Industrial Water Treatment Solutions | Hyaline Enviro Engineers",
     metaDescription:
@@ -18,7 +18,7 @@ export const marketSegments = {
       {
         name: "Pharmaceutical",
         slug: "pharmaceutical",
-        image: "/images/marketsegments/industries/pharmaceutical.jpg",
+        image: "/images/marketsegments/industries/pharmaceutical.webp",
 
         shortDescription:
           "High purity water systems for pharmaceutical manufacturing.",
@@ -47,7 +47,7 @@ export const marketSegments = {
       {
         name: "Chemical",
         slug: "chemical",
-        image: "/images/marketsegments/industries/chemical.jpg",
+        image: "/images/marketsegments/industries/chemical.webp",
 
         shortDescription:
           "Robust systems for complex and hazardous effluents.",
@@ -124,7 +124,7 @@ export const marketSegments = {
       {
         name: "Food Processing",
         slug: "food-processing",
-        image: "/images/marketsegments/industries/food.jpg",
+        image: "/images/marketsegments/industries/food.webp",
 
         shortDescription:
           "Hygienic water treatment for food & beverage industries.",
@@ -148,7 +148,7 @@ export const marketSegments = {
       {
         name: "Power Plants",
         slug: "power-plants",
-        image: "/images/marketsegments/industries/power.jpg",
+        image: "/images/marketsegments/industries/power.webp",
 
         shortDescription:
           "High efficiency water systems for power generation.",

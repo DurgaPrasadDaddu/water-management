@@ -295,7 +295,8 @@ export default function ProductsSection() {
                     src={product?.image || "/images/placeholder.jpg"}
                     alt={product?.name}
                     fill
-                    className="object-center group-hover:scale-105 transition duration-700"
+                    sizes="(max-width: 768px) 100vw, 400px"
+                    className="object-cover object-center group-hover:scale-105 transition duration-700"
                   />
                 </div>
               </div>
@@ -344,6 +345,7 @@ export default function ProductsSection() {
                       src={product.image}
                       alt={product.name}
                       fill
+                      sizes="(max-width: 768px) 100vw, 400px"
                       className="object-center rounded"
                     />
                   </div>

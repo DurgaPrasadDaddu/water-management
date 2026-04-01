@@ -16,14 +16,15 @@ export default function Navbar() {
 
           {/* LOGO */}
           <Link href="/" className="flex items-center shrink-0">
-            <Image
-              src="/logos/logo.png"
-              alt="Hyaline Enviro Engineers"
-              width={220}
-              height={70}
-              priority
-              className="object-contain w-[150px] md:w-[180px] lg:w-[200px] xl:w-[220px] h-auto"
-            />
+           <Image
+  src="/logos/logo.webp"
+  alt="Hyaline Enviro Engineers"
+  width={220}
+  height={70}
+  priority
+  className="object-contain h-auto w-[150px] md:w-[180px] lg:w-[200px] xl:w-[220px]"
+  style={{ height: "auto" }}
+/>
           </Link>
 
           {/* NAV LINKS (UNCHANGED STRUCTURE) */}

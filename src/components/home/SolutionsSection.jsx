@@ -40,6 +40,7 @@ export default function SolutionsSection() {
                     src={item.hero?.image || "/images/placeholder.jpg"}
                     alt={item.name}
                     fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                     className="object-center group-hover:scale-105 transition duration-500"
                   />
 

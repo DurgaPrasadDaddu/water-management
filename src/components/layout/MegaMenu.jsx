@@ -5,7 +5,7 @@ import { ChevronDown } from "lucide-react";
 
 export default function MegaMenu({ item }) {
   return (
-    <div className="group relative z-50">
+    <div className="group relative z-90">
       {/* MENU TITLE */}
       <button className="flex items-center gap-1 font-bold font-medium text-[var(--color-dark)] hover:text-[#00A3E0] transition">
         {item.name}

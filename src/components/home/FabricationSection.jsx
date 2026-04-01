@@ -151,6 +151,7 @@ export default function FabricationSection() {
             src="/Banners/fabrications.webp" 
             alt="Fabrication Background"
             fill
+            sizes="(max-width: 768px) 100vw, 50vw"
             className="object-cover"
           />
         </div>
@@ -223,6 +224,7 @@ export default function FabricationSection() {
                       src={item.image}
                       alt={item.title}
                       fill
+                      sizes="(max-width: 768px) 100vw, 50vw"
                       className="object-center group-hover:scale-105 transition duration-300"
                     />
                   </div>

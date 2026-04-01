@@ -16,7 +16,7 @@ const Footer = () => {
         <div className="col-span-12 lg:col-span-4 flex flex-col items-center justify-center space-y-6 sm:space-y-8 text-left">
           <div className="px-4">
             <Image
-              src="/logos/logo.png"
+              src="/logos/logo.webp"
               alt="Hyaline Enviro Engineers"
               width={160}
               height={50}

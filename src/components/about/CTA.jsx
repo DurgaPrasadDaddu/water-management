@@ -33,11 +33,12 @@ export default function CTASection() {
     >
       {/* 🔥 Background Image */}
       <Image
-        src="/images/marketsegments/industrial.jpg"
+        src="/images/marketsegments/industrial.webp"
         alt="Water Treatment Plant"
         fill
         priority
-        className="object-cover scale-105"
+        sizes="100vw"
+        className="object-center"
       />
 
       {/* 🔥 Gradient Overlay (Premium Look) */}

@@ -189,8 +189,8 @@
 
 import Image from "next/image";
 import { Droplets, Factory, Settings, Globe, ArrowRight } from "lucide-react";
-import SectionWrapper from "../ui/SectionWrapper";
-import SectionHeading from "../ui/SectionHeading";
+import SectionWrapper from "../../../components/ui/SectionWrapper";
+import SectionHeading from "../../../components/ui/SectionHeading";
 
 export default function AboutSection() {
 

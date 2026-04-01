@@ -10,7 +10,7 @@ const segments = [
   {
     name: "Industrial Sector",
     slug: "/market-segments/industrial",
-    image: "/images/marketsegments/industrial.jpg",
+    image: "/images/marketsegments/industrial.webp",
   },
   {
     name: "Commercial & Institutional",
