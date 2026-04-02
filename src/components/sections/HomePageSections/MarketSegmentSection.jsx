@@ -1,9 +1,7 @@
-"use client";
-
 import Link from "next/link";
-import SectionWrapper from "../ui/SectionWrapper";
-import SectionHeading from "../ui/SectionHeading";
-import Container from "../ui/Container";
+import SectionWrapper from "../../ui/SectionWrapper";
+import SectionHeading from "../../ui/SectionHeading";
+import Container from "../../ui/Container";
 import Image from "next/image";
 
 const segments = [
@@ -48,10 +46,10 @@ export default function MarketSegmentSection() {
             <Link
               key={index}
               href={item.slug}
-              className="group relative rounded-2xl overflow-hidden h-[380px] shadow-md hover:shadow-2xl transition duration-500"
+              className="group relative rounded-2xl overflow-hidden h-[280px] shadow-md hover:shadow-2xl transition duration-500"
             >
         
-              <div className="group relative aspect-[3/2] overflow-hidden rounded-xl">
+              <div className="group relative aspect-[4/3] overflow-hidden rounded-xl">
                 <Image
                   src={item.image}
                   alt={item.name}

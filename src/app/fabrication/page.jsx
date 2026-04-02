@@ -76,7 +76,7 @@ export default function FabricationPage() {
       {/* ✅ Listing */}
       <ListingPageTemplate
         title="Fabrication"
-        subtitle="High-quality industrial fabrication solutions built with precision engineering and durability."
+        subtitle="We specialize in precision-engineered fabrication including MS & SS structures, process tanks, equipment skids, and industrial components. Every solution is customized to meet your operational requirements, ensuring durability, safety, and long-term reliability."
         data={fabricationData}
         basePath="fabrication"
       />

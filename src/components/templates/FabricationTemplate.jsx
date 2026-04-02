@@ -205,6 +205,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import "@/styles/animations.css";
 
 // ─── SVG Icons ────────────────────────────────────────────────────────────────
 const CheckIcon = () => (
@@ -335,6 +336,7 @@ export default function FabricationTemplate({ data, relatedProducts = [] }) {
             src={data.image || "/images/placeholder.jpg"}
             alt={data.title}
             fill
+            sizes="(max-width: 768px) 100vw, 200px"
             className="object-center animate-slowZoom"
             priority
             style={{ filter: "brightness(0.88) saturate(0.75)" }}
@@ -415,7 +417,7 @@ export default function FabricationTemplate({ data, relatedProducts = [] }) {
             <div className="grid grid-cols-3 divide-x" style={{ divideColor: "rgba(255,255,255,0.1)" }}>
               {[
                 { value: "13+",       label: "Years Experience" },
-                { value: "100+",      label: "Projects Done" },
+                { value: "500+",      label: "Projects Done" },
                 { value: "Pan India", label: "Delivery" },
               ].map((s, i) => (
                 <div key={i} className="px-4 py-3 text-center">

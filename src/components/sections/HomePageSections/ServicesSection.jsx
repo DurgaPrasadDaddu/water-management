@@ -464,9 +464,9 @@ import { Autoplay } from "swiper/modules";
 import "swiper/css";
 
 import services from "@/data/services";
-import SectionWrapper from "../ui/SectionWrapper";
-import SectionHeading from "../ui/SectionHeading";
-import Container from "../ui/Container";
+import SectionWrapper from "../../ui/SectionWrapper";
+import SectionHeading from "../../ui/SectionHeading";
+import Container from "../../ui/Container";
 
 export default function ServicesSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -505,7 +505,7 @@ export default function ServicesSection() {
   }, [activeIndex]);
 
   return (
-    <SectionWrapper className="relative overflow-hidden bg-gradient-to-b from-[#F9FAFB] to-white">
+    <SectionWrapper className="relative overflow-hidden bg-gradient-to-b from-[#F9FAFB] to-white ">
       {/* Background effects */}
       <div className="absolute inset-0 z-0">
         <div className="absolute top-[-100px] right-[-150px] w-[450px] h-[450px] bg-[#00A3E0]/10 rounded-full blur-3xl" />

@@ -5,6 +5,12 @@ const nextConfig = {
   },
   images: {
   qualities: [60]
+},
+experimental: {
+  optimizePackageImports: true,
+},
+experimental: {
+  optimizeCss: true,
 }
 };
 

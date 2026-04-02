@@ -123,7 +123,7 @@ const catStyle = (cat) => CATEGORY_STYLES[cat] || { pill: "bg-blue-50 text-blue-
 
 // ─── Stat numbers for hero ───────────────────────────────────────────────────
 const HERO_STATS = [
-  { value: "100+", label: "Plants Delivered" },
+  { value: "500+", label: "Plants Delivered" },
   { value: "13+",  label: "Years of Expertise" },
   { value: "10+",   label: "Industry Sectors" },
   { value: "PAN India", label: "Project Footprint" },
@@ -426,7 +426,7 @@ export default function ProjectsClient({ projects = [] }) {
                 Looking for a Similar Solution?
               </h2>
               <p className="text-blue-200 mb-10 leading-relaxed">
-                Our engineering team has delivered 100+ projects across India. Tell us your requirement — we will engineer the right solution.
+                Our engineering team has delivered 500+ projects across India. Tell us your requirement — we will engineer the right solution.
               </p>
 
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">

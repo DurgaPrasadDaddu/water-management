@@ -17,7 +17,6 @@
 //     </section>
 //   );
 // }
-"use client";
 
 import Image from "next/image";
 import Link from "next/link";
@@ -37,7 +36,7 @@ export default function CTASection() {
         alt="Water Treatment Plant"
         fill
         priority
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 50vw"
         className="object-center"
       />
 

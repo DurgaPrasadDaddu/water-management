@@ -342,8 +342,8 @@ const FeaturedCard = ({ item, basePath, index = 0 }) => {
           src={imgSrc}
           alt={title}
           fill
-          className="object-cover transition-transform duration-700 group-hover:scale-105"
           sizes="(max-width: 768px) 100vw, 50vw"
+          className="object-cover transition-transform duration-700 group-hover:scale-105"
         />
         <div className="absolute inset-0 bg-gradient-to-r from-transparent to-[#0A2540]/60" />
         <div className="absolute top-4 left-4 flex flex-wrap gap-2">
@@ -488,9 +488,9 @@ export default function ListingPageTemplate({
   const sectionLabel = title.replace(/s$/, "");
 
   const defaultStats = stats || [
-    { value: "100+", label: "Projects Delivered" },
+    { value: "500+", label: "Projects Delivered" },
     { value: "13+", label: "Years Experience" },
-    { value: "50+", label: "Clients Served" },
+    { value: "300+", label: "Clients Served" },
     { value: "99%", label: "Client Satisfaction" },
   ];
 
@@ -516,8 +516,9 @@ export default function ListingPageTemplate({
         {heroImage && (
           <Image
             src={heroImage}
-            alt=""
+            alt="her-image"
             fill
+            sizes="(max-width: 768px) 100vw, 550px"
             className="object-cover opacity-20"
             priority
           />

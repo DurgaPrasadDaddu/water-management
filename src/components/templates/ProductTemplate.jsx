@@ -403,7 +403,7 @@ const PROCESS_STEPS = [
 
 const TRUST_STATS = [
   { value: "13+", label: "Years of Experience" },
-  { value: "100+", label: "Projects Delivered" },
+  { value: "500+", label: "Projects Delivered" },
   { value: "Pan India", label: "Service Network" },
   { value: "ISO 9001", label: "Quality Certified" },
 ];

@@ -468,8 +468,8 @@ const INDUSTRY_ICONS = {
 ───────────────────────────────────────────── */
 const TRUST_STATS = [
   { value: "13+", label: "Years Experience" },
-  { value: "100+", label: "Projects Delivered" },
-  { value: "000+", label: "Clients Served" },
+  { value: "500+", label: "Projects Delivered" },
+  { value: "400+", label: "Clients Served" },
   { value: "10+", label: "Industries" },
 ];
 
@@ -508,7 +508,7 @@ export default function SolutionTemplate({ data }) {
           alt={data.name}
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover"
         />
 

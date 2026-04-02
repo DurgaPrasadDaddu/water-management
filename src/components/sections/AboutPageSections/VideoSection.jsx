@@ -33,7 +33,7 @@ export default function VideoSection() {
                     alt="Video Thumbnail"
                     fill
                     priority
-                    sizes="100vw"
+                    sizes="(max-width: 768px) 100vw, 50vw"
                     className="object-cover rounded-xl"
                   />
                 </div>

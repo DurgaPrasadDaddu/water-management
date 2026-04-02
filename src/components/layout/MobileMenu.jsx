@@ -141,6 +141,7 @@
 // }
 
 // premium look menu bar
+
 "use client";
 
 import { useState, useEffect } from "react";
@@ -173,6 +174,9 @@ export default function MobileMenu() {
       {/* 🔥 MENU BUTTON */}
       <div className="lg:hidden">
         <button
+          aria-label={mobileOpen ? "Close menu" : "Open menu"}
+          aria-expanded={mobileOpen}
+          aria-controls="mobile-menu"
           onClick={() => setMobileOpen(!mobileOpen)}
           className="p-2 relative z-[10001] transition-transform active:scale-90"
         >
@@ -213,10 +217,13 @@ export default function MobileMenu() {
           </div>
 
           {/* MENU */}
-          <div className="flex-1 overflow-y-auto px-4 py-6 space-y-1">
-            {navigation.map((item) => {
+          <div className="flex-1 overflow-y-auto px-4 py-3 space-y-1">
+            {navigation.filter(
+                (item) =>
+                  item.name !== "Blog" &&
+                  item.name !== "Contact",
+              ).map((item) => {
               const isActive = pathname === item.href;
-
               return (
                 <div key={item.name}>
                   {item.children ? (

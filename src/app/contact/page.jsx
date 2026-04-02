@@ -1016,9 +1016,9 @@ export default function ContactPage() {
               for your facility.
             </p>
 
-            <div className="inline-flex border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm">
+            <div className="grid grid-cols-2 md:grid-cols-4 border border-white/10 rounded-2xl overflow-hidden bg-white/5 backdrop-blur-sm">
               <StatBadge value="13+" label="Years Exp." />
-              <StatBadge value="100+" label="Projects" />
+              <StatBadge value="500+" label="Projects" />
               <StatBadge value="ISO" label="Certified" />
               <StatBadge value="24/7" label="Support" />
             </div>

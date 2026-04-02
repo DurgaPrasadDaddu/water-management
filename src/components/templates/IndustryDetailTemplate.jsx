@@ -515,7 +515,7 @@ export default function IndustryDetailsTemplate({
           {/* Stat strip */}
           <div className="mt-5 p-5 border-t border-white/10 flex flex-wrap gap-x-12 gap-y-4">
             {[
-              { v: "100+", l: "Projects Delivered" },
+              { v: "500+", l: "Projects Delivered" },
               { v: "18+", l: "States Covered" },
               { v: "100%", l: "Compliance Rate" },
               { v: "13+", l: "Years Experience" },

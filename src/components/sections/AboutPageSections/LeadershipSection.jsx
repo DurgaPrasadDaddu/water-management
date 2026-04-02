@@ -12,11 +12,11 @@
 //     </section>
 //   );
 // }
-"use client";
+
 
 import Image from "next/image";
-import SectionWrapper from "../ui/SectionWrapper";
-import SectionHeading from "../ui/SectionHeading";
+import SectionWrapper from "../../ui/SectionWrapper";
+import SectionHeading from "../../ui/SectionHeading";
 
 const team = [
   {
@@ -72,7 +72,7 @@ function TeamCard({ member }) {
           alt={member.name}
           fill
           priority
-          sizes="100vw"
+          sizes="(max-width: 768px) 100vw, 50vw"
           className="object-cover object-top group-hover:scale-105 transition duration-500"
         />
 

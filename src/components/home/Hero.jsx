@@ -326,7 +326,7 @@ export default function Hero() {
             "
           >
             <motion.div variants={dropVariant}>
-              <WaterDrop number="100+" label="Projects Completed" />
+              <WaterDrop number="500+" label="Projects Completed" />
             </motion.div>
 
             <motion.div variants={dropVariant}>

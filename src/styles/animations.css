@@ -1,0 +1,9 @@
+@keyframes slowZoom {
+  from { transform: scale(1); }
+  to { transform: scale(1.1); }
+}
+
+.animate-slowZoom {
+  transform: scale(1.1);
+}
+

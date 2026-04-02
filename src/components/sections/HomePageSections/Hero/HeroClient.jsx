@@ -292,7 +292,7 @@ import { useEffect, useState } from "react";
 
 /* DATA */
 const STATS = [
-  { value: "100+", line1: "Projects", line2: "Completed" },
+  { value: "500+", line1: "Projects", line2: "Completed" },
   { value: "13+", line1: "Years", line2: "Experience" },
   { value: "50+", line1: "Industrial", line2: "Clients" },
 ];
@@ -329,7 +329,7 @@ function DropCard({ stat, index, mounted }) {
           clipPath: "url(#waterDrop)",
           background: hovered
             ? "linear-gradient(170deg, rgba(25,70,140,0.94), rgba(8,28,80,0.98))"
-            : "linear-gradient(170deg, rgba(75,255,255,0.86), rgba(75,200,255,0.63))",
+            : "linear-gradient(170deg, rgba(75,255,255,0.86), rgba(75,200,255,0.63)) ",
           borderColor: "rgba(0,200,255,0.18)",
         }}
       />
@@ -346,7 +346,7 @@ function DropCard({ stat, index, mounted }) {
 
       <div className="absolute inset-0 flex flex-col items-center justify-center text-center px-3">
         <span className="text-3xl font-bold text-green-700">{stat.value}</span>
-        <span className="text-base font-semibold text-gray-800">
+        <span className="text-base font-semibold text-gray-800 hover:text-white">
           {stat.line1}
           <br />
           {stat.line2}

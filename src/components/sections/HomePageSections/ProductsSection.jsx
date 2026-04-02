@@ -179,8 +179,8 @@ import { products } from "@/data/products";
 import Container from "@/components/ui/Container";
 import Image from "next/image";
 import Link from "next/link";
-import SectionHeading from "../ui/SectionHeading";
-import SectionWrapper from "../ui/SectionWrapper";
+import SectionHeading from "../../ui/SectionHeading";
+import SectionWrapper from "../../ui/SectionWrapper";
 
 export default function ProductsSection() {
   const [activeCategory, setActiveCategory] = useState("filtration");

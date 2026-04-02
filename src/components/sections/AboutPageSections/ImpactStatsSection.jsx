@@ -148,8 +148,8 @@
 
 import { useEffect, useRef, useState } from "react";
 import { Briefcase, Folder, Users, MapPin } from "lucide-react";
-import SectionWrapper from "../ui/SectionWrapper";
-import SectionHeading from "../ui/SectionHeading";
+import SectionWrapper from "../../ui/SectionWrapper";
+import SectionHeading from "../../ui/SectionHeading";
 
 const stats = [
   {

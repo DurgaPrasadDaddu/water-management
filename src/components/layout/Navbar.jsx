@@ -1,5 +1,3 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
 import { navigation } from "@/config/navigation";
@@ -11,29 +9,31 @@ export default function Navbar() {
     // <header className="relative z-[999] bg-white border-b border-gray-100">
     <header className="sticky top-0 z-[9999] bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4">
-
         <div className="flex items-center justify-between h-[70px] xl:h-[85px] mb-4">
-
           {/* LOGO */}
           <Link href="/" className="flex items-center shrink-0">
-           <Image
-  src="/logos/logo.webp"
-  alt="Hyaline Enviro Engineers"
-  width={220}
-  height={70}
-  priority
-  className="object-contain h-auto w-[150px] md:w-[180px] lg:w-[200px] xl:w-[220px]"
-  style={{ height: "auto" }}
-/>
+            <Image
+              src="/logos/logo.webp"
+              alt="Hyaline Enviro Engineers"
+              width={220}
+              height={70}
+              priority
+              className="object-contain h-auto w-[150px] md:w-[180px] lg:w-[200px] xl:w-[220px]"
+              style={{ height: "auto" }}
+            />
           </Link>
 
           {/* NAV LINKS (UNCHANGED STRUCTURE) */}
           <nav className="hidden lg:flex items-center justify-center flex-wrap lg:max-w-[600px] xl:max-w-none gap-x-5 gap-y-2 xl:flex-nowrap xl:gap-7">
             {navigation
-              .filter((item) => item.name !== "Blog" && item.name !== "Contact" && item.name !== "Careers")
+              .filter(
+                (item) =>
+                  item.name !== "Blog" &&
+                  item.name !== "Contact" &&
+                  item.name !== "Careers",
+              )
               .map((item) => (
                 <div key={item.name} className="relative group">
-
                   {item.children ? (
                     <MegaMenu item={item} />
                   ) : (
@@ -57,7 +57,6 @@ export default function Navbar() {
                       {item.name}
                     </Link>
                   )}
-
                 </div>
               ))}
           </nav>
@@ -85,9 +84,7 @@ export default function Navbar() {
 
           {/* MOBILE */}
           <MobileMenu />
-
         </div>
-
       </div>
     </header>
   );

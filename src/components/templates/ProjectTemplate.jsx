@@ -244,7 +244,7 @@ export default function ProjectTemplate({ project }) {
             fill
             priority
             className="object-cover"
-            sizes="100vw"
+            sizes="(max-width: 768px) 100vw, 50vw"
           />
         ) : (
           <div className="absolute inset-0 bg-gradient-to-br from-slate-800 via-slate-700 to-slate-900">
@@ -514,7 +514,7 @@ export default function ProjectTemplate({ project }) {
                   Let is engineer your solution.
                 </p>
                 <p className="text-blue-200 text-xs leading-relaxed mb-5">
-                  Our engineers have delivered 100+ plants. Reach out for a technical consultation.
+                  Our engineers have delivered 500+ plants. Reach out for a technical consultation.
                 </p>
                 <a
                   href="mailto:hr@hyalineenviro.com"

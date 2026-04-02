@@ -75,7 +75,7 @@ export default function ProductsPage() {
       {/* ✅ Listing */}
       <ListingPageTemplate
         title="Products"
-        subtitle="High-performance water treatment products for industrial and commercial applications."
+        subtitle="Explore a comprehensive range of industrial products including membranes, resins, pressure systems, and testing instruments designed for water treatment and engineering applications. Hyaline Enviro Engineers Pvt. Ltd. supplies reliable, high-performance components tailored for industrial and commercial requirements across India."
         data={products}
         basePath="products" // ✅ FIXED
       />

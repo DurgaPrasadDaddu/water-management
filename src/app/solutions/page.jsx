@@ -76,7 +76,7 @@ export default function SolutionsPage() {
       {/* ✅ Listing Template */}
       <ListingPageTemplate
         title="Solutions"
-        subtitle="Advanced water and wastewater treatment solutions engineered for industrial excellence."
+        subtitle="Hyaline Enviro Engineers provides end-to-end engineering solutions combining advanced water treatment technologies with industrial fabrication and turnkey project execution. From design to commissioning, we deliver reliable and sustainable solutions tailored for industrial applications."
         data={solutions}
         basePath="solutions"
       />

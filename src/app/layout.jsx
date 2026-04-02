@@ -1,5 +1,5 @@
 import Footer from "@/components/layout/Footer";
-import "../styles/globals.css"
+import "../styles/globals.css";
 import Header from "@/components/layout/Header";
 import { Inter, Poppins } from "next/font/google";
 import { organizationSchema, localBusinessSchema } from "@/lib/schema";
@@ -14,7 +14,7 @@ export const poppins = Poppins({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
   variable: "--font-poppins",
-  display: 'swap'
+  display: "swap",
 });
 
 export const metadata = {
@@ -32,16 +32,26 @@ export const metadata = {
   },
 };
 
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/images/hero/sewage-treatment-plant-hero-bg.webp"
+          fetchPriority="high"
+        />
+      </head>
       <body className={`${inter.variable} ${poppins.variable}`}>
         <Header />
+        <main >
         {children}
-        <Footer/>
-         <FloatingWrapper />
-          {/* Global Schema */}
+        </main>
+        <Footer />
+        <FloatingWrapper />
+
+        {/* Global Schema */}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

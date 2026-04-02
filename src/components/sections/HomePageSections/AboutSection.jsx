@@ -107,12 +107,12 @@
 //               Engineering Sustainable Water <br />& Wastewater Solutions
 //             </>
 //           }
-//           description={`Hyaline Enviro Engineers Pvt. Ltd. delivers advanced water and 
-//           wastewater treatment solutions along with industrial fabrication 
-//           services. We provide complete end-to-end engineering solutions 
+//           description={`Hyaline Enviro Engineers Pvt. Ltd. delivers advanced water and
+//           wastewater treatment solutions along with industrial fabrication
+//           services. We provide complete end-to-end engineering solutions
 //           from design to commissioning.`}
 //         />
-        
+
 //         {/* Main Content */}
 //         <div className="grid lg:grid-cols-2 gap-12 items-center">
 
@@ -184,16 +184,12 @@
 //   );
 // }
 
-
-"use client";
-
 import Image from "next/image";
 import { Droplets, Factory, Settings, Globe, ArrowRight } from "lucide-react";
 import SectionWrapper from "../../../components/ui/SectionWrapper";
 import SectionHeading from "../../../components/ui/SectionHeading";
 
 export default function AboutSection() {
-
   const features = [
     {
       icon: <Droplets className="w-6 h-6 text-[color:var(--color-primary)]" />,
@@ -220,7 +216,6 @@ export default function AboutSection() {
   return (
     <SectionWrapper>
       <div className="max-w-7xl mx-auto px-6 relative z-10">
-
         {/* Heading */}
         <SectionHeading
           preTitle="Welcome to"
@@ -238,24 +233,24 @@ export default function AboutSection() {
 
         {/* Main Content */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
-
           {/* LEFT IMAGE */}
           <div className="relative">
             <div className="rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src="/images/about/hyaline-home-about.webp"
-                alt="Water Treatment"
+                alt="Water Treatment Plant"
                 width={600}
                 height={500}
-                className="object-cover w-full h-full"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                className="object-cover w-full h-auto"
               />
             </div>
 
             {/* Floating Card */}
-            <div className="absolute -top-6 -left-3 lg:-left-5 bg-white/80 backdrop-blur-lg p-6 rounded-2xl shadow-xl border border-white/50">
-              <h4 className="text-xl font-bold text-[color:var(--color-primary)]">
-                13+
-              </h4>
+            <div className="absolute -top-6 -left-3 lg:-left-5 bg-white/80 backdrop-blur-lg p-4 lg:p-6 rounded-2xl shadow-xl border border-white/50">
+              <p className="text-xl text-center font-bold text-[color:var(--color-primary)]">
+                15+
+              </p>
               <p className="text-sm text-[color:var(--color-text)]">
                 Industrial Sectors
               </p>
@@ -264,7 +259,6 @@ export default function AboutSection() {
 
           {/* RIGHT CONTENT */}
           <div>
-
             <h3 className="text-2xl font-bold text-[color:var(--color-dark)] mb-6">
               Delivering Innovative Engineering & Environmental Solutions
             </h3>
@@ -322,7 +316,6 @@ export default function AboutSection() {
                 <ArrowRight className="w-4 h-4" />
               </a>
             </div>
-
           </div>
         </div>
       </div>

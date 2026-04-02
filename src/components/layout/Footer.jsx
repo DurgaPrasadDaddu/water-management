@@ -1,5 +1,3 @@
-"use client";
-
 import Link from "next/link";
 import Image from "next/image";
 import { products } from "@/data/products";
@@ -10,7 +8,7 @@ import { socialLinks } from "@/data/socialLinks";
 const Footer = () => {
   return (
     // <footer className="bg-[var(--color-dark)] text-gray-300 pt-12 sm:pt-16 pb-8 px-4 sm:px-6">
-    <footer className="bg-[var(--color-dark)] text-gray-300 pt-12 sm:pt-16 pb-8 pl-16 pr-4 sm:pl-18 sm:pr-10">
+    <footer className="bg-[var(--color-dark)] text-white/90 pt-12 sm:pt-16 pb-8 pl-16 pr-4 sm:pl-18 sm:pr-10">
       <div className="max-w-7xl mx-auto grid grid-cols-12 gap-4 md:gap-10 text-center lg:text-left">
         {/* LEFT BLOCK */}
         <div className="col-span-12 lg:col-span-4 flex flex-col items-center justify-center space-y-6 sm:space-y-8 text-left">
@@ -32,12 +30,12 @@ const Footer = () => {
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 break-words">
               {/* Corporate */}
-              <div>
-                <p className="text-white font-medium text-sm sm:text-sm md:text-base mb-1">
+              <div className="text-white/80 leading-relaxed">
+                <p className="font-medium text-sm sm:text-sm md:text-base mb-1">
                   Corporate Office
                 </p>
 
-                <p className="text-gray-300 text-sm sm:text-sm md:text-base leading-relaxed">
+                <p className="text-sm sm:text-sm md:text-base leading-relaxed">
                   Plot no : 61, Jayaram Bhavan, Ground Floor,
                   <br />
                   Road no : 1, Green Park Avenue,
@@ -47,19 +45,32 @@ const Footer = () => {
                   Suchitra Circle, Hyderabad - 500067.
                 </p>
 
-                <p className="mt-2 text-gray-300 text-sm sm:text-sm md:text-base">
+                <p className="mt-2 text-sm sm:text-sm md:text-base">
                   <a
                     href="tel:+917981123366"
-                    className="hover:text-[color:var(--color-primary)] transition break-all"
+                    className="
+                    inline-flex items-center
+                    min-h-[44px] px-3 py-2
+                    text-white/90
+                    hover:text-[#00A3E0]
+                    transition
+                    break-all
+                  "
                   >
-                    +91-7981123366
+                    📞 <span>+91-7981123366</span>
                   </a>
                   <br />
                   <a
                     href="tel:+919553753337"
-                    className="hover:text-[color:var(--color-primary)] transition break-all"
-                  >
-                    +91-9553753337
+                    className="
+                    inline-flex items-center
+                    min-h-[44px] px-3 py-2
+                    text-white/90
+                    hover:text-[#00A3E0]
+                    transition
+                    break-all
+                  ">
+                    📞 <span>+91-9553753337</span>
                   </a>
                 </p>
 
@@ -74,12 +85,12 @@ const Footer = () => {
               </div>
 
               {/* Factory */}
-              <div>
-                <p className="text-white font-medium text-sm sm:text-sm md:text-base mb-1">
+              <div className="text-white/80 leading-relaxed">
+                <p className="font-medium text-sm sm:text-sm md:text-base mb-1">
                   Factory Address
                 </p>
 
-                <p className="text-gray-300 text-sm sm:text-sm md:text-base leading-relaxed">
+                <p className="text-sm sm:text-sm md:text-base leading-relaxed">
                   Plot No: 02, Survey No: 11, Pipeline Road,
                   <br />
                   Beside MYUR Bar & Restaurant,
@@ -87,12 +98,18 @@ const Footer = () => {
                   Jeedimetla (V), Hyderabad - 500067.
                 </p>
 
-                <p className="mt-2 text-gray-300 text-sm sm:text-sm md:text-base">
+                <p className="mt-2 text-sm sm:text-sm md:text-base">
                   <a
                     href="tel:+919390701234"
-                    className="hover:text-[color:var(--color-primary)] transition break-all"
-                  >
-                    +91-93907 01234
+                   className="
+                    inline-flex items-center
+                    min-h-[44px] px-3 py-2
+                    text-white/90
+                    hover:text-[#00A3E0]
+                    transition
+                    break-all
+                  ">
+                    📞 <span>+91-93907 01234</span>
                   </a>
                   <br />
                 </p>

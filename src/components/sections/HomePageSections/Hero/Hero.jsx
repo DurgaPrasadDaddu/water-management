@@ -247,19 +247,21 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import HeroClient from "./HeroClient";
+import dynamic from "next/dynamic";
+
+const HeroClient = dynamic(() => import("./HeroClient"));
 
 export default function Hero() {
   return (
     <section className="relative min-h-[75vh] flex items-center overflow-hidden">
-      
-      {/* LCP IMAGE */}
+    
       <Image
         src="/images/hero/sewage-treatment-plant-hero-bg.webp"
         alt="Water treatment plant"
         fill
         priority
-        sizes="100vw"
+        fetchPriority="high"
+        sizes="(max-width: 768px) 100vw, 50vw"
         className="object-cover object-[center_35%]"
       />
 

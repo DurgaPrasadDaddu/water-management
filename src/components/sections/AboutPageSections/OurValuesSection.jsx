@@ -27,10 +27,9 @@
 //     </section>
 //   );
 // }
-"use client";
 
 import { Users, Cpu, Gauge } from "lucide-react";
-import SectionWrapper from "../ui/SectionWrapper";
+import SectionWrapper from "../../ui/SectionWrapper";
 
 const values = [
   {

@@ -2,8 +2,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { solutions } from "@/data/solutions";
 import Container from "@/components/ui/Container";
-import SectionWrapper from "../ui/SectionWrapper";
-import SectionHeading from "../ui/SectionHeading";
+import SectionWrapper from "../../ui/SectionWrapper";
+import SectionHeading from "../../ui/SectionHeading";
 
 export default function SolutionsSection() {
   return (

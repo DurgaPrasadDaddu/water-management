@@ -1,10 +1,12 @@
 @import "tailwindcss";
+/* @import "tailwindcss/preflight";
+@import "tailwindcss/utilities"; */
 
 /* ---------- ROOT DESIGN SYSTEM ---------- */
 
 :root {
   /* ===== BRAND COLORS ===== */
-  --color-primary: #2182c4;   /* Blue */
+  --color-primary: #19b3da;   /* Blue */
   --color-secondary: #8DC63F; /* Eco Green */
 
   /* ===== NEUTRALS ===== */
@@ -77,39 +79,6 @@ p {
   max-width: 1280px;
   margin: 0 auto;
   padding: 0 16px;
-}
-
-/* ---------- ANIMATIONS ---------- */
-
-@keyframes slowZoom {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scale(1.1);
-  }
-}
-
-.animate-slowZoom {
-  transform: scale(1.1);
-}
-
-@keyframes scroll {
-  0% {
-    top: -10px;
-    opacity: 0;
-  }
-  50% {
-    opacity: 1;
-  }
-  100% {
-    top: 40px;
-    opacity: 0;
-  }
-}
-
-.animate-scroll {
-  animation: scroll 2s infinite;
 }
 
 html, body {

@@ -148,7 +148,7 @@ export default function FabricationSection() {
         {/* Background Image */}
         <div className="absolute inset-0">
           <Image
-            src="/Banners/fabrications.webp" 
+            src="/Banners/fabrications.webp"
             alt="Fabrication Background"
             fill
             sizes="(max-width: 768px) 100vw, 50vw"
@@ -219,13 +219,13 @@ export default function FabricationSection() {
                   {/* <div className="absolute left-0 top-0 h-full w-1 bg-[#00A3E0]" /> */}
 
                   {/* IMAGE */}
-                  <div className="relative w-28 h-38 flex-shrink-0 rounded-lg overflow-hidden">
+                  <div className="relative w-28 h-36 flex-shrink-0 rounded-lg overflow-hidden">
                     <Image
                       src={item.image}
                       alt={item.title}
                       fill
-                      sizes="(max-width: 768px) 100vw, 50vw"
-                      className="object-center group-hover:scale-105 transition duration-300"
+                      sizes="112px"
+                      className="object-center transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
 

@@ -32,7 +32,7 @@ export default function ServicesPage() {
       />
     <ListingPageTemplate
       title="Services"
-      subtitle="End-to-end industrial services ensuring efficiency, reliability, and performance."
+      subtitle="We deliver end-to-end engineering and O&M solutions — from design and fabrication to optimization and compliance — ensuring sustainability and long-term reliability for industrial and municipal systems."
       data={services}
       basePath="services"
     />
