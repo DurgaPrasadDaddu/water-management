@@ -344,19 +344,19 @@ export default function Hero() {
   return (
     <section className="relative min-h-[75vh] flex items-center overflow-hidden">
       
-      {/* ✅ HERO IMAGE (LCP optimized) */}
+     
       <Image
         src="/images/hero/sewage-treatment-plant-hero-bg.webp"
         alt="Water treatment plant"
         fill
         priority
         fetchPriority="high"
-        sizes="100vw"
+        sizes="(max-width: 768px) 100vw, 1600px"
         className="object-cover object-[center_35%]"
       />
 
       {/* Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-r from-blue-950/95 via-blue-950/80 to-transparent" />
+      <div className="absolute inset-0 bg-gradient-to-b from-blue-300/30 to-transparent md:bg-gradient-to-r from-blue-950/95 via-blue-950/80 to-transparent" />
 
       {/* CONTENT */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 py-3">
