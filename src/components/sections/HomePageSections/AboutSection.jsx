@@ -241,7 +241,7 @@ export default function AboutSection() {
                 alt="Water Treatment Plant"
                 width={600}
                 height={500}
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 600px"
+                sizes="(max-width: 768px) 100vw, 550px"
                 className="object-cover w-full h-auto"
               />
             </div>
