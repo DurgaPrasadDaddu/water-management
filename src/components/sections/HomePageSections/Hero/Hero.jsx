@@ -245,23 +245,113 @@
 //   );
 // }
 
+// import Image from "next/image";
+// import Link from "next/link";
+// import dynamic from "next/dynamic";
+
+// const HeroClient = dynamic(() => import("./HeroClient"));
+
+// export default function Hero() {
+//   return (
+//     <section className="relative min-h-[75vh] flex items-center overflow-hidden">
+    
+//       <Image
+//         src="/images/hero/sewage-treatment-plant-hero-bg.webp"
+//         alt="Water treatment plant"
+//         fill
+//         priority
+//         fetchPriority="high"
+//         sizes="(max-width: 768px) 100vw, 50vw"
+//         className="object-cover object-[center_35%]"
+//       />
+
+//       {/* Overlay */}
+//       <div className="absolute inset-0 bg-gradient-to-r from-blue-950/95 via-blue-950/80 to-transparent" />
+
+//       {/* CONTENT */}
+//       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 py-3">
+        
+//         {/* ✅ PREMIUM GRID */}
+//         <div className="grid grid-cols-12 items-center gap-y-12 lg:gap-x-5">
+          
+//           {/* LEFT CONTENT */}
+//           <div className="col-span-12 lg:col-span-7 flex flex-col justify-center space-y-6 text-center lg:text-left md:pl-10">
+            
+//             <p className="text-cyan-400 font-bold text-xs tracking-[0.2em] uppercase">
+//               Pioneers in Water Treatment & Engineering Solutions
+//             </p>
+
+//             <h1 className="font-extrabold leading-[1.05] tracking-tight">
+//               <span className="block text-white text-3xl sm:text-4xl lg:text-6xl">
+//                 Industrial
+//               </span>
+
+//               <span className="block text-cyan-400 text-2xl sm:text-3xl lg:text-5xl drop-shadow-[0_0_40px_rgba(0,207,255,0.35)]">
+//                 Water & Wastewater Treatment
+//               </span>
+
+//               <span className="block text-white text-3xl sm:text-4xl lg:text-6xl">
+//                 Engineering Experts
+//               </span>
+//             </h1>
+
+//             <p className="text-slate-300/80 text-sm sm:text-base leading-relaxed max-w-xl mx-auto lg:mx-0">
+//               Hyaline Enviro Engineers Pvt. Ltd. delivers reliable{" "}
+//               <span className="text-slate-200 font-semibold">
+//                 water and wastewater solutions
+//               </span>{" "}
+//               for residential and commercial applications, specialising in STP,
+//               ETP, RO Plants, ZLD & industrial fabrication works across India.
+//             </p>
+
+//             {/* CTA */}
+//             <div className="flex flex-wrap gap-4 justify-center lg:justify-start pt-2">
+              
+//               <Link
+//                 href="/solutions"
+//                 className="relative inline-flex items-center justify-center px-7 py-3 text-sm font-semibold tracking-wide text-white rounded-md bg-gradient-to-r from-cyan-500 to-cyan-600 shadow-lg shadow-cyan-500/30 hover:shadow-cyan-400/50 hover:-translate-y-0.5 transition-all duration-300"
+//               >
+//                 Explore Solutions
+//               </Link>
+
+//               <Link
+//                 href="/contact"
+//                 className="inline-flex items-center justify-center px-7 py-3 text-sm font-semibold tracking-wide text-white border border-white/50 rounded-md backdrop-blur-sm hover:bg-white/10 hover:border-cyan-400 hover:text-cyan-400 hover:-translate-y-0.5 transition-all duration-300"
+//               >
+//                 Request Consultation
+//               </Link>
+//             </div>
+//           </div>
+
+//           {/* RIGHT → STATS */}
+//           <div className="col-span-12 lg:col-span-4 flex justify-center lg:justify-end">
+//             <HeroClient />
+//           </div>
+
+//         </div>
+//       </div>
+//     </section>
+//   );
+// }
 import Image from "next/image";
 import Link from "next/link";
 import dynamic from "next/dynamic";
 
+// ✅ Load ONLY on client + desktop
 const HeroClient = dynamic(() => import("./HeroClient"));
 
 export default function Hero() {
   return (
     <section className="relative min-h-[75vh] flex items-center overflow-hidden">
-    
+      
+      {/* ✅ HERO IMAGE (LCP optimized) */}
       <Image
         src="/images/hero/sewage-treatment-plant-hero-bg.webp"
         alt="Water treatment plant"
         fill
         priority
         fetchPriority="high"
-        sizes="(max-width: 768px) 100vw, 50vw"
+        sizes="100vw"
         className="object-cover object-[center_35%]"
       />
 
@@ -271,7 +361,6 @@ export default function Hero() {
       {/* CONTENT */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-10 py-3">
         
-        {/* ✅ PREMIUM GRID */}
         <div className="grid grid-cols-12 items-center gap-y-12 lg:gap-x-5">
           
           {/* LEFT CONTENT */}
@@ -321,11 +410,45 @@ export default function Hero() {
                 Request Consultation
               </Link>
             </div>
+
+            {/* ✅ MOBILE STATS (NO JS → BEST LCP) */}
+            <div className="md:hidden mt-6">
+              <div className="grid grid-cols-3 gap-4 text-center max-w-sm mx-auto">
+                
+                <div>
+                  <p className="text-lg font-bold text-cyan-400">500+</p>
+                  <p className="text-xs text-slate-300">
+                    Projects <br /> Completed
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-lg font-bold text-cyan-400">13+</p>
+                  <p className="text-xs text-slate-300">
+                    Years <br /> Experience
+                  </p>
+                </div>
+
+                <div>
+                  <p className="text-lg font-bold text-cyan-400">50+</p>
+                  <p className="text-xs text-slate-300">
+                    Industrial <br /> Clients
+                  </p>
+                </div>
+
+              </div>
+            </div>
+
           </div>
 
-          {/* RIGHT → STATS */}
+          {/* RIGHT → DESKTOP ONLY (CLIENT COMPONENT) */}
           <div className="col-span-12 lg:col-span-4 flex justify-center lg:justify-end">
-            <HeroClient />
+            
+            
+            <div className="hidden md:block">
+              <HeroClient />
+            </div>
+
           </div>
 
         </div>
