@@ -551,11 +551,11 @@ export default function ProductTemplate({ product }) {
             <div className="relative fade-up fade-up-delay-4">
               <div className="relative aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 bg-white/5 backdrop-blur-xl shadow-2xl">
                 <Image
-                  src={product?.image || "/placeholder.jpg"}
+                  src={product?.image}
                   alt={product?.name || "product"}
                   fill
-                  className="object-center"
-                  priority
+                  className="object-cover object-center"
+                  sizes="(max-width: 768px) 100vw, 33vw"
                 />
 
                 {/* Overlay Gradient */}

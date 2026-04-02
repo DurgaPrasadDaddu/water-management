@@ -469,7 +469,7 @@ export default function FabricationTemplate({ data, relatedProducts = [] }) {
             <div className="space-y-3 min-w-0">
               <div
                 className="relative overflow-hidden shadow-md w-full"
-                style={{ aspectRatio: "4/3", borderRadius: "var(--radius-md)" }}
+                style={{ aspectRatio: "3/2", borderRadius: "var(--radius-md)" }}
               >
                 <Image
                   src={images[activeImage] || "/images/placeholder.jpg"}

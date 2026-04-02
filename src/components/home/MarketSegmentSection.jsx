@@ -51,13 +51,16 @@ export default function MarketSegmentSection() {
               className="group relative rounded-2xl overflow-hidden h-[380px] shadow-md hover:shadow-2xl transition duration-500"
             >
         
-              <Image
-                src={item.image}
-                alt={item.name}
-                fill
-                className="object-cover transform group-hover:scale-110 transition duration-700"
-              />
-
+              <div className="group relative aspect-[3/2] overflow-hidden rounded-xl">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  className="object-cover transition duration-700 group-hover:scale-110"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  loading="lazy"
+                />
+              </div>
               {/* Dark Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
 
