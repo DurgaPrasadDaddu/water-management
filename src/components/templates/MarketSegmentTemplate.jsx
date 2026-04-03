@@ -8,10 +8,10 @@ export default function MarketSegmentTemplate({ data }) {
       {/* Banner */}
       <Banner
         title={data.title}
-        description={data.description}
+        description={data.shortDescription}
         image={data.image}
       />
-      
+
       {/* Heading Section */}
 
       <section className="relative py-16 bg-gradient-to-br from-blue-50 via-white to-green-50 overflow-hidden">
@@ -28,9 +28,8 @@ export default function MarketSegmentTemplate({ data }) {
             Industries We Serve in {data.title}
           </h2>
 
-          <p className="text-[var(--heading-text)] mt-6 max-w-2xl mx-auto">
-            Explore our expertise across multiple industries with tailored
-            engineering solutions designed for performance and compliance.
+          <p className="text-[var(--heading-text)] text-lg mt-6 max-w-2xl mx-auto whitespace-pre-line">
+            {data.description}
           </p>
         </div>
       </section>

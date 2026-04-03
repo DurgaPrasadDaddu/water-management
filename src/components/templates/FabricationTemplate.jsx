@@ -336,7 +336,7 @@ export default function FabricationTemplate({ data, relatedProducts = [] }) {
             src={data.image || "/images/placeholder.jpg"}
             alt={data.title}
             fill
-            sizes="(max-width: 768px) 100vw, 200px"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px"
             className="object-center animate-slowZoom"
             priority
             style={{ filter: "brightness(0.88) saturate(0.75)" }}

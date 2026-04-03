@@ -415,10 +415,10 @@ export default function IndustryDetailsTemplate({
       }}
       className="antialiased overflow-x-hidden"
     >
-      {/* ════════════════════════════════════════════════════════════════════
+      {/* 
           1. HERO
-      ════════════════════════════════════════════════════════════════════ */}
-      <section className="relative min-h-[78vh] flex items-end overflow-hidden">
+       */}
+      <section className="relative min-h-[60vh] lg:min-h-[78vh flex items-end overflow-hidden lg:pl-[80px]">
         {/* BG image */}
         {image ? (
           <Image
@@ -427,6 +427,7 @@ export default function IndustryDetailsTemplate({
             fill
             priority
             className="object-cover object-center"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px"
             style={{ filter: "brightness(0.40) saturate(1.1)" }}
           />
         ) : (
@@ -439,19 +440,10 @@ export default function IndustryDetailsTemplate({
         {/* Brand blue left-edge accent */}
         <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-transparent via-[#00A3E0] to-transparent opacity-80" />
 
-        {/* Dot grid — top-right decoration */}
-        <div
-          className="absolute top-14 right-14 hidden lg:grid grid-cols-7 gap-3 opacity-[0.08]"
-          aria-hidden="true"
-        >
-          {Array.from({ length: 49 }).map((_, i) => (
-            <div key={i} className="w-1 h-1 rounded-full bg-white" />
-          ))}
-        </div>
-
-        <div className="relative z-10 w-full container-custom pb-16 lg:pb-24 pt-36">
+       
+        <div className="relative z-10 w-full container-custom pb-16 lg:pb-24 pt-16 md:pl-18">
           {/* Breadcrumb */}
-          <nav className="flex items-center flex-wrap gap-1.5 text-sm text-white/50 mb-7">
+          <nav className="flex items-center flex-wrap gap-1.5 text-sm text-white/50 mb-7 mt-5">
             <Link
               href="/"
               className="hover:text-white transition-colors duration-200"
@@ -460,7 +452,7 @@ export default function IndustryDetailsTemplate({
             </Link>
             <IconChevronRight size={13} />
             <Link
-              href="/industries"
+              href="/market-segments/industrial"
               className="hover:text-white transition-colors duration-200"
             >
               Industries
@@ -536,9 +528,9 @@ export default function IndustryDetailsTemplate({
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════════
+      {/* 
           2. OVERVIEW
-      ════════════════════════════════════════════════════════════════════ */}
+       */}
       <section className="section py-24">
         <div className="container-custom">
           <div className="grid lg:grid-cols-2 gap-16 items-center">
@@ -632,9 +624,9 @@ export default function IndustryDetailsTemplate({
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════════
+      {/* 
           3. CHALLENGES VS SOLUTIONS
-      ════════════════════════════════════════════════════════════════════ */}
+       */}
       {(problems.length > 0 || solutions.length > 0) && (
         <section id="challenges" className="section py-24 bg-[#F9FAFB]">
           <div className="container-custom">
@@ -774,9 +766,9 @@ export default function IndustryDetailsTemplate({
         </section>
       )}
 
-      {/* ════════════════════════════════════════════════════════════════════
+      {/* 
           4. ENGINEERING APPROACH
-      ════════════════════════════════════════════════════════════════════ */}
+       */}
       <section id="approach" className="section py-24 bg-white">
         <div className="container-custom">
           <div className="text-center mb-16">
@@ -835,9 +827,9 @@ export default function IndustryDetailsTemplate({
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════════
+      {/* 
           6. INDUSTRY BENEFITS
-      ════════════════════════════════════════════════════════════════════ */}
+       */}
       <section className="section py-24 bg-[#F9FAFB]">
         <div className="container-custom">
           <div className="text-center mb-14">
@@ -884,9 +876,9 @@ export default function IndustryDetailsTemplate({
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════════
+      {/* 
           7. CTA
-      ════════════════════════════════════════════════════════════════════ */}
+       */}
       <section id="contact" className="section py-20 bg-white">
         <div className="container-custom">
           <div className="relative overflow-hidden rounded-[16px] bg-gradient-to-br from-[#1F2937] via-[#0f2d42] to-[#1F2937] px-10 py-16 lg:px-20 lg:py-20 text-center shadow-2xl">
@@ -986,9 +978,9 @@ export default function IndustryDetailsTemplate({
         </div>
       </section>
 
-      {/* ════════════════════════════════════════════════════════════════════
+      {/* 
           UTILITY STYLES
-      ════════════════════════════════════════════════════════════════════ */}
+       */}
       <style jsx global>{`
         .line-clamp-3 {
           display: -webkit-box;

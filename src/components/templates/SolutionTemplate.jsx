@@ -498,9 +498,7 @@ export default function SolutionTemplate({ data }) {
           1. HERO
       ═══════════════════════════════════════ */}
       <section
-        className="relative flex flex-col justify-center overflow-hidden
-      
-         min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh]"
+        className="relative flex flex-col justify-center overflow-hidden min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh] lg:pl-[80px]"
       >
         {/* BG Image */}
         <Image
@@ -508,7 +506,7 @@ export default function SolutionTemplate({ data }) {
           alt={data.name}
           fill
           priority
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px"
           className="object-cover"
         />
 
@@ -658,7 +656,7 @@ export default function SolutionTemplate({ data }) {
                 </div>
               ))}
               <div className="pt-4 border-t border-[#00A3E0]/15 flex items-center gap-2 text-sm text-gray-500">
-                <MapPin size={14} className="text-[#00A3E0]" />
+                <MapPin size={16} className="text-[#00A3E0]" />
                 Pan India Project Execution
               </div>
             </motion.div>
@@ -704,7 +702,7 @@ export default function SolutionTemplate({ data }) {
                   </p>
                   <p className="text-gray-300 mb-4 text-sm">{item.problem}</p>
                   <p className="text-[#00A3E0] text-sm font-semibold mb-1 flex items-center gap-2">
-                    <CheckCircle2 size={14} /> Our Solution
+                    <CheckCircle2 size={16} /> Our Solution
                   </p>
                   <p className="text-white text-sm">{item.solution}</p>
                 </motion.div>
@@ -1068,13 +1066,13 @@ export default function SolutionTemplate({ data }) {
 
         <Container className="relative text-center">
           <motion.div {...fadeUp()}>
-            <p className="text-white/70 text-sm font-medium uppercase tracking-wider mb-3">
+            <p className="text-white/90 text-base font-medium uppercase tracking-wider mb-3">
               Ready to Get Started?
             </p>
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               {data.cta.title}
             </h2>
-            <p className="text-white/80 mb-10 max-w-lg mx-auto">
+            <p className="text-white/90 text-base mb-10 max-w-lg mx-auto">
               Talk to our engineers and get a customized solution tailored to
               your industry and compliance needs — no obligation.
             </p>
@@ -1093,17 +1091,17 @@ export default function SolutionTemplate({ data }) {
             </div>
 
             {/* Quick contact pills */}
-            <div className="flex flex-wrap justify-center gap-4 text-white/70 text-sm">
+            <div className="flex flex-wrap justify-center gap-4 text-white/90 text-base">
               <span className="flex items-center gap-1.5">
-                <Award size={14} />
+                <Award size={16} />
                 Free site assessment
               </span>
               <span className="flex items-center gap-1.5">
-                <Users size={14} />
+                <Users size={16} />
                 Expert consultation
               </span>
               <span className="flex items-center gap-1.5">
-                <Mail size={14} />
+                <Mail size={16} />
                 Quick turnaround quote
               </span>
             </div>

@@ -15,8 +15,7 @@ const services = [
     ],
 
     seo: {
-      title:
-        "AMC & Operation Maintenance Services | Hyaline Enviro Engineers",
+      title: "AMC & Operation Maintenance Services | Hyaline Enviro Engineers",
       description:
         "Expert AMC and O&M services for water treatment plants ensuring efficiency, compliance, and reliability.",
       keywords: [
@@ -158,11 +157,7 @@ const services = [
       "Execution & Commissioning",
     ],
 
-    industries: [
-      "Pharmaceutical",
-      "Chemical",
-      "Manufacturing",
-    ],
+    industries: ["Pharmaceutical", "Chemical", "Manufacturing"],
 
     faqs: [
       {
@@ -189,8 +184,7 @@ const services = [
     ],
 
     seo: {
-      title:
-        "Refabrication & Retrofitting Services | Hyaline Enviro Engineers",
+      title: "Refabrication & Retrofitting Services | Hyaline Enviro Engineers",
       description:
         "Enhance durability and performance of industrial systems through expert refabrication.",
       keywords: ["retrofitting services", "plant fabrication upgrade"],
@@ -211,10 +205,7 @@ const services = [
       "Installation & Testing",
     ],
 
-    industries: [
-      "Industrial Plants",
-      "Manufacturing Units",
-    ],
+    industries: ["Industrial Plants", "Manufacturing Units"],
 
     faqs: [
       {
@@ -314,17 +305,151 @@ const services = [
       "Testing & Commissioning",
     ],
 
-    industries: [
-      "Industrial Plants",
-      "Hospitals",
-      "Infrastructure Projects",
-    ],
+    industries: ["Industrial Plants", "Hospitals", "Infrastructure Projects"],
 
     faqs: [
       {
         question: "Do you provide fire system maintenance?",
         answer:
           "Yes, we provide installation as well as maintenance services for fire protection systems.",
+      },
+    ],
+  },
+  {
+    slug: "cfe-cfo-licensing",
+    title: "CFE & CFO Licensing and Documentation",
+    shortTitle: "CFE & CFO",
+
+    description:
+      "Complete assistance for Pollution Control Board approvals including Consent for Establishment (CFE) and Consent for Operation (CFO) with end-to-end documentation and compliance support.",
+
+    image: "/images/services/cfe-cfo.webp",
+
+    highlights: [
+      "Pollution Board Approvals",
+      "End-to-End Documentation",
+      "Fast Processing Support",
+    ],
+
+    seo: {
+      title:
+        "CFE & CFO Licensing Services | Pollution Control Board Approval India",
+      description:
+        "Expert support for obtaining CFE & CFO approvals with complete documentation, compliance, and fast-track processing for industries.",
+      keywords: [
+        "CFE approval",
+        "CFO certificate",
+        "pollution control board license",
+        "industrial compliance India",
+      ],
+    },
+
+    overview: `Hyaline Enviro Engineers provides complete support for obtaining Consent for Establishment (CFE) and Consent for Operation (CFO) approvals from Pollution Control Boards across India. Our expert team ensures accurate documentation, smooth submission, and continuous follow-up to help industries achieve regulatory compliance without delays.
+
+We understand the complexities of environmental regulations and provide hassle-free solutions tailored to your industry requirements, ensuring faster approvals and legal compliance.`,
+
+    features: [
+      "Preparation of complete documentation as per PCB norms",
+      "Application submission & tracking",
+      "Coordination with pollution control authorities",
+      "Compliance guidance & audit support",
+      "Renewal and modification assistance",
+    ],
+
+    process: [
+      "Requirement Analysis & Data Collection",
+      "Documentation Preparation",
+      "Application Submission",
+      "Follow-up with Authorities",
+      "Approval & Compliance Support",
+    ],
+
+    industries: [
+      "Pharmaceutical Industry",
+      "Chemical Industry",
+      "Manufacturing Units",
+      "Food Processing Industry",
+      "Textile Industry",
+    ],
+
+    faq: [
+      {
+        question: "What is CFE and CFO?",
+        answer:
+          "CFE (Consent for Establishment) is required before setting up an industry, while CFO (Consent for Operation) is required before starting operations.",
+      },
+      {
+        question: "Is CFE & CFO mandatory?",
+        answer:
+          "Yes, these approvals are mandatory for industries to comply with environmental regulations set by Pollution Control Boards.",
+      },
+    ],
+  },
+  {
+    slug: "usfda-documentation",
+    title: "USFDA Documentation Support",
+    shortTitle: "USFDA Docs",
+
+    description:
+      "Comprehensive USFDA documentation services including DQ, IQ, OQ, and PQ validation to ensure compliance for pharmaceutical and regulated industries.",
+
+    image: "/images/services/usfda.webp",
+
+    highlights: [
+      "DQ, IQ, OQ, PQ Validation",
+      "Regulatory Compliance",
+      "Audit-Ready Documentation",
+    ],
+
+    seo: {
+      title: "USFDA Documentation Services | DQ IQ OQ PQ Validation Experts",
+      description:
+        "End-to-end USFDA documentation support including DQ, IQ, OQ, and PQ validation for pharmaceutical and regulated industries.",
+      keywords: [
+        "USFDA documentation",
+        "DQ IQ OQ PQ validation",
+        "pharma validation services",
+        "FDA compliance services",
+      ],
+    },
+
+    overview: `We provide complete USFDA documentation support to help industries meet stringent regulatory requirements. Our services include Design Qualification (DQ), Installation Qualification (IQ), Operational Qualification (OQ), and Performance Qualification (PQ), ensuring that your systems and processes are fully validated and audit-ready.
+
+Our expert team ensures accurate documentation, compliance with global standards, and readiness for inspections, helping pharmaceutical and regulated industries maintain quality, safety, and regulatory approval.`,
+
+    features: [
+      "Design Qualification (DQ) documentation",
+      "Installation Qualification (IQ) validation",
+      "Operational Qualification (OQ) testing",
+      "Performance Qualification (PQ) verification",
+      "Audit preparation & compliance support",
+    ],
+
+    process: [
+      "Requirement Understanding",
+      "Documentation Planning",
+      "Validation Execution (DQ/IQ/OQ/PQ)",
+      "Report Preparation",
+      "Audit Support & Compliance",
+    ],
+
+    industries: [
+      "Pharmaceutical Industry",
+      "Biotechnology",
+      "Healthcare Industry",
+      "Food & Beverage Industry",
+    ],
+
+    faq: [
+      {
+        question: "What is DQ, IQ, OQ, PQ?",
+        answer:
+          "These are validation stages required for USFDA compliance: DQ (Design), IQ (Installation), OQ (Operation), and PQ (Performance).",
+      },
+      {
+        question: "Why is USFDA documentation important?",
+        answer:
+          "It ensures that systems meet regulatory standards, enabling product quality, safety, and approval for international markets.",
       },
     ],
   },

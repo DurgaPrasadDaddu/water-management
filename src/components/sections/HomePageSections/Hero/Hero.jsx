@@ -342,7 +342,7 @@ const HeroClient = dynamic(() => import("./HeroClient"));
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[75vh] flex items-center overflow-hidden">
+    <section className="relative min-h-[75vh] flex items-center overflow-hidden lg:pl-[80px]">
       
      
       <Image
@@ -351,7 +351,7 @@ export default function Hero() {
         fill
         priority
         fetchPriority="high"
-        sizes="(max-width: 768px) 100vw, 1600px"
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px"
         className="object-cover object-[center_35%]"
       />
 
@@ -364,7 +364,7 @@ export default function Hero() {
         <div className="grid grid-cols-12 items-center gap-y-12 lg:gap-x-5">
           
           {/* LEFT CONTENT */}
-          <div className="col-span-12 lg:col-span-7 flex flex-col justify-center space-y-6 text-center lg:text-left md:pl-10">
+          <div className="col-span-12 lg:col-span-7 flex flex-col justify-center space-y-6 text-center lg:text-left">
             
             <p className="text-cyan-400 font-bold text-xs tracking-[0.2em] uppercase">
               Pioneers in Water Treatment & Engineering Solutions

@@ -3,6 +3,8 @@ import Hero from "@/components/sections/HomePageSections/Hero/Hero"
 import AboutSection from "@/components/sections/HomePageSections/AboutSection"
 import ServicesSection from "@/components/sections/HomePageSections/ServicesSection"
 import MarketSegmentSection from "@/components/sections/HomePageSections/MarketSegmentSection"
+import ClientsCarousel from "@/components/sections/HomePageSections/ClientsCarousel"
+
 const FabricationSection = dynamic(() => import("@/components/sections/HomePageSections/FabricationSection"))
 const ProductsSection = dynamic(() => import("@/components/sections/HomePageSections/ProductsSection"))
 const SolutionsSection = dynamic(() => import("@/components/sections/HomePageSections/SolutionsSection"))
@@ -20,6 +22,7 @@ const Home = () => {
       <ProductsSection/>
       <ServicesSection/>
       <MarketSegmentSection/>
+      <ClientsCarousel/>
       {/* <ProjectsSection/> */}
     </div>
   )

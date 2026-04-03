@@ -531,20 +531,20 @@ effluents.`,
   },
 
   {
-    slug: "ro-uf-system",
-    name: "RO + UF Water Treatment System",
+    slug: "uf-ro-system",
+    name: "UF + RO Water Treatment System",
     tagline:
       "Advanced membrane filtration systems for high-quality water purification",
 
     hero: {
-      title: "RO & UF Water Treatment Systems",
+      title: "UF & RO Water Treatment Systems",
       subtitle: "Advanced purification solutions by Hyaline Enviro Engineers",
       image: "/images/solutions/ro+uf.webp",
     },
 
-    overview: `Reverse Osmosis (RO) combined with Ultra Filtration (UF) is an advanced water treatment solution designed to deliver high-quality purified water for industrial, commercial, and utility applications. UF acts as an effective pre-treatment stage, removing suspended solids, turbidity, bacteria, and colloidal particles from the feed water. This reduces fouling and protects RO membranes, ensuring stable performance and improved system efficiency.
+    overview: `Ultra Filtration (UF) combined with Reverse Osmosis (RO) is an advanced water treatment solution designed to deliver high-quality purified water for industrial, commercial, and utility applications. UF acts as an effective pre-treatment stage, removing suspended solids, turbidity, bacteria, and colloidal particles from the feed water. This reduces fouling and protects RO membranes, ensuring stable performance and improved system efficiency.
 
-The RO system then removes dissolved salts, organic matter, and impurities, producing high-purity water suitable for applications such as pharmaceuticals, food processing, manufacturing, and drinking water supply. At Hyaline Enviro Engineers Pvt. Ltd., we provide customized RO + UF systems tailored to specific requirements, offering complete solutions including design, installation, commissioning, and reliable after-sales support.`,
+The RO system then removes dissolved salts, organic matter, and impurities, producing high-purity water suitable for applications such as pharmaceuticals, food processing, manufacturing, and drinking water supply. At Hyaline Enviro Engineers Pvt. Ltd., we provide customized UF + RO systems tailored to specific requirements, offering complete solutions including design, installation, commissioning, and reliable after-sales support.`,
 
     whatWeProvide: [
       "System design and engineering",
@@ -590,39 +590,39 @@ The RO system then removes dissolved salts, organic matter, and impurities, prod
 
     faq: [
       {
-        question: "What is an RO + UF water treatment system?",
+        question: "What is an UF + RO water treatment system?",
         answer:
-          "An RO + UF system combines Ultrafiltration (UF) and Reverse Osmosis (RO) technologies to remove suspended particles, bacteria, viruses, and dissolved salts, producing high-purity water.",
+          "An UF + RO system combines Ultrafiltration (UF) and Reverse Osmosis (RO) technologies to remove suspended particles, bacteria, viruses, and dissolved salts, producing high-purity water.",
       },
       {
-        question: "What is the difference between RO and UF?",
+        question: "What is the difference between UF and RO?",
         answer:
           "UF removes suspended solids, bacteria, and larger particles, while RO removes dissolved salts, chemicals, and microscopic impurities, ensuring complete purification.",
       },
       {
-        question: "Where are RO + UF systems used?",
+        question: "Where are UF + RO systems used?",
         answer:
-          "RO + UF systems are widely used in hospitals, industries, commercial buildings, pharmaceutical plants, and drinking water applications.",
+          "UF + RO systems are widely used in hospitals, industries, commercial buildings, pharmaceutical plants, and drinking water applications.",
       },
       {
-        question: "What are the benefits of RO + UF systems?",
+        question: "What are the benefits of UF + RO systems?",
         answer:
           "These systems provide high-quality purified water, remove bacteria and dissolved impurities, improve taste, and ensure safe water for industrial and commercial use.",
       },
       {
-        question: "Can RO + UF systems remove bacteria and viruses?",
+        question: "Can UF + RO systems remove bacteria and viruses?",
         answer:
           "Yes, UF removes bacteria and suspended particles, while RO eliminates dissolved contaminants, ensuring safe and hygienic water.",
       },
       {
-        question: "What is the cost of an RO + UF system?",
+        question: "What is the cost of an UF + RO system?",
         answer:
           "The cost depends on system capacity, water quality, and application requirements. We provide customized solutions based on your needs.",
       },
       {
-        question: "Is RO + UF suitable for industrial use?",
+        question: "Is UF + RO suitable for industrial use?",
         answer:
-          "Yes, RO + UF systems are widely used in industries for process water, boiler feed, cooling systems, and high-purity water requirements.",
+          "Yes, UF + RO systems are widely used in industries for process water, boiler feed, cooling systems, and high-purity water requirements.",
       },
       {
         question: "Do you provide installation and maintenance support?",
@@ -640,9 +640,9 @@ The RO system then removes dissolved salts, organic matter, and impurities, prod
           "We provide advanced membrane technology solutions, efficient system design, and reliable execution with full support.",
       },
       {
-        question: "Can I get a customized RO + UF system for my requirement?",
+        question: "Can I get a customized UF + RO system for my requirement?",
         answer:
-          "Yes, we design customized RO + UF systems based on your water quality, capacity, and industry requirements. Contact us for a consultation.",
+          "Yes, we design customized UF + RO systems based on your water quality, capacity, and industry requirements. Contact us for a consultation.",
       },
     ],
 
@@ -771,6 +771,143 @@ At Hyaline Enviro Engineers Pvt. Ltd., we provide complete turnkey solutions for
     cta: {
       title: "Start Your Water Plant?",
       button: "Contact Us",
+    },
+  },
+  {
+    slug: "ro-edi-system",
+    name: "RO + EDI Water Treatment System",
+    tagline:
+      "High-purity water generation using Reverse Osmosis and Electro Deionization",
+
+    hero: {
+      title: "RO + EDI High Purity Water Systems",
+      subtitle:
+        "Advanced demineralization solutions by Hyaline Enviro Engineers",
+      image: "/images/solutions/etp.webp",
+    },
+
+    overview: `RO + EDI (Reverse Osmosis + Electro Deionization) is an advanced water purification system designed to produce ultra-pure water for critical industrial applications. The RO system removes dissolved salts, organic matter, and impurities, while the EDI unit further polishes the water by removing remaining ions using electrically charged resins and membranes without the need for chemical regeneration.
+
+This combination ensures consistent production of high-purity water with low conductivity, making it ideal for industries requiring stringent water quality standards. RO + EDI systems are widely used in pharmaceuticals, power plants, electronics, and other high-tech industries where ultrapure water is essential. At Hyaline Enviro Engineers Pvt. Ltd., we provide customized, energy-efficient, and reliable RO + EDI solutions with complete turnkey execution and after-sales support.`,
+
+    whatWeProvide: [
+      "Complete system design and engineering",
+      "RO + EDI system manufacturing and supply",
+      "Installation and commissioning",
+      "Automation and control integration",
+      "Operation & maintenance support",
+    ],
+
+    process: [
+      "Pre-treatment (Filtration & Softening)",
+      "Reverse Osmosis (RO)",
+      "Electro Deionization (EDI)",
+      "Final polishing and storage",
+    ],
+
+    benefits: [
+      "Ultra-high purity water output",
+      "Chemical-free operation (no acid/alkali regeneration)",
+      "Low operating and maintenance cost",
+      "Continuous and stable performance",
+      "Environment-friendly solution",
+    ],
+
+    applications: [
+      "Pharmaceutical Industry",
+      "Power Plants (Boiler Feed Water)",
+      "Electronics & Semiconductor Industry",
+      "Laboratories",
+      "Food & Beverage Industry",
+    ],
+
+    industries: [
+      "Pharmaceutical",
+      "Power Generation",
+      "Electronics",
+      "Manufacturing",
+    ],
+
+    whyChooseUs: [
+      "Expertise in advanced membrane and EDI technologies",
+      "Customized high-purity water solutions",
+      "Energy-efficient and reliable systems",
+      "Pan India project execution",
+    ],
+
+    seo: {
+      title: "RO EDI System Manufacturers in India | High Purity Water Systems",
+      description:
+        "Advanced RO + EDI systems for ultrapure water generation in pharmaceutical, power, and industrial applications.",
+      keywords: [
+        "RO EDI system",
+        "electro deionization system",
+        "high purity water system",
+        "EDI water treatment",
+      ],
+    },
+
+    faq: [
+      {
+        question: "What is an RO + EDI system?",
+        answer:
+          "RO + EDI is a water purification system where Reverse Osmosis removes dissolved salts and EDI further removes remaining ions to produce ultra-pure water without chemicals.",
+      },
+      {
+        question: "What is the purpose of EDI in water treatment?",
+        answer:
+          "EDI removes residual ions from RO-treated water using electrically charged membranes and resins, ensuring high purity without chemical regeneration.",
+      },
+      {
+        question: "Where are RO + EDI systems used?",
+        answer:
+          "These systems are used in pharmaceuticals, power plants, electronics manufacturing, laboratories, and industries requiring ultra-pure water.",
+      },
+      {
+        question: "What are the advantages of RO + EDI systems?",
+        answer:
+          "They provide consistent high-purity water, eliminate chemical usage, reduce operating costs, and ensure environmentally friendly operation.",
+      },
+      {
+        question: "Is EDI better than mixed bed systems?",
+        answer:
+          "Yes, EDI is more efficient as it eliminates the need for chemical regeneration, reduces downtime, and provides continuous operation.",
+      },
+      {
+        question: "What is the conductivity of EDI water?",
+        answer:
+          "EDI systems typically produce water with very low conductivity (as low as 0.1 µS/cm), suitable for high-purity applications.",
+      },
+      {
+        question: "What is the cost of an RO + EDI system?",
+        answer:
+          "The cost depends on system capacity, feed water quality, and application requirements. We provide customized solutions based on your needs.",
+      },
+      {
+        question: "Do you provide turnkey RO + EDI solutions?",
+        answer:
+          "Yes, we offer complete turnkey solutions including design, supply, installation, commissioning, and maintenance support.",
+      },
+      {
+        question: "How long does it take to install an RO + EDI system?",
+        answer:
+          "Installation timelines vary based on system size, typically ranging from a few weeks to a couple of months.",
+      },
+      {
+        question: "Why choose Hyaline Enviro Engineers for RO + EDI systems?",
+        answer:
+          "We provide advanced engineering solutions, reliable system performance, and complete end-to-end support across India.",
+      },
+      {
+        question: "Can I get a customized RO + EDI system?",
+        answer:
+          "Yes, we design customized systems based on your water quality, capacity, and industry requirements. Contact us for consultation.",
+      },
+    ],
+
+    cta: {
+      title: "Need High Purity Water Solution?",
+      button: "Request a Quote",
     },
   },
 ];

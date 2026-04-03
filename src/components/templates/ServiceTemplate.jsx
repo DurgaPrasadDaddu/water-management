@@ -394,10 +394,12 @@ const AnimatedCounter = ({ end, suffix = "", duration = 2000 }) => {
 };
 
 // ─── PROCESS STEP COMPONENT ───────────────────────────────────────────────────
-const ProcessStep = ({ step, index, total, isActive, onClick }) => {
+const ProcessStep = ({ step, index, total, isActive, onClick,  activeStep, onHover,onLeave,}) => {
   return (
     <button
       onClick={() => onClick(index)}
+      onMouseEnter={() => onHover(index)}
+      onMouseLeave={() => onLeave()}
       className="flex flex-col items-center group cursor-pointer focus:outline-none"
       style={{ flex: 1 }}
     >
@@ -410,7 +412,7 @@ const ProcessStep = ({ step, index, total, isActive, onClick }) => {
             background:
               index === 0
                 ? "transparent"
-                : isActive || index <= (typeof window !== "undefined" ? 0 : 0)
+                : isActive || index <= activeStep
                   ? "linear-gradient(90deg, #00A3E0, #0284C7)"
                   : "#E5E7EB",
           }}
@@ -471,6 +473,7 @@ export default function ServiceTemplate({ service }) {
   const [activeStep, setActiveStep] = useState(0);
   const [openFaq, setOpenFaq] = useState(null);
   const [heroVisible, setHeroVisible] = useState(false);
+  const [isUserInteracting, setIsUserInteracting] = useState(false);
 
   // Use faq or faqs
   const faqs = service?.faq || service?.faqs || [];
@@ -481,15 +484,16 @@ export default function ServiceTemplate({ service }) {
   }, []);
 
   // Auto-advance process steps
-  useEffect(() => {
-    const total = service?.process?.length || 0;
-    if (total === 0) return;
-    const interval = setInterval(() => {
-      setActiveStep((prev) => (prev + 1) % total);
-    }, 3000);
-    return () => clearInterval(interval);
-  }, [service?.process?.length]);
+ useEffect(() => {
+  const total = service?.process?.length || 0;
+  if (total === 0 || isUserInteracting) return;
 
+  const interval = setInterval(() => {
+    setActiveStep((prev) => (prev + 1) % total);
+  }, 5000); //10 seconds
+
+  return () => clearInterval(interval);
+}, [service?.process?.length, isUserInteracting]);
   if (!service) return null;
 
   const {
@@ -891,13 +895,21 @@ export default function ServiceTemplate({ service }) {
                 index={i}
                 total={process.length}
                 isActive={i <= activeStep}
+                activeStep={activeStep}
                 onClick={setActiveStep}
+                onHover={(i) => {
+                setIsUserInteracting(true);
+                setActiveStep(i); // optional (focus on hovered step)
+              }}
+              onLeave={() => {
+              setIsUserInteracting(false);
+              }}
               />
             ))}
           </div>
 
           {/* Active step detail card */}
-          <div className="hidden md:block relative mx-auto max-w-3xl">
+          <div className="hidden md:block relative mx-auto max-w-3xl ">
             {(process || []).map((step, i) => (
               <div
                 key={i}
@@ -984,16 +996,8 @@ export default function ServiceTemplate({ service }) {
                 </div>
               </div>
             </div>
-
-            {/* Nav buttons */}
-            <div className="hidden md:flex flex justify-center gap-3 mt-18">
-              <button
-                onClick={() => setActiveStep((p) => Math.max(0, p - 1))}
-                disabled={activeStep === 0}
-                className="px-5 py-2.5 rounded-xl bg-gray-500 border-2 border-gray-200 text-white hover:border-[#00A3E0] hover:text-[#00A3E0] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200 text-sm font-semibold"
-              >
-                ← Prev
-              </button>
+            
+            <div className="hidden md:flex flex justify-center gap-3 mt-20">
               <div className="flex items-center gap-2">
                 {(process || []).map((_, i) => (
                   <button
@@ -1003,17 +1007,7 @@ export default function ServiceTemplate({ service }) {
                   />
                 ))}
               </div>
-              <button
-                onClick={() =>
-                  setActiveStep((p) =>
-                    Math.min((process || []).length - 1, p + 1),
-                  )
-                }
-                disabled={activeStep === (process || []).length - 1}
-                className="px-5 py-2.5 rounded-xl bg-gray-500 border-2 border-gray-200 text-white hover:border-[#00A3E0] hover:text-[#00A3E0] disabled:opacity-30 disabled:cursor-not-allowed transition-all duration-200 text-sm font-semibold"
-              >
-                Next →
-              </button>
+             
             </div>
           </div>
 
@@ -1023,21 +1017,21 @@ export default function ServiceTemplate({ service }) {
               <div
                 key={i}
                 className="
-        bg-white rounded-xl p-4 
-        border border-gray-100 
-        shadow-sm
-      "
+                  bg-white rounded-xl p-4 
+                  border border-gray-100 
+                  shadow-sm
+                "
               >
                 <div className="flex items-start gap-3">
                   {/* Step number */}
                   <div
                     className="
-          w-10 h-10 rounded-lg 
-          bg-[#00A3E0] text-white 
-          flex items-center justify-center 
-          font-bold text-sm
-          shrink-0
-        "
+                    w-10 h-10 rounded-lg 
+                    bg-[#00A3E0] text-white 
+                    flex items-center justify-center 
+                    font-bold text-sm
+                    shrink-0
+                  "
                   >
                     {i + 1}
                   </div>

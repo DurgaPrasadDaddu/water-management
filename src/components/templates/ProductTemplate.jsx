@@ -555,7 +555,7 @@ export default function ProductTemplate({ product }) {
                   alt={product?.name || "product"}
                   fill
                   className="object-cover object-center"
-                  sizes="(max-width: 768px) 100vw, 33vw"
+                  sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px"
                 />
 
                 {/* Overlay Gradient */}

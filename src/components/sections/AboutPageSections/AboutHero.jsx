@@ -21,6 +21,7 @@ export default function AboutHero() {
           src="/images/about-bg.webp"
           alt="About Hyaline Enviro Engineers"
           fill
+          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px"
           priority
           className="object-center opacity-20"
         />
