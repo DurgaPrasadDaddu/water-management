@@ -35,14 +35,6 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <head>
-        <link
-          rel="preload"
-          as="image"
-          href="/images/hero/sewage-treatment-plant-hero-bg.webp"
-          fetchPriority="high"
-        />
-      </head>
       <body className={`${inter.variable} ${poppins.variable}`}>
         <Header />
         <main >

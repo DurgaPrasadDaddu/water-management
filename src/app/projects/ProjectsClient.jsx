@@ -42,7 +42,7 @@
 //                 width={400}
 //                 height={200}
 //                 sizes="(max-width: 768px) 100vw, 33vw"
-//                 className="object-center"
+//                 className="object-contain"
 //               />
 
 //               <div className="p-5">

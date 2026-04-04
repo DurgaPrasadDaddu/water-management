@@ -32,7 +32,7 @@
 // //           src={data.image || "/images/placeholder.jpg"}
 // //           alt={data.title}
 // //           fill
-// //           className="object-center"
+// //           className="object-contain"
 // //           priority
 // //         />
 
@@ -93,7 +93,7 @@
 // //               src={data.image || "/images/placeholder.jpg"}
 // //               alt={data.title}
 // //               fill
-// //               className="object-center"
+// //               className="object-contain"
 // //             />
 // //           </div>
 
@@ -327,9 +327,7 @@ export default function FabricationTemplate({ data, relatedProducts = [] }) {
       {/* ══════════════════════════════════════════════
           1. HERO — viewport height, no overflow
       ══════════════════════════════════════════════ */}
-      <section className="relative flex flex-col justify-end overflow-hidden sm:px-18 "
-        style={{ height: "65svh", minHeight: "500px", maxHeight: "820px" }}
-      >
+      <section className="relative flex flex-col justify-end overflow-hidden min-h-dvh md:min-h-[73vh] bg-slate-50 px-4 sm:px-18">
         {/* Background — slowZoom from globals.css */}
         <div className="absolute inset-0">
           <Image
@@ -398,7 +396,7 @@ export default function FabricationTemplate({ data, relatedProducts = [] }) {
               </Link>
 
               <Link
-                href="tel:+91XXXXXXXXXX"
+                 href="tel:+919553753337"
                 className="inline-flex items-center gap-2 text-white text-sm font-medium px-6 py-2.5 border border-white/25 hover:border-white/50 hover:bg-white/5 transition-all duration-300"
                 style={{ borderRadius: "var(--radius-md)" }}
               >
@@ -478,7 +476,7 @@ export default function FabricationTemplate({ data, relatedProducts = [] }) {
                   alt={data.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-cover transition-opacity duration-400"
+                  className="object-contain transition-opacity duration-400"
                 />
                 {/* Corner accent */}
                 <div
@@ -832,7 +830,7 @@ export default function FabricationTemplate({ data, relatedProducts = [] }) {
               </Link>
 
               <Link
-                href="mailto:info@company.com"
+                href="mailto:info@hyalineenviro.com"
                 className="inline-flex items-center gap-2 text-white text-base font-medium px-7 py-3 transition-all duration-300"
                 style={{
                   border: "1px solid rgba(255,255,255,0.2)",

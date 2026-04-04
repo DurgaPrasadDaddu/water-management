@@ -296,7 +296,7 @@ export default function ProductsSection() {
                     alt={product?.name}
                     fill
                     sizes="(max-width: 768px) 100vw, 400px"
-                    className="object-cover object-center group-hover:scale-105 transition duration-700"
+                    className="object-cover object-contain group-hover:scale-105 transition duration-700"
                   />
                 </div>
               </div>
@@ -346,7 +346,7 @@ export default function ProductsSection() {
                       alt={product.name}
                       fill
                       sizes="(max-width: 768px) 100vw, 400px"
-                      className="object-center rounded"
+                      className="object-contain rounded"
                     />
                   </div>
 

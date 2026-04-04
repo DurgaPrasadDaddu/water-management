@@ -426,7 +426,7 @@ export default function IndustryDetailsTemplate({
             alt={name}
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover object-contain"
             sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px"
             style={{ filter: "brightness(0.40) saturate(1.1)" }}
           />

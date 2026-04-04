@@ -23,7 +23,7 @@ export default function AboutHero() {
           fill
           sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px"
           priority
-          className="object-center opacity-20"
+          className="object-contain opacity-20"
         />
       </div>
 

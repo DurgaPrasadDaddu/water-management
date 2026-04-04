@@ -83,7 +83,7 @@
 //                       src={item.image}
 //                       alt={item.title}
 //                       fill
-//                       className="object-center group-hover:scale-105 transition duration-300"
+//                       className="object-contain group-hover:scale-105 transition duration-300"
 //                     />
 //                   </div>
 
@@ -225,7 +225,7 @@ export default function FabricationSection() {
                       alt={item.title}
                       fill
                       sizes="112px"
-                      className="object-center transition-transform duration-300 group-hover:scale-105"
+                      className="object-contain transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
 
