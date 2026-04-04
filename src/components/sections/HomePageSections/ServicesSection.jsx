@@ -604,14 +604,14 @@ export default function ServicesSection() {
                   fill
                   priority
                   sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  className="object-cover will-change-transform group-hover:scale-105 transition-transform duration-500"
+                  className="object-center"
                 />
 
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent" />
 
                 <div className="absolute inset-0 flex flex-col justify-end p-10 z-10 text-white">
                   <h3 className="text-2xl font-bold mb-2">{active.title}</h3>
-                  <p className="text-sm text-white/80 leading-relaxed max-w-lg">
+                  <p className="text-sm text-white/80 leading-relaxed max-w-lg line-clamp-2">
                     {active.overview}
                   </p>
 

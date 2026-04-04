@@ -99,7 +99,7 @@ export const marketSegments = {
       {
         name: "Manufacturing",
         slug: "manufacturing",
-        image: "/images/marketsegments/industries/manufacturing.jpeg",
+        image: "/images/marketsegments/industries/manufacturing.webp",
 
         shortDescription:
           "Water systems for industrial manufacturing processes.",

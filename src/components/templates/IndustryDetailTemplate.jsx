@@ -594,31 +594,6 @@ export default function IndustryDetailsTemplate({
                   </span>
                 ))}
               </div>
-
-              <div className="h-px bg-gray-100 mb-7" />
-
-              <div className="flex items-center gap-8">
-                <Link
-                  href="#approach"
-                  className="group inline-flex items-center gap-2 text-[#00A3E0] hover:text-[#0284C7] font-semibold text-sm transition-colors duration-200"
-                >
-                  Our Approach{" "}
-                  <IconArrowRight
-                    size={15}
-                    className="group-hover:translate-x-1 transition-transform duration-200"
-                  />
-                </Link>
-                <Link
-                  href="/services"
-                  className="group inline-flex items-center gap-2 text-[#4B5563] hover:text-[#1F2937] font-semibold text-sm transition-colors duration-200"
-                >
-                  All Services{" "}
-                  <IconArrowRight
-                    size={15}
-                    className="group-hover:translate-x-1 transition-transform duration-200"
-                  />
-                </Link>
-              </div>
             </div>
           </div>
         </div>

@@ -508,9 +508,9 @@ export default function ServiceTemplate({ service }) {
   } = service;
 
   const stats = [
-    { value: 100, suffix: "+", label: "Plants Installed" },
+    { value: 500, suffix: "+", label: "Plants Installed" },
     { value: 13, suffix: "+", label: "Years Experience" },
-    { value: 200, suffix: "+", label: "Happy Clients" },
+    { value: 400, suffix: "+", label: "Happy Clients" },
     { value: 99, suffix: "%", label: "Uptime Guaranteed" },
   ];
 
@@ -580,7 +580,7 @@ export default function ServiceTemplate({ service }) {
               </div>
 
               {/* Heading */}
-              <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900 leading-[1.1] mb-6">
+              <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-gray-900 leading-[1.1] mb-6 sm:pl-12">
                 {title.split(" ").map((word, i) => {
                   const accent = [
                     "&",
@@ -629,16 +629,10 @@ export default function ServiceTemplate({ service }) {
                   Get Free Consultation
                   <ArrowRight />
                 </Link>
-                <Link
-                  href="#overview"
-                  className="inline-flex items-center gap-2 px-7 py-3.5 bg-white border-2 border-gray-200 hover:border-[#00A3E0] text-gray-700 hover:text-[#00A3E0] font-semibold rounded-xl transition-all duration-300 hover:-translate-y-0.5"
-                >
-                  Learn More
-                </Link>
               </div>
 
               {/* Trust badges */}
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-4 mb-5">
                 {trustBadges.map((b, i) => (
                   <div
                     key={i}
@@ -1178,10 +1172,10 @@ export default function ServiceTemplate({ service }) {
                   Still have questions?
                 </p>
                 <Link
-                  href="/contact"
+                   href="tel:+919553753337"
                   className="inline-flex items-center gap-2 text-[#00A3E0] font-semibold hover:gap-3 transition-all duration-200"
                 >
-                  Talk to our engineers <ArrowRight />
+                  📞 Talk to our engineers <ArrowRight />
                 </Link>
               </div>
             </div>
@@ -1230,7 +1224,7 @@ export default function ServiceTemplate({ service }) {
                 Book Free Consultation
               </Link>
               <Link
-                href="mailto:info@hyalineenviro.com"
+                href="mailto:sales@hyalineenviro.com"
                 className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-transparent border-2 border-white/40 hover:border-white text-white font-semibold rounded-xl hover:-translate-y-1 transition-all duration-300 text-base backdrop-blur-sm"
               >
                 <MailIcon />
