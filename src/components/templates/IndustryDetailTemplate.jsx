@@ -487,7 +487,7 @@ export default function IndustryDetailsTemplate({
           {/* CTAs */}
           <div className="flex flex-wrap gap-4">
             <Link
-              href="#contact"
+              href="/contact"
               className="group inline-flex items-center gap-2.5 bg-[#00A3E0] hover:bg-[#0284C7] text-white font-semibold px-7 py-3.5 rounded-[10px] text-sm transition-all duration-300 shadow-lg shadow-[#00A3E0]/30 hover:-translate-y-0.5"
             >
               Get a Free Consultation
@@ -497,7 +497,7 @@ export default function IndustryDetailsTemplate({
               />
             </Link>
             <Link
-              href="#challenges"
+              href="/projects"
               className="inline-flex items-center gap-2.5 border border-white/25 hover:border-white/55 text-white/80 hover:text-white font-semibold px-7 py-3.5 rounded-[10px] text-sm transition-all duration-300 backdrop-blur-sm"
             >
               Explore Challenges
@@ -960,10 +960,10 @@ export default function IndustryDetailsTemplate({
               {/* Contact row */}
               <div className="flex flex-wrap justify-center gap-6 mt-8">
                 <a
-                  href="tel:+918000000000"
+                  href="tel:+919553753337"
                   className="inline-flex items-center gap-2 text-white/45 hover:text-[#00A3E0] text-sm transition-colors duration-200"
                 >
-                  <IconPhone size={13} /> +91 80000 00000
+                  <IconPhone size={13} /> +91 9553753337
                 </a>
                 <span className="text-white/15">|</span>
                 <a
