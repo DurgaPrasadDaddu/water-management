@@ -22,12 +22,12 @@ export default function FloatingActions() {
   return (
     <>
       {/* ================= LEFT SIDE ================= */}
-      <div className="fixed md:left-4 md:top-1/2 md:-translate-y-1/2 bottom-22 right-6 z-[40] pointer-events-none">
+      <div className="fixed md:left-4 md:top-1/2 md:-translate-y-1/2 bottom-42 right-4 z-[40] pointer-events-none">
         <div className="flex flex-col gap-4 w-fit h-fit pointer-events-auto">
           
           {/* WhatsApp */}
           <a
-            href="https://wa.me/919390701234"
+            href="https://wa.me/919553753337"
             target="_blank"
             rel="noopener noreferrer"
             className="relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-110 transition"
@@ -98,7 +98,7 @@ export default function FloatingActions() {
 
       {/* ================= SCROLL TO TOP ================= */}
       {showScroll && (
-        <div className="fixed bottom-6 right-6 z-[40] pointer-events-none">
+        <div className="fixed bottom-25 right-3 z-[40] pointer-events-none">
           
           <button
             onClick={scrollToTop}

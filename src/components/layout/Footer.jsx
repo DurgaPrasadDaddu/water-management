@@ -8,7 +8,7 @@ import { socialLinks } from "@/data/socialLinks";
 const Footer = () => {
   return (
     // <footer className="bg-[var(--color-dark)] text-gray-300 pt-12 sm:pt-16 pb-8 px-4 sm:px-6">
-    <footer className="bg-[var(--color-dark)] text-white/90 pt-12 sm:pt-16 pb-8 pl-16 pr-4 sm:pl-18 sm:pr-10">
+    <footer className="bg-[var(--color-dark)] text-white/90 pt-12 sm:pt-16 pb-8 pl-10 pr-4 sm:pr-10">
       <div className="max-w-7xl mx-auto grid grid-cols-12 gap-4 md:gap-10 text-center lg:text-left">
         {/* LEFT BLOCK */}
         <div className="col-span-12 lg:col-span-4 flex flex-col items-center justify-center space-y-6 sm:space-y-8 text-left">
@@ -42,7 +42,7 @@ const Footer = () => {
                   <br />
                   Behind Chennai Shopping Mall,
                   <br />
-                  Suchitra Circle, Hyderabad - 500067.
+                  Suchitra Circle, Hyderabad, Telangana - 500067.
                 </p>
 
                 <p className="mt-2 text-sm sm:text-sm md:text-base">
@@ -91,11 +91,11 @@ const Footer = () => {
                 </p>
 
                 <p className="text-sm sm:text-sm md:text-base leading-relaxed">
-                  Plot No: 02, Survey No: 11, Pipeline Road,
+                  Survey No: 737/2, Near MSR Convention Garden,
                   <br />
                   Beside MYUR Bar & Restaurant,
                   <br />
-                  Jeedimetla (V), Hyderabad - 500067.
+                  Devar Yamjal (V), Medchal, Telangana - 500078.
                 </p>
 
                 <p className="mt-2 text-sm sm:text-sm md:text-base">

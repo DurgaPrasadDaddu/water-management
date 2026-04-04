@@ -935,7 +935,7 @@ export default function IndustryDetailsTemplate({
                   />
                 </Link>
                 <Link
-                  href="tel:+917942818686"
+                  href="tel:+917981123366"
                   className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/18 border border-white/20 hover:border-white/40 text-white font-bold px-10 py-4 rounded-[10px] text-base transition-all duration-300 backdrop-blur-sm"
                 >
                   <IconPhone size={17} className="text-[#8DC63F]" />
