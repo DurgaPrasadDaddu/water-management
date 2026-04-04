@@ -188,6 +188,8 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { products } from "@/data/products";
+import { ChevronRight } from "lucide-react";
+import Button from "../ui/Button";
 
 //  INLINE SVG ICON SYSTEM  (zero external dependency)
 
@@ -535,15 +537,19 @@ export default function ProductTemplate({ product }) {
               {/* CTA */}
               <div className="flex flex-wrap gap-3 fade-up fade-up-delay-5">
                 <Link
-                  href="#enquiry"
+                  href="/contact"
                   className="px-7 py-3.5 rounded-xl text-sm font-semibold text-white bg-gradient-to-r from-sky-500 to-cyan-400 hover:opacity-90 transition-all"
                 >
                   Request a Quote →
                 </Link>
 
-                <button className="px-7 py-3.5 rounded-xl text-sm font-semibold text-white border border-white/20 bg-white/5 backdrop-blur hover:bg-white/10 transition-all">
-                  ↓ Download Brochure
-                </button>
+                <a
+                  href="/Brochure/hyaline-brochure.pdf"
+                  download
+                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/25 text-white text-sm font-medium backdrop-blur hover:bg-white/10 transition"
+                >
+                  Download Brochure <ChevronRight size={15} />
+                </a>
               </div>
             </div>
 
@@ -665,9 +671,14 @@ export default function ProductTemplate({ product }) {
             <p className="text-gray-500 mb-4">
               Looking for a customized solution for your industry?
             </p>
-            <button className="px-6 py-3 bg-[var(--color-primary)] text-white rounded-lg font-medium hover:opacity-90 transition">
+            {/* <button
+             href="/contact"
+             className="px-6 py-3 bg-[var(--color-primary)] text-white rounded-lg font-medium hover:opacity-90 transition">
               Get a Free Consultation
-            </button>
+            </button> */}
+            <Button href="/contact" variant="primary">
+              Get Free Consultation
+            </Button>
           </div>
         </Container>
       </section>
@@ -728,39 +739,51 @@ export default function ProductTemplate({ product }) {
           </div>
 
           {/* Mobile: vertical */}
-          <div className="flex flex-col gap-0 lg:hidden relative pl-12">
-            <div
-              className="absolute left-5 top-4 bottom-4 w-px"
-              style={{
-                background:
-                  "linear-gradient(180deg,var(--color-primary),var(--color-secondary))",
-              }}
-            />
-            {PROCESS_STEPS.map((s, i) => (
-              <Reveal
-                key={i}
-                delay={i * 70}
-                className="relative pb-10 last:pb-0"
-              >
-                <div
-                  className="absolute -left-[2.8rem] w-12 h-12 rounded-full flex items-center justify-center text-white font-bold text-sm shadow-md border-2 border-white"
-                  style={{
-                    background:
-                      "linear-gradient(135deg,var(--color-primary),var(--color-accent))",
-                  }}
-                >
-                  {s.num}
-                </div>
-                <div className="pt-1">
-                  <h4 className="font-bold text-[var(--color-dark)] mb-1.5">
-                    {s.title}
-                  </h4>
-                  <p className="text-gray-500 text-sm leading-relaxed">
-                    {s.body}
-                  </p>
-                </div>
-              </Reveal>
-            ))}
+          <div className="lg:hidden px-2">
+            <div className="flex flex-col gap-4">
+              {PROCESS_STEPS.map((s, i) => (
+                <Reveal key={i} delay={i * 80}>
+                  <div
+                    className="relative bg-white rounded-2xl p-4 shadow-md border border-gray-100 
+          transition-all duration-300 active:scale-[0.98]"
+                  >
+                    {/* Top Row */}
+                    <div className="flex items-center gap-3 mb-2">
+                      {/* Step Badge */}
+                      <div
+                        className="w-10 h-10 flex items-center justify-center rounded-xl text-white font-bold text-sm shadow-md"
+                        style={{
+                          background:
+                            "linear-gradient(135deg,var(--color-primary),var(--color-accent))",
+                        }}
+                      >
+                        {s.num}
+                      </div>
+
+                      {/* Title */}
+                      <h4 className="font-semibold text-[var(--color-dark)] text-[15px]">
+                        {s.title}
+                      </h4>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-gray-600 text-sm leading-relaxed line-clamp-3">
+                      {s.body}
+                    </p>
+
+                    {/* Bottom Accent */}
+                    <div className="mt-3 flex items-center justify-between">
+                      <div className="h-[2px] w-16 bg-gradient-to-r from-[var(--color-primary)] to-[var(--color-accent)] rounded-full" />
+
+                      {/* Step Count */}
+                      <span className="text-xs text-gray-400 font-medium">
+                        Step {s.num}
+                      </span>
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
           </div>
         </Container>
       </section>

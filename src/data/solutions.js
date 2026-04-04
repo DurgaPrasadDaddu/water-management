@@ -783,7 +783,7 @@ At Hyaline Enviro Engineers Pvt. Ltd., we provide complete turnkey solutions for
       title: "RO + EDI High Purity Water Systems",
       subtitle:
         "Advanced demineralization solutions by Hyaline Enviro Engineers",
-      image: "/images/solutions/etp.webp",
+      image: "/images/solutions/ro-edi-system.webp",
     },
 
     overview: `RO + EDI (Reverse Osmosis + Electro Deionization) is an advanced water purification system designed to produce ultra-pure water for critical industrial applications. The RO system removes dissolved salts, organic matter, and impurities, while the EDI unit further polishes the water by removing remaining ions using electrically charged resins and membranes without the need for chemical regeneration.
