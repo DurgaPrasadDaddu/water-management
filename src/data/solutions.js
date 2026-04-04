@@ -10,16 +10,43 @@ export const solutions = [
       subtitle:
         "Engineered and delivered by Hyaline Enviro Engineers Pvt. Ltd.",
       image: "/images/solutions/mee.webp",
+      mobileImage: "/images/solutions/mee-mobile.webp",
     },
 
     overview: `A Multiple Effect Evaporator (MEE) is a highly efficient thermal treatment system designed to handle 
 high-TDS and high-salinity industrial effluents by evaporating and separating water from dissolved solids. It 
 operates on the principle of multiple effects, where the vapour generated in one stage is reused as the 
-heating medium for the next stage, significantly reducing steam and energy consumption. The recovered 
-condensate is of reusable quality and can be recycled back into process, cooling, or boiler feed applications, 
+heating medium for the next stage, significantly reducing steam and energy consumption.
+
+The recovered condensate is of reusable quality and can be recycled back into process, cooling, or boiler feed applications, 
 while the concentrated reject is sent to crystallizers or drying systems for conversion into solid waste. MEE 
 is a key component of Zero Liquid Discharge (ZLD) plants, enabling maximum water recovery, volume 
 reduction, and compliance with stringent environmental norms.`,
+
+    problemSolution: [
+      {
+        problem:
+          "High TDS and salinity in industrial effluent makes disposal difficult and non-compliant.",
+        solution:
+          "Our MEE systems efficiently evaporate wastewater and separate dissolved solids, ensuring regulatory compliance and safe disposal.",
+      },
+      {
+        problem:
+          "Excessive wastewater volume increases treatment and disposal costs.",
+        solution:
+          "We reduce wastewater volume significantly through multi-effect evaporation, lowering operational costs.",
+      },
+      {
+        problem: "High energy consumption in traditional evaporation systems.",
+        solution:
+          "Our multi-effect design reuses vapor energy across stages, reducing steam consumption and improving efficiency.",
+      },
+      {
+        problem: "Industries struggle to achieve Zero Liquid Discharge (ZLD).",
+        solution:
+          "Our MEE integrates seamlessly with ZLD systems, enabling maximum water recovery and zero discharge.",
+      },
+    ],
 
     whatWeProvide: [
       "Complete system design and engineering",
@@ -151,6 +178,7 @@ reduction, and compliance with stringent environmental norms.`,
       title: "Zero Liquid Discharge (ZLD) Systems",
       subtitle: "Advanced environmental solutions by Hyaline Enviro Engineers",
       image: "/images/solutions/zld.webp",
+      mobileImage: "/images/solutions/zld-mobile.webp",
     },
 
     overview: `Zero Liquid Discharge (ZLD) is an advanced wastewater treatment system in which all 
@@ -159,9 +187,34 @@ no liquid waste is released into the environment. Through a combination of physi
 chemical, biological, and membrane-based processes, high-quality treated water is recycled 
 for process, cooling, boiler, and utility applications, while the concentrated reject is further 
 treated in evaporation and crystallization systems to convert dissolved solids into dry salts 
-for safe disposal. ZLD enables industries to achieve maximum water recovery, reduce 
+for safe disposal. 
+
+ZLD enables industries to achieve maximum water recovery, reduce 
 freshwater consumption, comply with stringent pollution control norms, and support 
 sustainable and eco-friendly operations`,
+
+    problemSolution: [
+      {
+        problem: "Strict pollution norms require zero wastewater discharge.",
+        solution:
+          "Our ZLD systems ensure complete recovery and reuse of water with zero discharge.",
+      },
+      {
+        problem: "Freshwater consumption is increasing operational costs.",
+        solution:
+          "We recover up to 90–95% water, reducing dependency on freshwater sources.",
+      },
+      {
+        problem: "Complex wastewater composition is difficult to treat.",
+        solution:
+          "We integrate RO, MEE, and crystallization technologies for complete treatment.",
+      },
+      {
+        problem: "Environmental compliance risks and penalties.",
+        solution:
+          "Our systems ensure full compliance with pollution control board regulations.",
+      },
+    ],
 
     whatWeProvide: [
       "Complete ZLD system design and engineering",
@@ -278,15 +331,67 @@ sustainable and eco-friendly operations`,
       subtitle:
         "Reliable wastewater treatment systems by Hyaline Enviro Engineers",
       image: "/images/solutions/stp.webp",
+      mobileImage: "/images/solutions/stp-mobile.webp",
     },
 
     overview: `The Sewage Treatment Plant (STP) is designed using advanced MBBR (Moving Bed Biofilm Reactor) / SBR 
 technology to ensure efficient and reliable wastewater treatment. The system effectively reduces organic load and 
-pollutants, producing treated water that meets statutory norms for safe reuse or compliant discharge. The project 
-scope included complete civil works, mechanical installation, interconnecting piping, and automation, ensuring 
+pollutants, producing treated water that meets statutory norms for safe reuse or compliant discharge. 
+
+The project scope included complete civil works, mechanical installation, interconnecting piping, and automation, ensuring 
 seamless integration and smooth plant operation. The STP has been successfully installed, tested, and is fully 
 operational, delivering consistent performance with a focus on sustainability and environmental compliance.`,
 
+    problemSolution: [
+      {
+        problem:
+          "Untreated sewage leads to foul odor, unhealthy living conditions, and complaints from residents or customers.",
+        solution:
+          "Our STP systems eliminate odor and treat wastewater efficiently, ensuring a clean, hygienic, and comfortable environment.",
+      },
+      {
+        problem:
+          "High freshwater consumption increases operational costs for apartments, hotels, and commercial facilities.",
+        solution:
+          "We enable water reuse for flushing, gardening, and utilities — reducing water bills significantly.",
+      },
+      {
+        problem:
+          "Non-compliance with pollution control norms can result in heavy penalties and legal issues.",
+        solution:
+          "Our STP systems are designed to meet all regulatory standards, ensuring complete compliance and peace of mind.",
+      },
+      {
+        problem:
+          "Limited space availability makes it difficult to install large treatment systems in urban projects.",
+        solution:
+          "We design compact, space-efficient STP solutions that fit seamlessly into your available infrastructure.",
+      },
+      {
+        problem:
+          "Frequent system breakdowns and poor maintenance increase operational headaches.",
+        solution:
+          "Our robust design and reliable O&M support ensure smooth, hassle-free operation with minimal downtime.",
+      },
+      {
+        problem:
+          "Poor water quality after treatment makes reuse unsafe or ineffective.",
+        solution:
+          "Using advanced MBBR/SBR technologies, we ensure high-quality treated water suitable for multiple reuse applications.",
+      },
+      {
+        problem:
+          "Rising environmental concerns and sustainability expectations from customers and authorities.",
+        solution:
+          "Our eco-friendly STP solutions help you build a sustainable, green, and responsible infrastructure.",
+      },
+      {
+        problem:
+          "Manual operation and lack of automation increase dependency on manpower.",
+        solution:
+          "We provide automated STP systems with smart controls for easy monitoring and reduced human intervention.",
+      },
+    ],
     whatWeProvide: [
       "Design and engineering of STP systems",
       "Supply and installation",
@@ -403,6 +508,7 @@ operational, delivering consistent performance with a focus on sustainability an
       subtitle:
         "Industrial wastewater treatment systems by Hyaline Enviro Engineers",
       image: "/images/solutions/etp.webp",
+      mobileImage: "/images/solutions/etp-mobile.webp",
     },
 
     overview: `Industrialization has led to increased groundwater contamination, and environmental concerns along with 
@@ -419,6 +525,57 @@ treatment, followed by polishing steps such as Sand Filtration, Activated Carbon
 required, Evaporation. These advanced solutions ensure effective removal of contaminants, compliance with 
 environmental standards, and optimized operational efficiency, making them suitable for various industrial 
 effluents.`,
+
+    problemSolution: [
+      {
+        problem:
+          "Industrial effluent contains toxic chemicals, oils, and contaminants that cannot be discharged safely.",
+        solution:
+          "Our ETP systems effectively remove harmful pollutants using advanced physico-chemical and biological treatment processes.",
+      },
+      {
+        problem:
+          "Non-compliance with pollution control norms can lead to heavy fines, shutdowns, and legal risks.",
+        solution:
+          "We design ETP systems that ensure full compliance with CPCB/SPCB regulations, protecting your business from penalties.",
+      },
+      {
+        problem:
+          "Complex and varying wastewater composition makes treatment inefficient with standard systems.",
+        solution:
+          "We analyze your effluent characteristics and design customized treatment solutions tailored to your industry needs.",
+      },
+      {
+        problem:
+          "High operational costs due to inefficient treatment processes and energy consumption.",
+        solution:
+          "Our energy-efficient ETP systems optimize treatment processes, reducing operating costs and improving ROI.",
+      },
+      {
+        problem:
+          "Limited space in industrial setups restricts installation of large treatment plants.",
+        solution:
+          "We provide compact, modular ETP designs that fit easily into existing industrial infrastructure.",
+      },
+      {
+        problem:
+          "Untreated or poorly treated effluent leads to environmental damage and brand reputation risk.",
+        solution:
+          "Our systems ensure safe discharge and sustainable operations, enhancing your brand’s environmental responsibility.",
+      },
+      {
+        problem:
+          "Frequent system failures and poor maintenance disrupt plant operations.",
+        solution:
+          "We deliver robust systems with reliable O&M support for continuous, hassle-free performance.",
+      },
+      {
+        problem:
+          "Water scarcity increases dependency on fresh water sources in industries.",
+        solution:
+          "Our ETP solutions enable water reuse for industrial processes, reducing freshwater consumption significantly.",
+      },
+    ],
 
     whatWeProvide: [
       "ETP system design and engineering",
@@ -540,12 +697,63 @@ effluents.`,
       title: "UF & RO Water Treatment Systems",
       subtitle: "Advanced purification solutions by Hyaline Enviro Engineers",
       image: "/images/solutions/ro+uf.webp",
+      mobileImage: "/images/solutions/ro+uf-mobile.webp",
     },
 
     overview: `Ultra Filtration (UF) combined with Reverse Osmosis (RO) is an advanced water treatment solution designed to deliver high-quality purified water for industrial, commercial, and utility applications. UF acts as an effective pre-treatment stage, removing suspended solids, turbidity, bacteria, and colloidal particles from the feed water. This reduces fouling and protects RO membranes, ensuring stable performance and improved system efficiency.
 
 The RO system then removes dissolved salts, organic matter, and impurities, producing high-purity water suitable for applications such as pharmaceuticals, food processing, manufacturing, and drinking water supply. At Hyaline Enviro Engineers Pvt. Ltd., we provide customized UF + RO systems tailored to specific requirements, offering complete solutions including design, installation, commissioning, and reliable after-sales support.`,
 
+    problemSolution: [
+      {
+        problem:
+          "Raw water contains suspended particles, bacteria, and impurities affecting safety and usability.",
+        solution:
+          "Our UF systems remove turbidity, bacteria, and colloidal particles, ensuring clean and safe pre-treated water.",
+      },
+      {
+        problem:
+          "High dissolved salts and contaminants make water unsuitable for industrial and drinking purposes.",
+        solution:
+          "Our RO systems eliminate dissolved salts and impurities, delivering high-purity water for critical applications.",
+      },
+      {
+        problem:
+          "Frequent membrane fouling leads to reduced efficiency and increased maintenance costs.",
+        solution:
+          "UF acts as an effective pre-treatment, protecting RO membranes and ensuring long-lasting system performance.",
+      },
+      {
+        problem:
+          "Inconsistent water quality affects production, healthcare operations, and product quality.",
+        solution:
+          "We provide stable, high-quality water output with advanced UF + RO integration for consistent performance.",
+      },
+      {
+        problem:
+          "High operational costs due to inefficient filtration and frequent system breakdowns.",
+        solution:
+          "Our energy-efficient and optimized systems reduce operational costs while maintaining high performance.",
+      },
+      {
+        problem:
+          "Waterborne contaminants pose health risks in hospitals and drinking water applications.",
+        solution:
+          "Our systems remove bacteria, viruses, and harmful impurities, ensuring safe and hygienic water supply.",
+      },
+      {
+        problem:
+          "Lack of customized solutions leads to poor system performance for specific water conditions.",
+        solution:
+          "We design tailored UF + RO systems based on your water quality, capacity, and application needs.",
+      },
+      {
+        problem:
+          "Downtime and maintenance issues disrupt operations in industrial and commercial setups.",
+        solution:
+          "We provide reliable systems with complete installation and maintenance support for uninterrupted performance.",
+      },
+    ],
     whatWeProvide: [
       "System design and engineering",
       "Supply and installation",
@@ -663,12 +871,62 @@ The RO system then removes dissolved salts, organic matter, and impurities, prod
       subtitle:
         "End-to-end drinking water plant solutions by Hyaline Enviro Engineers",
       image: "/images/solutions/drinking-water.jpeg",
+      mobileImage: "/images/solutions/drinking-water-mobile.webp",
     },
 
     overview: `Packaged Drinking Water Plants are designed to purify raw water from various sources such as borewells, surface water, or municipal supply into safe, hygienic, and high-quality drinking water. The treatment process typically involves multi-stage filtration, Reverse Osmosis (RO), UV disinfection, and ozonation to effectively remove suspended particles, dissolved impurities, bacteria, viruses, and harmful contaminants. This ensures that the final water meets regulatory standards and is safe for human consumption.
 
 At Hyaline Enviro Engineers Pvt. Ltd., we provide complete turnkey solutions for packaged drinking water plants, tailored to meet specific capacity and quality requirements. Our systems are engineered for reliability, efficiency, and ease of operation, supporting consistent production of purified water for bottling and commercial distribution. We offer end-to-end services including design, equipment supply, installation, commissioning, and ongoing maintenance support, ensuring long-term performance and business sustainability.`,
 
+    problemSolution: [
+      {
+        problem:
+          "Raw water from borewell or municipal sources contains impurities, bacteria, and harmful contaminants.",
+        solution:
+          "Our multi-stage filtration with RO, UV, and ozonation ensures safe, hygienic, and high-quality drinking water.",
+      },
+      {
+        problem:
+          "Inconsistent water quality affects brand reputation and customer trust in bottled water businesses.",
+        solution:
+          "We deliver consistent, high-purity water output that meets BIS and regulatory standards, ensuring customer confidence.",
+      },
+      {
+        problem:
+          "Complex licensing and compliance requirements delay plant setup and operations.",
+        solution:
+          "We guide you through BIS, FSSAI, and pollution approvals, ensuring a smooth and hassle-free setup.",
+      },
+      {
+        problem:
+          "High operational costs reduce profitability in drinking water businesses.",
+        solution:
+          "Our energy-efficient systems are designed to optimize production cost and maximize ROI.",
+      },
+      {
+        problem:
+          "Frequent maintenance and system downtime affect production capacity.",
+        solution:
+          "We provide reliable systems with robust components and ongoing maintenance support for uninterrupted operation.",
+      },
+      {
+        problem:
+          "Lack of proper plant design leads to inefficiency and poor water output quality.",
+        solution:
+          "We offer complete turnkey solutions with optimized design for maximum efficiency and performance.",
+      },
+      {
+        problem:
+          "Growing competition in packaged water market demands high-quality and consistent supply.",
+        solution:
+          "Our advanced purification systems help you deliver premium-quality water and stay ahead in the market.",
+      },
+      {
+        problem: "Difficulty in scaling production as demand increases.",
+        solution:
+          "Our modular plant designs allow easy scalability to expand your production capacity as your business grows.",
+      },
+    ],
     whatWeProvide: [
       "Complete plant design and setup",
       "Equipment supply and installation",
@@ -784,12 +1042,63 @@ At Hyaline Enviro Engineers Pvt. Ltd., we provide complete turnkey solutions for
       subtitle:
         "Advanced demineralization solutions by Hyaline Enviro Engineers",
       image: "/images/solutions/ro-edi-system.webp",
+      mobileImage: "/images/solutions/ro-edi-mobile.webp",
     },
 
     overview: `RO + EDI (Reverse Osmosis + Electro Deionization) is an advanced water purification system designed to produce ultra-pure water for critical industrial applications. The RO system removes dissolved salts, organic matter, and impurities, while the EDI unit further polishes the water by removing remaining ions using electrically charged resins and membranes without the need for chemical regeneration.
 
 This combination ensures consistent production of high-purity water with low conductivity, making it ideal for industries requiring stringent water quality standards. RO + EDI systems are widely used in pharmaceuticals, power plants, electronics, and other high-tech industries where ultrapure water is essential. At Hyaline Enviro Engineers Pvt. Ltd., we provide customized, energy-efficient, and reliable RO + EDI solutions with complete turnkey execution and after-sales support.`,
 
+    problemSolution: [
+      {
+        problem:
+          "Industries require ultra-pure water, but conventional systems fail to meet strict quality standards.",
+        solution:
+          "Our RO + EDI systems produce ultra-high purity water with very low conductivity, ideal for critical applications.",
+      },
+      {
+        problem:
+          "Chemical regeneration in traditional systems increases operational cost and environmental impact.",
+        solution:
+          "Our EDI technology eliminates the need for chemicals, ensuring eco-friendly and cost-effective operation.",
+      },
+      {
+        problem:
+          "Inconsistent water quality affects production processes and product quality in sensitive industries.",
+        solution:
+          "We deliver stable and consistent high-purity water output for reliable industrial performance.",
+      },
+      {
+        problem:
+          "Frequent downtime due to manual regeneration and maintenance disrupts operations.",
+        solution:
+          "Our continuous EDI process ensures uninterrupted operation with minimal maintenance requirements.",
+      },
+      {
+        problem:
+          "High operational and maintenance costs reduce efficiency in water treatment systems.",
+        solution:
+          "Our energy-efficient systems reduce running costs while maintaining superior performance.",
+      },
+      {
+        problem:
+          "Residual ions after RO treatment reduce water purity for high-end applications.",
+        solution:
+          "EDI polishing removes remaining ions, ensuring ultra-pure water suitable for pharmaceutical and electronic industries.",
+      },
+      {
+        problem:
+          "Complex system integration and lack of customization lead to inefficiencies.",
+        solution:
+          "We provide fully customized RO + EDI solutions tailored to your water quality and industrial requirements.",
+      },
+      {
+        problem:
+          "Environmental regulations demand sustainable and low-impact water treatment solutions.",
+        solution:
+          "Our chemical-free, energy-efficient systems support sustainable operations and regulatory compliance.",
+      },
+    ],
     whatWeProvide: [
       "Complete system design and engineering",
       "RO + EDI system manufacturing and supply",

@@ -493,104 +493,104 @@ const IMPACT_ICONS = [TrendingDown, Leaf, BadgeCheck, Droplets];
 ───────────────────────────────────────────── */
 export default function SolutionTemplate({ data }) {
   return (
-    <>
+    <main className="md:min-h-[70vh] min-h-dvh">
       {/* ═══════════════════════════════════════
           1. HERO
       ═══════════════════════════════════════ */}
-      <section
-        className="relative flex flex-col justify-center overflow-hidden min-h-[70vh] sm:min-h-[75vh] md:min-h-[80vh] lg:pl-[80px]"
-      >
-        {/* BG Image */}
-        <Image
-          src={data.hero.image}
-          alt={data.name}
-          fill
-          priority
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px"
-          className="object-cover"
-        />
+      <section className="relative overflow-hidden  bg-[#2b4a77] py-5 md:py-18 lg:pl-20">
+        {/* Background Images */}
+        <div className="absolute inset-0">
+          {/* ✅ Mobile Image (LCP Target) */}
+          <Image
+            src={data.hero.mobileImage}
+            alt={data.name}
+            fill
+            priority
+            sizes="(max-width: 768px) 100vw"
+            className="object-cover block md:hidden"
+          />
 
-        {/* Layered Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-r from-[#001a2e]/90 via-[#002d4a]/75 to-transparent" />
+          {/* ✅ Desktop Image */}
+          <Image
+            src={data.hero.image}
+            alt={data.name}
+            fill
+            sizes="100vw"
+            className="object-center hidden md:block"
+          />
+        </div>
+
+        {/* ✅ Strong Gradient Overlay (for readability) */}
+        <div className="absolute inset-0 bg-gradient-to-r from-[#001a2e]/90 via-[#002d4a]/70 to-transparent" />
+
+        {/* ✅ Soft Bottom Fade */}
         <div className="absolute inset-0 bg-gradient-to-t from-[#001a2e]/60 via-transparent to-transparent" />
 
-        {/* Decorative Grid Lines */}
+        {/* ✅ Light Grid (very low opacity = cheap render) */}
         <div
-          className="absolute inset-0 opacity-[0.04]"
+          className="absolute inset-0 opacity-[0.02] pointer-events-none"
           style={{
             backgroundImage:
               "linear-gradient(#fff 1px, transparent 1px), linear-gradient(90deg, #fff 1px, transparent 1px)",
-            backgroundSize: "60px 60px",
+            backgroundSize: "50px 50px",
           }}
         />
 
-        {/* Accent Glow */}
-        <div className="absolute top-1/2 left-[5%] -translate-y-1/2 w-72 h-72 bg-[#00A3E0] rounded-full blur-[120px] opacity-20 pointer-events-none" />
-
-        <div className="relative w-full pb-16 pt-5 sm:px-18">
+        {/* CONTENT */}
+        <div className="relative z-10 w-full px-6 sm:px-10 py-2">
           <Container>
             <div className="max-w-2xl">
               {/* Tag */}
-              <motion.div {...fadeIn(0.1)} className="mb-5">
-                <span className="inline-flex items-center gap-2 text-[#00A3E0] text-xs font-semibold uppercase tracking-[0.15em] border border-[#00A3E0]/30 bg-[#00A3E0]/10 backdrop-blur px-3 py-1.5 rounded-full">
-                  <span className="w-1.5 h-1.5 rounded-full bg-[#00A3E0] animate-pulse" />
+              <div className="mb-5">
+                <span className="inline-flex items-center gap-2 text-gray-100 text-xs font-semibold uppercase tracking-[0.15em] border border-[#00A3E0]/30 bg-[#00A3E0]/10 px-3 py-1.5 rounded-full">
+                  <span className="w-1.5 h-1.5 rounded-full bg-[#00A3E0]" />
                   Industrial Solution
                 </span>
-              </motion.div>
+              </div>
 
-              {/* Headline */}
-              <motion.h1
-                {...fadeUp(0.15)}
-                className="text-4xl md:text-[3.25rem] font-bold leading-[1.1] text-white mb-5"
-              >
+              {/* Heading */}
+              <h1 className="text-3xl sm:text-4xl md:text-[3.2rem] font-bold leading-[1.1] text-white mb-5">
                 {data.hero.title}
-              </motion.h1>
+              </h1>
 
-              {/* Subheadline */}
-              <motion.p
-                {...fadeUp(0.22)}
-                className="text-lg text-gray-300 mb-8 leading-relaxed max-w-xl"
-              >
+              {/* Subtitle */}
+              <p className="text-base sm:text-lg text-gray-300 mb-8 leading-relaxed max-w-xl">
                 {data.hero.subtitle} — engineered for performance, compliance,
                 and long-term value.
-              </motion.p>
+              </p>
 
-              {/* CTA Row */}
-              <motion.div
-                {...fadeUp(0.28)}
-                className="flex flex-wrap gap-3 mb-10"
-              >
+              {/* CTA */}
+              <div className="flex flex-wrap gap-3 mb-10">
                 <Button href="/contact" variant="primary">
                   Get Free Consultation
                 </Button>
+
                 <a
                   href="/Brochure/hyaline-brochure.pdf"
                   download
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/25 text-white text-sm font-medium backdrop-blur hover:bg-white/10 transition"
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-white/25 text-white text-sm font-medium hover:bg-white/10 transition"
                 >
-                  Download Brochure <ChevronRight size={15} />
+                  Download Brochure
                 </a>
-              </motion.div>
+              </div>
 
-              {/* Trust Badges */}
-              <motion.div
-                {...fadeIn(0.35)}
-                className="flex flex-wrap gap-x-7 gap-y-3"
-              >
+              {/* Stats */}
+              <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
                 {TRUST_STATS.map((s) => (
-                  <div key={s.label} className="text-center">
-                    <p className="text-2xl font-bold text-[#00A3E0]">
+                  <div key={s.label}>
+                    <p className="text-xl sm:text-2xl font-bold text-[#00A3E0]">
                       {s.value}
                     </p>
-                    <p className="text-sm text-gray-400 mt-0.5">{s.label}</p>
+                    <p className="text-xs sm:text-sm text-gray-400 mt-1">
+                      {s.label}
+                    </p>
                   </div>
                 ))}
-              </motion.div>
+              </div>
             </div>
           </Container>
         </div>
       </section>
-
       {/* ── BREADCRUMBS ── */}
       <Breadcrumbs
         items={[
@@ -1108,6 +1108,6 @@ export default function SolutionTemplate({ data }) {
           </motion.div>
         </Container>
       </section>
-    </>
+    </main>
   );
 }
