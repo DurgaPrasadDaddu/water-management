@@ -58,7 +58,7 @@
 //             alt={project.client.name}
 //             width={48}
 //             height={48}
-//             className="object-contain"
+//             className="object-cover"
 //           />
 //           <div>
 //             <p className="font-semibold">{project.client.name}</p>
@@ -455,7 +455,7 @@ export default function ProjectTemplate({ project }) {
                           src={client.logo}
                           alt={client.name || "Client"}
                           fill
-                          className="object-contain"
+                          className="object-cover"
                           sizes="112px"
                         />
                       </div>

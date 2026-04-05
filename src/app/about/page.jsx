@@ -38,7 +38,7 @@
 //             alt="About Hyaline Enviro Engineers"
 //             fill
 //             priority
-//             className="object-contain opacity-20"
+//             className="object-cover opacity-20"
 //           />
 //         </div>
 

@@ -498,7 +498,7 @@
 //           alt="Water treatment facility"
 //           fill
 //           priority
-//           className="object-cover object-contain"
+//           className="object-cover object-cover"
 //           sizes="100vw"
 //         />
 

@@ -83,7 +83,7 @@ export default function ClientsCarousel() {
                     alt={client.name}
                     width={120}
                     height={60}
-                    className="object-contain opacity-80 group-hover:opacity-100 transition duration-300"
+                    className="object-cover opacity-80 group-hover:opacity-100 transition duration-300"
                   />
                 </div>
 

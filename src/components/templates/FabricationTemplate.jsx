@@ -32,7 +32,7 @@
 // //           src={data.image || "/images/placeholder.jpg"}
 // //           alt={data.title}
 // //           fill
-// //           className="object-contain"
+// //           className="object-cover"
 // //           priority
 // //         />
 
@@ -93,7 +93,7 @@
 // //               src={data.image || "/images/placeholder.jpg"}
 // //               alt={data.title}
 // //               fill
-// //               className="object-contain"
+// //               className="object-cover"
 // //             />
 // //           </div>
 
@@ -476,7 +476,7 @@ export default function FabricationTemplate({ data, relatedProducts = [] }) {
                   alt={data.title}
                   fill
                   sizes="(max-width: 768px) 100vw, 50vw"
-                  className="object-contain transition-opacity duration-400"
+                  className="object-center transition-opacity duration-400"
                 />
                 {/* Corner accent */}
                 <div

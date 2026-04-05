@@ -42,7 +42,7 @@
 //                   src={item.image || item.hero?.image}
 //                   alt={item.title || item.name}
 //                   fill
-//                   className="object-contain group-hover:scale-105 transition duration-500"
+//                   className="object-cover group-hover:scale-105 transition duration-500"
 //                 />
 //               </div>
 

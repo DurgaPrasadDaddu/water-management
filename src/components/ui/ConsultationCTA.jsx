@@ -44,7 +44,7 @@
 //                 alt="Hyaline Enviro"
 //                 width={24}
 //                 height={24}
-//                 className="object-contain"
+//                 className="object-cover"
 //               /> */}
 
 //               <span>Get In Touch</span>

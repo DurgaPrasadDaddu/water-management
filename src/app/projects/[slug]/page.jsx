@@ -40,7 +40,7 @@
 //             alt={project.client.name}
 //             width={48}
 //             height={48}
-//             className="object-contain"
+//             className="object-cover"
 //           />
 //           <div>
 //             <p className="font-semibold">{project.client.name}</p>

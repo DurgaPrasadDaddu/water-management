@@ -42,7 +42,7 @@
 //                 width={400}
 //                 height={200}
 //                 sizes="(max-width: 768px) 100vw, 33vw"
-//                 className="object-contain"
+//                 className="object-cover"
 //               />
 
 //               <div className="p-5">
@@ -592,7 +592,7 @@ function ProjectCard({ project, featured = false }) {
                     src={client.logo}
                     alt={client.name || "Client"}
                     fill
-                    className="object-contain p-1"
+                    className="object-cover p-1"
                     sizes="32px"
                   />
                 </div>

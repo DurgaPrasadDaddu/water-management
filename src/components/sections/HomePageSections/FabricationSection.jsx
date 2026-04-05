@@ -98,7 +98,7 @@ export default function FabricationSection() {
                       alt={item.title}
                       fill
                       sizes="112px"
-                      className="object-contain transition-transform duration-300 group-hover:scale-105"
+                      className="object-center transition-transform duration-300 group-hover:scale-105"
                     />
                   </div>
 

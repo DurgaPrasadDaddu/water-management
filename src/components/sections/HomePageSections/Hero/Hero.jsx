@@ -29,17 +29,17 @@ export default function Hero() {
           alt="Water treatment plant"
           fill
           priority
-          fetchPriority="high"
-          sizes="(max-width: 768px) 100vw, 50vw"
+          sizes="(max-width: 768px) 100vw"
           className="object-cover object-center block md:hidden"
         />
 
         <Image
           src="/Banners/sewage-treatment-plant-hero-bg.webp"
           alt="Water treatment plant"
-          fill
-          sizes="(max-width: 768px) 100vw, 50vw"
-          className="object-cover object-[center_35%] hidden md:block"
+          width={1920}
+          height={900}
+          sizes="100vw"
+          className="hidden md:block w-full h-auto object-cover object-[center_35%]"
         />
       </div>
 
