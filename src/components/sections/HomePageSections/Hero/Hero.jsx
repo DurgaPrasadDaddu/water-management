@@ -1,8 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
-
-const HeroClient = dynamic(() => import("./HeroClient"));
+// import dynamic from "next/dynamic";
+import HeroClient from "./HeroClient";
+// const HeroClient = dynamic(() => import("./HeroClient"));
 
 const stats = [
   {
@@ -126,7 +126,7 @@ export default function Hero() {
             </div>
           </div>
           {/* RIGHT */}
-          <div className="col-span-12 lg:col-span-4 flex justify-center lg:justify-end">
+          <div className="col-span-12 lg:col-span-4 flex justify-center lg:justify-center pb-5">
             <div className="hidden md:block">
               <HeroClient />
             </div>

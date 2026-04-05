@@ -1,5 +1,6 @@
 import Footer from "@/components/layout/Footer";
 import "../styles/globals.css";
+import "../styles/animations.css";
 import Header from "@/components/layout/Header";
 import { Inter, Poppins } from "next/font/google";
 import { organizationSchema, localBusinessSchema } from "@/lib/schema";
