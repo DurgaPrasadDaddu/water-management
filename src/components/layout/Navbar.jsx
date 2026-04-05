@@ -18,8 +18,8 @@ export default function Navbar() {
               width={220}
               height={70}
               priority
-              className="object-contain h-auto w-[150px] md:w-[180px] lg:w-[200px] xl:w-[220px]"
-              style={{ height: "auto" }}
+              className="object-contain h-10 w-auto"
+              
             />
           </Link>
 

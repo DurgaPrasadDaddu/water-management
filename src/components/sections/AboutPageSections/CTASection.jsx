@@ -37,7 +37,7 @@ export default function CTASection() {
         fill
         priority
         sizes="(max-width: 768px) 100vw, 50vw"
-        className="object-contain"
+        className="object-cover"
       />
 
       {/* 🔥 Gradient Overlay (Premium Look) */}

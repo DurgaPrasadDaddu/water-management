@@ -22,19 +22,19 @@ const team = [
   {
     name: "Naresh Reddy Tumu",
     role: "Chief Executive Officer",
-    image: "/images/leaders/NRT.jpg",
+    image: "/images/leaders/NRT.webp",
     bg: "bg-[#EDE6D6]",
   },
   {
     name: "Yashwanth Reddy Nomula",
     role: "Director",
-    image: "/images/leaders/YRN.jpg",
+    image: "/images/leaders/YRN.webp",
     bg: "bg-[#DCE3EA]",
   },
   {
     name: "G. Hari Prasad",
     role: "Director",
-    image: "/images/leaders/GHP.png",
+    image: "/images/leaders/GHP.webp",
     bg: "bg-[#EDE6D6]",
   },
 ];

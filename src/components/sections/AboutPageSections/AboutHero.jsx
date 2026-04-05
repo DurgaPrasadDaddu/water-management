@@ -14,16 +14,26 @@ function StatBadge({ value, label }) {
 export default function AboutHero() {
   return (
     <section className="relative overflow-hidden bg-[#0e2444] py-6 sm:py-8 md:py-10">
-      
-      {/* Background Image */}
+    
+      {/* Background Images */}
       <div className="absolute inset-0">
+        {/* ✅ Mobile Image (LCP Priority) */}
         <Image
-          src="/images/about-bg.webp"
+          src="/Banners/about-bg-mobile.webp"
           alt="About Hyaline Enviro Engineers"
           fill
-          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 1200px"
           priority
-          className="object-contain opacity-20"
+          sizes="(max-width: 768px) 100vw"
+          className="object-cover opacity-20 block md:hidden"
+        />
+
+        {/* ✅ Desktop Image */}
+        <Image
+          src="/Banners/about-bg.webp"
+          alt="About Hyaline Enviro Engineers"
+          fill
+          sizes="100vw"
+          className="object-cover opacity-20 hidden md:block"
         />
       </div>
 
@@ -53,9 +63,8 @@ export default function AboutHero() {
       <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-cyan-400/50 to-transparent" />
 
       {/* CONTENT */}
-      <div className="relative z-10 max-w-7xl mx-auto px-3 sm:px-5 md:px-6 lg:px-8">
+      <div className="relative z-10 max-w-7xl mx-auto  px-6  lg:px-8">
         <div className="max-w-3xl md:pl-10 lg:pl-14">
-
           {/* Tag */}
           <div className="flex items-center gap-3 mb-4 sm:mb-6">
             <div className="h-px w-6 sm:w-8 bg-cyan-400" />
@@ -75,11 +84,11 @@ export default function AboutHero() {
 
           {/* Description */}
           <p className="text-sm sm:text-base md:text-lg text-slate-400 leading-relaxed max-w-xl mb-8 sm:mb-10">
-            Hyaline Enviro Engineers Pvt. Ltd. is a trusted leader in water
-            and wastewater treatment and industrial fabrication. We deliver
-            end-to-end engineering solutions — from design and manufacturing
-            to installation and commissioning — ensuring efficiency,
-            compliance, and long-term sustainability.
+            Hyaline Enviro Engineers Pvt. Ltd. is a trusted leader in water and
+            wastewater treatment and industrial fabrication. We deliver
+            end-to-end engineering solutions — from design and manufacturing to
+            installation and commissioning — ensuring efficiency, compliance,
+            and long-term sustainability.
           </p>
 
           {/* Stats */}
@@ -106,9 +115,9 @@ export default function AboutHero() {
               Explore Fabrications
             </Link>
           </div>
-
         </div>
       </div>
     </section>
+    
   );
 }

@@ -132,7 +132,7 @@ export default function ContactPage() {
         <div className="absolute inset-0">
           {/* Mobile Image (LCP target) */}
           <Image
-            src="/images/contact-bg-mobile.webp"
+            src="/Banners/contact-bg-mobile.webp"
             alt="Contact Background"
             fill
             priority
@@ -142,7 +142,7 @@ export default function ContactPage() {
 
           {/* Desktop Image */}
           <Image
-            src="/images/contact-bg-desktop.webp"
+            src="/Banners/contact-bg-desktop.webp"
             alt="Contact Background"
             fill
             sizes="100vw"

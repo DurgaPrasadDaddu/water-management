@@ -160,13 +160,13 @@ const stats = [
   },
   {
     icon: Folder,
-    value: 100,
+    value: 500,
     suffix: "+",
     label: "Projects Executed",
   },
   {
     icon: Users,
-    value: 50,
+    value: 400,
     suffix: "+",
     label: "Satisfied Clients",
   },
