@@ -1,23 +1,3 @@
-// // components/about/CTA.jsx
-
-// export default function CTA() {
-//   return (
-//     <section className="py-20 bg-blue-600 text-white text-center">
-//       <h2 className="text-3xl font-bold mb-4">
-//         Looking for Reliable Engineering Solutions?
-//       </h2>
-
-//       <p className="mb-6">
-//         Contact us today to discuss your project requirements.
-//       </p>
-
-//       <button className="bg-white text-blue-600 px-6 py-3 rounded-lg font-semibold">
-//         Get a Quote
-//       </button>
-//     </section>
-//   );
-// }
-
 import Image from "next/image";
 import Link from "next/link";
 

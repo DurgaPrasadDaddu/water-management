@@ -1,33 +1,3 @@
-// // components/about/VisionMission.jsx
-
-// export default function VisionMission() {
-//   return (
-//     <section className="py-20 bg-gray-50">
-//       <div className="max-w-6xl mx-auto px-6 grid md:grid-cols-2 gap-8">
-        
-//         <div className="bg-white p-8 rounded-xl shadow">
-//           <h3 className="text-xl font-bold mb-3">Our Vision</h3>
-//           <p className="text-[var(--heading-text)]">
-//             To become a trusted leader in water treatment, environmental engineering,
-//             and industrial fabrication by delivering sustainable and innovative solutions.
-//           </p>
-//         </div>
-
-//         <div className="bg-white p-8 rounded-xl shadow">
-//           <h3 className="text-xl font-bold mb-3">Our Mission</h3>
-//           <ul className="text-[var(--heading-text)] space-y-2">
-//             <li>• High-quality water treatment solutions</li>
-//             <li>• Reliable engineering services</li>
-//             <li>• Safety and compliance</li>
-//             <li>• Sustainable environmental solutions</li>
-//           </ul>
-//         </div>
-
-//       </div>
-//     </section>
-//   );
-// }
-
 import { Users, Cpu, Gauge } from "lucide-react";
 import SectionWrapper from "../../ui/SectionWrapper";
 
