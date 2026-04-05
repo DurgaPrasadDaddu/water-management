@@ -18,7 +18,7 @@ const Footer = () => {
               alt="Hyaline Enviro Engineers"
               width={160}
               height={50}
-              className="h-10 w-auto"
+              className="mx-auto lg:mx-0"
             />
           </div>
 
