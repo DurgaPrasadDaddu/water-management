@@ -220,7 +220,6 @@ export default function MobileMenu() {
           <div className="flex-1 overflow-y-auto px-4 py-3 space-y-1">
             {navigation.filter(
                 (item) =>
-                  item.name !== "Blog" &&
                   item.name !== "Contact",
               ).map((item) => {
               const isActive = pathname === item.href;

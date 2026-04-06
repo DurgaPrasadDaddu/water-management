@@ -29,7 +29,7 @@ export default function VideoSection() {
                 {/* Thumbnail */}
                 <div className="relative w-full h-[250px]">
                   <Image
-                    src="/logos/hyaline-thumbnail.webp"
+                    src="/images/about/hyaline-thumbnail.webp"
                     alt="Video Thumbnail"
                     fill
                     priority

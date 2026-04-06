@@ -69,8 +69,6 @@ export const navigation = [
     ],
   },
 
-  { name: "Projects", href: "/projects" },
-  { name: "Blog", href: "/blog" },
   { name: "Careers", href: "/careers" },
   { name: "Contact", href: "/contact" },
 ];

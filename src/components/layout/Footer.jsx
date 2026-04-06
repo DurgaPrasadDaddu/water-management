@@ -14,7 +14,7 @@ const Footer = () => {
         <div className="col-span-12 lg:col-span-4 flex flex-col items-center justify-center space-y-6 sm:space-y-8 text-left">
           <div className="px-4">
             <Image
-              src="/logos/logo.webp"
+              src="/logo.webp"
               alt="Hyaline Enviro Engineers"
               width={160}
               height={50}
@@ -53,7 +53,7 @@ const Footer = () => {
                     min-h-[44px] px-3 py-2
                     text-white/90
                     hover:text-[#00A3E0]
-                    transition
+                    transitionblo
                     break-all
                   "
                   >
@@ -150,12 +150,10 @@ const Footer = () => {
           <ul className="space-y-1.5 sm:space-y-2 text-sm sm:text-sm md:text-base">
             {[
               "about",
-              "projects",
+              "solutions",
               "fabrication",
               "products",
               "services",
-              "solutions",
-              "blog",
               "careers",
               "contact",
             ].map((item) => (

@@ -13,25 +13,19 @@ export default function Navbar() {
           {/* LOGO */}
           <Link href="/" className="flex items-center shrink-0">
             <Image
-              src="/logos/logo.webp"
+              src="/logo.webp"
               alt="Hyaline Enviro Engineers"
               width={220}
               height={70}
               priority
-              className="object-cover h-auto w-[150px] md:w-[180px] lg:w-[200px] xl:w-[220px]"
-              
+              className="object-contain h-[80px] md:h-[95px] lg:h-[100px] xl:h-[110px] w-auto"
             />
           </Link>
 
           {/* NAV LINKS (UNCHANGED STRUCTURE) */}
           <nav className="hidden lg:flex items-center justify-center flex-wrap lg:max-w-[600px] xl:max-w-none gap-x-5 gap-y-2 xl:flex-nowrap xl:gap-7">
             {navigation
-              .filter(
-                (item) =>
-                  item.name !== "Blog" &&
-                  item.name !== "Contact" &&
-                  item.name !== "Careers",
-              )
+              .filter((item) => item.name.toLowerCase() !== "contact")
               .map((item) => (
                 <div key={item.name} className="relative group">
                   {item.children ? (

@@ -14,7 +14,7 @@ export default function CompanyIntro() {
 
               <div className="rounded-2xl overflow-hidden shadow-lg">
                 <Image
-                  src="/images/about/hyaline-home-about.webp"
+                  src="/images/about/about.jpg"
                   alt="Engineering Team"
                   width={500}
                   height={350}

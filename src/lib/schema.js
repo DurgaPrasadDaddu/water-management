@@ -94,13 +94,13 @@ export const fabricationSchema = (item) => ({
 
 //  PROJECTS / CASE STUDY
 
-export const projectSchema = (project) => ({
-  "@context": "https://schema.org",
-  "@type": "CreativeWork",
-  name: project.name,
-  description: project.description,
-  locationCreated: project.location,
-});
+// export const projectSchema = (project) => ({
+//   "@context": "https://schema.org",
+//   "@type": "CreativeWork",
+//   name: project.name,
+//   description: project.description,
+//   locationCreated: project.location,
+// });
 
 //  BLOG PAGE
 

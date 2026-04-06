@@ -18,14 +18,6 @@ export default function TopBar() {
         {/* RIGHT SECTION */}
         <div className="flex items-center gap-4 text-white text-sm">
 
-          {/* CAREERS */}
-          <Link
-            href="/careers"
-            className="font-medium hover:text-gray-800 transition duration-300"
-          >
-            Careers
-          </Link>
-
           {/* EMAIL */}
           <a
             href="mailto:info@hyalineenviro.com"

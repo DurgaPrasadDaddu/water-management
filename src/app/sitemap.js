@@ -8,14 +8,7 @@ const baseUrl = "https://www.hyalineenviro.com";
 
 export default function sitemap() {
   // Static Pages
-  const staticRoutes = [
-    "",
-    "/about",
-    "/blog",
-    "/careers",
-    "/contact",
-    "/projects",
-  ].map((route) => ({
+  const staticRoutes = ["", "/about", "/careers", "/contact"].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
   }));

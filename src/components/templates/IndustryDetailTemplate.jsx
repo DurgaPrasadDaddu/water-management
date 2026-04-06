@@ -497,10 +497,10 @@ export default function IndustryDetailsTemplate({
               />
             </Link>
             <Link
-              href="/projects"
+              href="/solutions"
               className="inline-flex items-center gap-2.5 border border-white/25 hover:border-white/55 text-white/80 hover:text-white font-semibold px-7 py-3.5 rounded-[10px] text-sm transition-all duration-300 backdrop-blur-sm"
             >
-              Explore Challenges
+              Explore Our Solutions
             </Link>
           </div>
 
