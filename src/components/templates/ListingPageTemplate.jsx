@@ -875,10 +875,10 @@ export default function ListingPageTemplate({
               </svg>
             </Link>
             <Link
-              href="/quote"
+              href="tel:+917981123366"
               className="inline-flex items-center gap-2 px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-bold rounded-xl border border-white/20 hover:border-white/40 transition-all duration-300 hover:-translate-y-0.5 text-sm tracking-wide backdrop-blur-sm"
             >
-              Get a Quote
+              Talk to an expert
               <svg
                 className="w-4 h-4"
                 fill="none"

@@ -239,7 +239,7 @@ const Footer = () => {
             Rights Reserved.
           </p>
 
-          <div className="flex flex-wrap justify-center gap-4 text-xs sm:text-sm">
+          {/* <div className="flex flex-wrap justify-center gap-4 text-xs sm:text-sm">
             <Link
               href="/privacy-policy"
               className="hover:text-[var(--color-primary)] transition"
@@ -252,7 +252,7 @@ const Footer = () => {
             >
               Terms & Conditions
             </Link>
-          </div>
+          </div> */}
         </div>
       </div>
     </footer>
