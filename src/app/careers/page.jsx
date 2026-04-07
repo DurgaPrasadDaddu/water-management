@@ -362,7 +362,7 @@ export default function CareersPage() {
               style={{
                 fontSize: "clamp(2rem, 5vw, 3.5rem)",
                 fontFamily: "var(--font-heading)",
-                fontWeight: 700,
+                fontWeight: 500,
               }}
             >
               Build Infrastructure That <br />

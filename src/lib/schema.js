@@ -14,7 +14,7 @@ export const organizationSchema = {
   ],
   contactPoint: {
     "@type": "ContactPoint",
-    telephone: "+91-9390701234",
+    telephone: "+91-9347605167",
     contactType: "customer support",
   },
 };
@@ -26,7 +26,7 @@ export const localBusinessSchema = {
   "@type": "EngineeringCompany",
   name: "Hyaline Enviro Engineers Pvt Ltd",
   url: baseUrl,
-  telephone: "+91-9390701234",
+  telephone: "+91-9347605167",
   address: {
     "@type": "PostalAddress",
     streetAddress: "Green Park Road, Jeedimetla",

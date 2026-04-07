@@ -10,6 +10,7 @@ import { useRef } from "react";
 
 import Container from "@/components/ui/Container";
 import { fabricationData } from "@/data/fabrication";
+import MobileCTA from "@/components/ui/MobileCTA";
 
 export default function FabricationSection() {
   const swiperRef = useRef(null);
@@ -38,7 +39,7 @@ export default function FabricationSection() {
         <Container className="relative z-10">
           {/* ================= HEADING ================= */}
           <div className="text-center mb-12">
-            <p className="text-white text-sm sm:text-base font-semibold tracking-wide">
+            <p className="text-white text-lg sm:text-base font-semibold tracking-wide uppercase">
               Industrial Fabrication Expertise
             </p>
 
@@ -137,6 +138,7 @@ export default function FabricationSection() {
           to meet industry-specific operational requirements with precision and
           reliability.
         </div>
+        <MobileCTA href="/fabrications" label="View All Fabrications" />
       </Container>
     </section>
   );

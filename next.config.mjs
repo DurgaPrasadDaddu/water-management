@@ -2,6 +2,7 @@
 const nextConfig = {
   images: {
     formats: ["image/avif", "image/webp","images/jpg", "images/png"],
+    domains: ["img.youtube.com"],
   },
   images: {
   qualities: [60]

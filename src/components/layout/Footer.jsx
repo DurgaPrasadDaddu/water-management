@@ -8,18 +8,22 @@ import { socialLinks } from "@/data/socialLinks";
 const Footer = () => {
   return (
     // <footer className="bg-[var(--color-dark)] text-gray-300 pt-12 sm:pt-16 pb-8 px-4 sm:px-6">
-    <footer className="bg-[var(--color-dark)] text-white/90 pt-12 sm:pt-16 pb-8 pl-10 pr-4 sm:pr-10">
+    <footer className="bg-[var(--color-dark)] text-white/90 pt-12 sm:pt-16 pb-8 pr-5 sm:pl-20">
       <div className="max-w-7xl mx-auto grid grid-cols-12 gap-4 md:gap-10 text-center lg:text-left">
         {/* LEFT BLOCK */}
         <div className="col-span-12 lg:col-span-4 flex flex-col items-center justify-center space-y-6 sm:space-y-8 text-left">
           <div className="px-4">
-            <Image
-              src="/logo.webp"
-              alt="Hyaline Enviro Engineers"
-              width={160}
-              height={50}
-              className="mx-auto lg:mx-0"
-            />
+            <Link href="/">
+              <Image
+                src="/logo.webp"
+                alt="Hyaline Enviro Engineers"
+                width={180}
+                height={70}
+                priority
+                sizes="(max-width: 768px) 140px, (max-width: 1200px) 160px, 180px"
+                className="object-contain w-auto h-[70px] md:h-[80px] lg:h-[90px]"
+              />
+            </Link>
           </div>
 
           {/* ADDRESS */}
@@ -31,7 +35,7 @@ const Footer = () => {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 break-words">
               {/* Corporate */}
               <div className="text-white/80 leading-relaxed">
-                <p className="font-medium text-sm sm:text-sm md:text-base mb-1">
+                <p className="text-[color:var(--color-primary)]  font-medium text-sm sm:text-sm md:text-base mb-1">
                   Corporate Office
                 </p>
 
@@ -69,7 +73,8 @@ const Footer = () => {
                     hover:text-[#00A3E0]
                     transition
                     break-all
-                  ">
+                  "
+                  >
                     📞 <span>+91-9553753337</span>
                   </a>
                 </p>
@@ -86,7 +91,7 @@ const Footer = () => {
 
               {/* Factory */}
               <div className="text-white/80 leading-relaxed">
-                <p className="font-medium text-sm sm:text-sm md:text-base mb-1">
+                <p className="font-medium text-[color:var(--color-primary)]  text-sm sm:text-sm md:text-base mb-1">
                   Factory Address
                 </p>
 
@@ -99,16 +104,17 @@ const Footer = () => {
 
                 <p className="mt-2 text-sm sm:text-sm md:text-base">
                   <a
-                    href="tel:+919390701234"
-                   className="
+                    href="tel:+919347605167"
+                    className="
                     inline-flex items-center
                     min-h-[44px] px-3 py-2
                     text-white/90
                     hover:text-[#00A3E0]
                     transition
                     break-all
-                  ">
-                    📞 <span>+91-93907 01234</span>
+                  "
+                  >
+                    📞 <span>+91-9347605167</span>
                   </a>
                   <br />
                 </p>
@@ -168,6 +174,48 @@ const Footer = () => {
           </ul>
         </div>
 
+        <div className="col-span-12 md:col-span-6 lg:col-span-3 text-left space-y-6">
+          {/* SOLUTIONS */}
+          <div>
+            <h4 className="text-[color:var(--color-primary)] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
+              SOLUTIONS
+            </h4>
+
+            <ul className="space-y-1.5 sm:space-y-2 text-sm sm:text-sm md:text-base">
+              {solutions?.slice(0, 5).map((item) => (
+                <li key={item.slug}>
+                  <Link
+                    href={`/solutions/${item.slug}`}
+                    className="hover:text-[var(--color-primary)] transition hover:translate-x-1 inline-block"
+                  >
+                    {item.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* SERVICES */}
+          <div>
+            <h4 className="text-[color:var(--color-primary)] font-semibold mb-2 sm:mb-3 text-sm sm:text-base">
+              SERVICES
+            </h4>
+
+            <ul className="space-y-1.5 sm:space-y-2 text-sm sm:text-sm md:text-base">
+              {services.map((item) => (
+                <li key={item.slug}>
+                  <Link
+                    href={`/services/${item.slug}`}
+                    className="hover:text-[var(--color-primary)] transition hover:translate-x-1 inline-block"
+                  >
+                    {item.title}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
         {/* PRODUCTS */}
         <div className="col-span-12 md:col-span-6 lg:col-span-3 text-left">
           <h4 className="text-[color:var(--color-primary)] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
@@ -187,52 +235,11 @@ const Footer = () => {
             ))}
           </ul>
         </div>
-
-        {/* SERVICES */}
-        <div className="col-span-12 md:col-span-6 lg:col-span-3 text-left space-y-6">
-          <div>
-            <h4 className="text-[color:var(--color-primary)] font-semibold mb-2 sm:mb-3 text-sm sm:text-base">
-              SERVICES
-            </h4>
-
-            <ul className="space-y-1.5 sm:space-y-2 text-sm sm:text-sm md:text-base">
-              {services.map((item) => (
-                <li key={item.slug}>
-                  <Link
-                    href={`/services/${item.slug}`}
-                    className="hover:text-[var(--color-primary)] transition hover:translate-x-1 inline-block"
-                  >
-                    {item.title}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="text-[color:var(--color-primary)] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
-              SOLUTIONS
-            </h4>
-
-            <ul className="space-y-1.5 sm:space-y-2 text-sm sm:text-sm md:text-base">
-              {solutions?.slice(0, 5).map((item) => (
-                <li key={item.slug}>
-                  <Link
-                    href={`/solutions/${item.slug}`}
-                    className="hover:text-[var(--color-primary)] transition hover:translate-x-1 inline-block"
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
       </div>
 
       {/* BOTTOM */}
       <div className="border-t border-white/10 mt-10 sm:mt-12 pt-5 sm:pt-6 text-xs sm:text-sm">
-        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-center gap-3 text-center md:text-left">
+        <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-center items-center gap-3 text-center md:text-left">
           <p className="text-gray-400 text-xs sm:text-sm">
             © {new Date().getFullYear()} Hyaline Enviro Engineers Pvt. Ltd. All
             Rights Reserved.

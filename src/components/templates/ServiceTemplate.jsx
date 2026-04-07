@@ -558,11 +558,11 @@ export default function ServiceTemplate({ service }) {
               <div className="flex items-center gap-2 mb-6">
                 <Link
                   href="/services"
-                  className="text-base text-gray-400 hover:text-[#00A3E0] transition-colors"
+                  className="text-base text-gray-600 hover:text-[#00A3E0] transition-colors"
                 >
                   Services
                 </Link>
-                <span className="text-gray-300">/</span>
+                <span className="text-gray-700">/</span>
                 <span className="text-sm text-[#00A3E0] font-medium">
                   {service.shortTitle}
                 </span>
@@ -601,7 +601,7 @@ export default function ServiceTemplate({ service }) {
                 })}
               </h1>
 
-              <p className="text-lg text-gray-500 leading-relaxed mb-8 max-w-xl sm:pl-12">
+              <p className="text-lg text-gray-700 leading-relaxed mb-8 max-w-xl sm:pl-12">
                 {description}
               </p>
 
@@ -761,7 +761,7 @@ export default function ServiceTemplate({ service }) {
               <span className="text-[#00A3E0]">{service.shortTitle}</span>{" "}
               Services?
             </h2>
-            <p className="text-lg text-gray-500 leading-relaxed">{overview}</p>
+            <p className="text-lg text-gray-700 leading-relaxed">{overview}</p>
 
             {/* Credentials row */}
             <div className="mt-12 grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -790,7 +790,7 @@ export default function ServiceTemplate({ service }) {
                     className={`w-10 h-1 rounded-full mb-4 ${c.color === "blue" ? "bg-[#00A3E0]" : "bg-[#8DC63F]"}`}
                   />
                   <h4 className="font-bold text-gray-900 mb-2">{c.title}</h4>
-                  <p className="text-base text-gray-500 leading-relaxed">
+                  <p className="text-base text-gray-700 leading-relaxed">
                     {c.body}
                   </p>
                 </div>
@@ -813,7 +813,7 @@ export default function ServiceTemplate({ service }) {
               Core Capabilities &amp;{" "}
               <span className="text-[#00A3E0]">Features</span>
             </h2>
-            <p className="text-gray-400 max-w-xl mx-auto text-base">
+            <p className="text-gray-700 max-w-xl mx-auto text-base">
               Each service is backed by technical expertise, proven
               methodologies, and dedicated support.
             </p>
@@ -845,7 +845,7 @@ export default function ServiceTemplate({ service }) {
                   <h3 className="font-bold text-gray-900 text-base leading-snug mb-2 pr-8">
                     {feat}
                   </h3>
-                  <p className="text-base text-gray-400">
+                  <p className="text-base text-gray-700">
                     Professional execution with certified engineers and quality
                     assurance protocols.
                   </p>
@@ -874,7 +874,7 @@ export default function ServiceTemplate({ service }) {
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Our <span className="text-[#00A3E0]">Proven Process</span>
             </h2>
-            <p className="text-gray-400 max-w-xl mx-auto text-base">
+            <p className="text-gray-700 max-w-xl mx-auto text-base">
               A structured, transparent approach ensuring quality delivery at
               every stage.
             </p>
@@ -961,7 +961,7 @@ export default function ServiceTemplate({ service }) {
                       style={{ width: `${((i + 1) / process.length) * 100}%` }}
                     />
                   </div>
-                  <div className="flex justify-between mt-1.5 text-xs text-gray-400">
+                  <div className="flex justify-between mt-1.5 text-xs text-gray-700">
                     <span>Progress</span>
                     <span>{Math.round(((i + 1) / process.length) * 100)}%</span>
                   </div>
@@ -1084,7 +1084,7 @@ export default function ServiceTemplate({ service }) {
           </div>
 
           {/* Bottom note */}
-          <p className="text-center text-gray-500 text-sm mt-10">
+          <p className="text-center text-gray-500 text-base mt-10">
             Not seeing your industry?{" "}
             <Link
               href="/contact"
@@ -1111,7 +1111,7 @@ export default function ServiceTemplate({ service }) {
                 <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
                   Common <span className="text-[#00A3E0]">Questions</span>
                 </h2>
-                <p className="text-gray-400">
+                <p className="text-gray-700 text-base">
                   Everything you need to know about our services.
                 </p>
               </div>
@@ -1168,7 +1168,7 @@ export default function ServiceTemplate({ service }) {
               </div>
 
               <div className="text-center mt-10">
-                <p className="text-gray-400 text-sm mb-3">
+                <p className="text-gray-700 text-base mb-3">
                   Still have questions?
                 </p>
                 <Link
@@ -1233,7 +1233,7 @@ export default function ServiceTemplate({ service }) {
             </div>
 
             {/* Trust row */}
-            <div className="flex flex-wrap justify-center gap-8 text-white/60 text-sm">
+            <div className="flex flex-wrap justify-center gap-8 text-white/60 text-base">
               {[
                 "Free Site Assessment",
                 "No Hidden Costs",

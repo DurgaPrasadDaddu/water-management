@@ -9,16 +9,17 @@ export default function Navbar() {
     // <header className="relative z-[999] bg-white border-b border-gray-100">
     <header className="sticky top-0 z-[9999] bg-white border-b border-gray-100">
       <div className="max-w-7xl mx-auto px-4">
-        <div className="flex items-center justify-between h-[70px] xl:h-[85px] mb-4">
+        <div className="flex items-center justify-between h-[70px] xl:h-[85px] mb-1">
           {/* LOGO */}
-          <Link href="/" className="flex items-center shrink-0">
+          <Link href="/">
             <Image
               src="/logo.webp"
               alt="Hyaline Enviro Engineers"
-              width={220}
+              width={180}
               height={70}
               priority
-              className="object-contain h-[80px] md:h-[95px] lg:h-[100px] xl:h-[110px] w-auto"
+              sizes="(max-width: 768px) 140px, (max-width: 1200px) 160px, 180px"
+              className="object-contain w-auto h-[70px] md:h-[80px] lg:h-[90px]"
             />
           </Link>
 

@@ -4,7 +4,6 @@ import CTASection from "@/components/sections/AboutPageSections/CTASection";
 import ImpactStatsSection from "@/components/sections/AboutPageSections/ImpactStatsSection";
 import LeadershipSection from "@/components/sections/AboutPageSections/LeadershipSection";
 import OurValuesSection from "@/components/sections/AboutPageSections/OurValuesSection";
-import VideoSection from "@/components/sections/AboutPageSections/VideoSection";
 import { aboutSchema } from "@/lib/schema";
 
 export default function AboutClient() {
@@ -25,7 +24,6 @@ export default function AboutClient() {
         <CTASection/>
         <OurValuesSection />
         <LeadershipSection />
-        <VideoSection/>
       </main>
     </>
   );

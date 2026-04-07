@@ -11,7 +11,7 @@ export default function Banner({ title, description, image }) {
             {title}
           </h1>
 
-          <p className="mt-4 md:mt-6 text-sm sm:text-base text-gray-300 leading-relaxed">
+          <p className="mt-4 md:mt-6 text-base sm:text-lg text-gray-300 leading-relaxed">
             {description}
           </p>
         </div>

@@ -4,6 +4,7 @@ import { solutions } from "@/data/solutions";
 import Container from "@/components/ui/Container";
 import SectionWrapper from "../../ui/SectionWrapper";
 import SectionHeading from "../../ui/SectionHeading";
+import MobileCTA from "@/components/ui/MobileCTA";
 
 export default function SolutionsSection() {
   return (
@@ -70,6 +71,7 @@ export default function SolutionsSection() {
             </Link>
           ))}
         </div>
+        <MobileCTA href="/solutions" label="View All Solutions" />
       </Container>
     </SectionWrapper>
   );

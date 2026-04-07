@@ -477,7 +477,7 @@ const TRUST_STATS = [
    CERTIFICATIONS
 ───────────────────────────────────────────── */
 const CERTIFICATIONS = [
-  "PCB Compliant",
+  "PCB compliance",
   "ISO Certified",
   "ZLD Specialist",
   "Pan India Execution",
@@ -682,11 +682,11 @@ export default function SolutionTemplate({ data }) {
               {...fadeUp()}
               className="text-center max-w-2xl mx-auto mb-12"
             >
-              <p className="text-xs uppercase tracking-widest text-[#00A3E0] font-semibold mb-3">
+              <p className="text-lg uppercase tracking-widest text-[#00A3E0] font-semibold mb-3">
                 The Challenge
               </p>
               <h2 className="text-3xl font-bold">
-                Industry Pain Points We Solve
+                Industry Pain Points We Resolve
               </h2>
             </motion.div>
             <div className="grid md:grid-cols-2 gap-5">
@@ -696,12 +696,12 @@ export default function SolutionTemplate({ data }) {
                   {...fadeUp(i * 0.1)}
                   className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/8 transition"
                 >
-                  <p className="text-[#ff6b6b] text-sm font-semibold mb-2 flex items-center gap-2">
+                  <p className="text-[#ff6b6b] text-base font-semibold mb-2 flex items-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-[#ff6b6b]" />
                     Pain Point
                   </p>
                   <p className="text-gray-300 mb-4 text-sm">{item.problem}</p>
-                  <p className="text-[#00A3E0] text-sm font-semibold mb-1 flex items-center gap-2">
+                  <p className="text-[#00A3E0] text-base font-semibold mb-1 flex items-center gap-2">
                     <CheckCircle2 size={16} /> Our Solution
                   </p>
                   <p className="text-white text-sm">{item.solution}</p>
@@ -715,7 +715,7 @@ export default function SolutionTemplate({ data }) {
       {/* ═══════════════════════════════════════
           4. WHAT WE PROVIDE (Solution Stack)
       ═══════════════════════════════════════ */}
-      <section className="section bg-[#f8fafc]">
+      {/* <section className="section bg-[#f8fafc]">
         <Container>
           <motion.div {...fadeUp()} className="mb-10">
             <p className="text-xs uppercase tracking-widest text-[#00A3E0] font-semibold mb-2">
@@ -724,7 +724,7 @@ export default function SolutionTemplate({ data }) {
             <h2 className="text-3xl font-bold text-gray-900">
               What We Provide
             </h2>
-            <p className="text-gray-500 mt-2 max-w-xl">
+            <p className="text-gray-500 mt-2 text-base max-w-xl">
               End-to-end engineering from design to long-term maintenance —
               single-vendor accountability.
             </p>
@@ -740,7 +740,7 @@ export default function SolutionTemplate({ data }) {
                 <div className="w-10 h-10 rounded-xl bg-[#00A3E0]/10 flex items-center justify-center mb-4 group-hover:bg-[#00A3E0]/20 transition">
                   <Wrench size={18} className="text-[#00A3E0]" />
                 </div>
-                <p className="font-semibold text-gray-800 text-sm leading-snug">
+                <p className="font-semibold text-gray-800 text-lg leading-snug">
                   {item}
                 </p>
                 <div className="mt-4 h-px bg-gradient-to-r from-[#00A3E0]/30 to-transparent" />
@@ -748,8 +748,63 @@ export default function SolutionTemplate({ data }) {
             ))}
           </div>
         </Container>
-      </section>
+      </section> */}
+       <section className="relative py-20 bg-gradient-to-b from-white to-[#eef6ff] overflow-hidden">
+      
+      {/* subtle background glow */}
+      <div className="absolute top-[-100px] left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-[#00A3E0]/10 blur-[120px] rounded-full" />
 
+      <div className="max-w-6xl mx-auto px-4 relative z-10">
+        
+        {/* HEADER */}
+        <motion.div className="mb-14 text-center">
+          <p className="text-base uppercase tracking-[0.25em] text-[#00A3E0] font-semibold mb-3">
+            Complete Solution Stack
+          </p>
+
+          <h2 className="text-4xl md:text-5xl font-bold text-gray-900 leading-tight">
+            What We Provide
+          </h2>
+
+          <p className="text-gray-700 mt-4 text-lg max-w-2xl mx-auto">
+            End-to-end engineering from design to long-term maintenance — 
+            delivered with precision, reliability, and scale.
+          </p>
+        </motion.div>
+
+        {/* GRID */}
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          {data.whatWeProvide.map((item, i) => (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ delay: i * 0.08, duration: 0.6 }}
+              viewport={{ once: true }}
+              className="group relative rounded-2xl p-[1px] bg-gradient-to-br from-[#00A3E0]/40 via-transparent to-[#00A3E0]/20 hover:from-[#00A3E0]/70 transition-all duration-500"
+            >
+              {/* glass card */}
+              <div className="relative h-full bg-white/80 backdrop-blur-xl rounded-2xl p-6 shadow-md group-hover:shadow-xl transition-all duration-500">
+                
+                {/* icon */}
+                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-[#00A3E0] to-blue-500 flex items-center justify-center mb-5 shadow-lg group-hover:scale-110 transition">
+                  <Wrench size={20} className="text-white" />
+                </div>
+
+                {/* text */}
+                <p className="font-semibold text-gray-800 text-lg leading-relaxed group-hover:text-gray-900 transition">
+                  {item}
+                </p>
+
+                {/* bottom accent line */}
+                <div className="absolute bottom-0 left-0 w-0 h-[2px] bg-[#00A3E0] group-hover:w-full transition-all duration-500 rounded-full" />
+              </div>
+            </motion.div>
+          ))}
+        </div>
+      </div>
+    </section>
+      
       {/* ═══════════════════════════════════════
           5. PROCESS FLOW (Stepper)
       ═══════════════════════════════════════ */}
@@ -857,13 +912,13 @@ export default function SolutionTemplate({ data }) {
       <section className="section bg-gradient-to-br from-[#f0f9ff] to-[#f8fafc]">
         <Container>
           <motion.div {...fadeUp()} className="mb-10">
-            <p className="text-xs uppercase tracking-widest text-[#00A3E0] font-semibold mb-2">
+            <p className="text-lg uppercase tracking-widest text-[#00A3E0] font-semibold mb-2">
               Value Delivered
             </p>
             <h2 className="text-3xl font-bold text-gray-900">
               Business Impact & Benefits
             </h2>
-            <p className="text-gray-500 mt-2 max-w-lg">
+            <p className="text-gray-700 text-base mt-2 max-w-lg">
               Tangible outcomes that directly affect your compliance, costs, and
               sustainability goals.
             </p>
@@ -882,7 +937,7 @@ export default function SolutionTemplate({ data }) {
                     <Icon size={20} className="text-[#00A3E0]" />
                   </div>
                   <div>
-                    <p className="font-semibold text-gray-800 text-sm">
+                    <p className="font-semibold text-gray-800 text-lg">
                       {item}
                     </p>
                   </div>
@@ -921,9 +976,9 @@ export default function SolutionTemplate({ data }) {
                     <div className="w-12 h-12 rounded-xl bg-[#00A3E0]/10 flex items-center justify-center mb-3 group-hover:bg-[#00A3E0]/20 transition">
                       <Icon size={22} className="text-[#00A3E0]" />
                     </div>
-                    <p className="font-semibold text-gray-800 text-sm">{ind}</p>
+                    <p className="font-semibold text-gray-800 text-base">{ind}</p>
                     {useCase && (
-                      <p className="text-xs text-gray-400 mt-1 leading-snug">
+                      <p className="text-base text-gray-400 mt-1 leading-snug">
                         {useCase}
                       </p>
                     )}
@@ -935,62 +990,7 @@ export default function SolutionTemplate({ data }) {
         </section>
       )}
 
-      {/* ═══════════════════════════════════════
-          8. CASE STUDIES (if present)
-      ═══════════════════════════════════════ */}
-      {data.caseStudies?.length > 0 && (
-        <section className="section bg-[#001a2e] text-white">
-          <Container>
-            <motion.div {...fadeUp()} className="mb-12">
-              <p className="text-xs uppercase tracking-widest text-[#00A3E0] font-semibold mb-2">
-                Proven Track Record
-              </p>
-              <h2 className="text-3xl font-bold">Project Case Studies</h2>
-            </motion.div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {data.caseStudies.map((cs, i) => (
-                <motion.div
-                  key={i}
-                  {...fadeUp(i * 0.1)}
-                  className="bg-white/5 border border-white/10 rounded-2xl p-6 hover:bg-white/8 transition"
-                >
-                  <p className="text-[#00A3E0] font-bold text-lg mb-1">
-                    {cs.client}
-                  </p>
-                  <p className="text-xs text-gray-400 mb-4 uppercase tracking-wider">
-                    {cs.industry}
-                  </p>
-                  <div className="space-y-3 text-sm">
-                    <div>
-                      <span className="text-gray-400 font-medium">
-                        Challenge:{" "}
-                      </span>
-                      <span className="text-gray-300">{cs.problem}</span>
-                    </div>
-                    <div>
-                      <span className="text-gray-400 font-medium">
-                        Solution:{" "}
-                      </span>
-                      <span className="text-gray-300">{cs.solution}</span>
-                    </div>
-                    <div className="flex items-start gap-2 pt-2 border-t border-white/10">
-                      <CheckCircle2
-                        size={15}
-                        className="text-[#8DC63F] shrink-0 mt-0.5"
-                      />
-                      <span className="text-[#8DC63F] font-medium">
-                        {cs.outcome}
-                      </span>
-                    </div>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-          </Container>
-        </section>
-      )}
-
+     
       {/* ═══════════════════════════════════════
           9. WHY CHOOSE US
       ═══════════════════════════════════════ */}
@@ -998,13 +998,13 @@ export default function SolutionTemplate({ data }) {
         <Container>
           <div className="grid lg:grid-cols-[1fr_1fr] gap-12 items-center">
             <motion.div {...fadeUp()}>
-              <p className="text-xs uppercase tracking-widest text-[#00A3E0] font-semibold mb-2">
+              <p className="text-lg uppercase tracking-widest text-[#00A3E0] font-semibold mb-2">
                 Our Edge
               </p>
               <h2 className="text-3xl font-bold text-gray-900 mb-5">
                 Why Choose Hyaline Enviro Engineers
               </h2>
-              <p className="text-gray-500 mb-8 leading-relaxed">
+              <p className="text-gray-700 text-base mb-8 leading-relaxed">
                 More than a vendor — we are an engineering partner committed to
                 your operational success with complete end-to-end
                 accountability.
@@ -1020,7 +1020,7 @@ export default function SolutionTemplate({ data }) {
                     <div className="w-6 h-6 rounded-full bg-[#00A3E0] flex items-center justify-center shrink-0 mt-0.5">
                       <CheckCircle2 size={13} className="text-white" />
                     </div>
-                    <p className="text-gray-700 text-sm">{item}</p>
+                    <p className="text-gray-700 text-base">{item}</p>
                   </motion.div>
                 ))}
               </div>
@@ -1036,7 +1036,7 @@ export default function SolutionTemplate({ data }) {
                   <p className="text-3xl font-bold text-[#00A3E0] mb-1">
                     {s.value}
                   </p>
-                  <p className="text-xs text-gray-500 font-medium">{s.label}</p>
+                  <p className="text-base text-gray-500 font-medium">{s.label}</p>
                 </div>
               ))}
             </motion.div>

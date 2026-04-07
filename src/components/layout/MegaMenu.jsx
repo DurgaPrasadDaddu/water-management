@@ -48,9 +48,9 @@ export default function MegaMenu({ item }) {
               "
             >
               {/* Number badge */}
-              <span className="w-6 h-6 flex items-center justify-center text-[11px] font-bold bg-slate-100 text-slate-400 rounded-md group-hover/item:bg-[#00A3E0] group-hover/item:text-white transition">
+              {/* <span className="w-6 h-6 flex items-center justify-center text-[11px] font-bold bg-slate-100 text-slate-400 rounded-md group-hover/item:bg-[#00A3E0] group-hover/item:text-white transition">
                 {String(index + 1).padStart(2, "0")}
-              </span>
+              </span> */}
 
               {/* Text */}
               <span className="text-sm font-medium text-slate-700 group-hover/item:text-[#00A3E0]">

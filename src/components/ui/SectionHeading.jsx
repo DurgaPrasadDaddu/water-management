@@ -48,7 +48,7 @@ const SectionHeading = ({
       {variant === "product" && tag && (
         <motion.p
           variants={fadeUp}
-          className="text-[color:var(--color-primary)] text-sm font-semibold tracking-widest uppercase"
+          className="text-[color:var(--color-primary)] text-lg font-semibold tracking-widest uppercase"
         >
           {tag}
         </motion.p>
@@ -58,13 +58,13 @@ const SectionHeading = ({
       {variant === "default" && preTitle && (
         <motion.p variants={fadeUp}>
           {/* Pretitle */}
-          <span className="block text-sm sm:text-base">
+          <span className="block text-base sm:lg font-semibold ">
             {preTitle}
           </span>
 
           {/* Highlight */}
           {highlight && (
-            <span className="block text-[color:var(--color-primary)] font-semibold text-base sm:text-lg mt-1">
+            <span className="block text-[color:var(--color-primary)] font-semibold text-lg sm:text-xl mt-1">
               {highlight}
             </span>
           )}

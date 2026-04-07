@@ -7,6 +7,7 @@ import Image from "next/image";
 import Link from "next/link";
 import SectionHeading from "../../ui/SectionHeading";
 import SectionWrapper from "../../ui/SectionWrapper";
+import MobileCTA from "@/components/ui/MobileCTA";
 
 export default function ProductsSection() {
   const [activeCategory, setActiveCategory] = useState("filtration");
@@ -193,6 +194,8 @@ export default function ProductsSection() {
             );
           })}
         </div>
+
+        <MobileCTA href="/products" label="View All Products" />
       </Container>
     </SectionWrapper>
   );

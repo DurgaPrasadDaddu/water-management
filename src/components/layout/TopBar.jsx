@@ -11,7 +11,7 @@ export default function TopBar() {
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-11">
         
         {/* LEFT MESSAGE */}
-        <p className="text-sm text-[var(--heading-tag)] font-bold tracking-wide">
+        <p className="text-base text-[var(--color-accent)] font-bold tracking-wide">
           Welcome to Hyaline Enviro Engineers Pvt. Ltd.
         </p>
 
@@ -29,11 +29,11 @@ export default function TopBar() {
 
           {/* PHONE */}
           <a
-            href="tel:+919390701234"
+            href="tel:+919347605167"
             className="flex items-center font-semibold gap-2 hover:text-gray-800 transition duration-300"
           >
             <Phone size={14} />
-            <span>+91 9390701234</span>
+            <span>+91 9347605167</span>
           </a>
 
           {/* SOCIAL */}

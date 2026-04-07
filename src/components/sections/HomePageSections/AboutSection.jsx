@@ -8,7 +8,7 @@ export default function AboutSection() {
     {
       icon: <Droplets className="w-6 h-6 text-[color:var(--color-primary)]" />,
       title: "Water Treatment Experts",
-      desc: "Advanced WTP, STP, ETP, RO & ZLD systems",
+      desc: "Advanced MEE, WTP, STP, ETP, UF+RO & ZLD systems",
     },
     {
       icon: <Factory className="w-6 h-6 text-[color:var(--color-secondary)]" />,
@@ -63,7 +63,7 @@ export default function AboutSection() {
             {/* Floating Card */}
             <div className="absolute -top-6 -left-3 lg:-left-5 bg-white/80 backdrop-blur-lg p-4 lg:p-6 rounded-2xl shadow-xl border border-white/50">
               <p className="text-xl text-center font-bold text-[color:var(--color-primary)]">
-                15+
+                30+
               </p>
               <p className="text-sm text-[color:var(--color-text)]">
                 Industrial Sectors
@@ -78,7 +78,7 @@ export default function AboutSection() {
             </h3>
 
             <p className="text-[color:var(--color-dark)] text-base sm:text-lg mb-8 leading-relaxed">
-              Our expertise spans across WTP, STP, ETP, RO, ZLD, MEE, and ATFD
+              Our expertise spans across MEE, STP, ETP, UF+RO, ZLD, WTP, and ATFD
               systems. With a skilled team of engineers and fabricators, we
               ensure precision, quality, and long-term reliability.
             </p>

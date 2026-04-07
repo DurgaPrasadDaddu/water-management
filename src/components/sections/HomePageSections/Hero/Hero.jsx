@@ -14,7 +14,7 @@ const stats = [
     label: ["Years", "Experience"],
   },
   {
-    value: "50+",
+    value: "100+",
     label: ["Industrial", "Clients"],
   },
 ];
@@ -78,8 +78,8 @@ export default function Hero() {
               <span className="text-slate-200 font-semibold">
                 water and wastewater solutions
               </span>{" "}
-              for residential and commercial applications, specialising in STP,
-              ETP, RO Plants, ZLD & industrial fabrication works across India.
+              for industrial, commercial AND residential applications, specialising in MTP, STP,
+              ETP, UF + RO Plants, ZLD & industrial fabrication works across India.
             </p>
 
             {/* CTA */}

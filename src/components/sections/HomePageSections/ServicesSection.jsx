@@ -12,6 +12,7 @@ import services from "@/data/services";
 import SectionWrapper from "../../ui/SectionWrapper";
 import SectionHeading from "../../ui/SectionHeading";
 import Container from "../../ui/Container";
+import MobileCTA from "@/components/ui/MobileCTA";
 
 export default function ServicesSection() {
   const [activeIndex, setActiveIndex] = useState(0);
@@ -216,6 +217,7 @@ export default function ServicesSection() {
             ))}
           </Swiper>
         </div>
+        <MobileCTA href="/services" label="View All Services" />
       </Container>
     </SectionWrapper>
   );

@@ -42,16 +42,19 @@ export default function MarketSegmentTemplate({ data }) {
             <Link
               key={index}
               href={`/market-segments/${data.slug}/${item.slug}`}
-              className="group relative rounded-2xl overflow-hidden h-[320px] shadow-md hover:shadow-2xl transition duration-500"
+              className="group relative rounded-2xl overflow-hidden  shadow-md hover:shadow-2xl transition duration-500"
             >
               {/* Image */}
 
-              <Image
-                src={item.image}
-                alt={item.name}
-                fill
-                className="absolute inset-0 object-cover transform group-hover:scale-110 transition duration-700"
-              />
+              <div className="relative w-full h-[200px] sm:h-[250px] md:h-[300px] overflow-hidden">
+                <Image
+                  src={item.image}
+                  alt={item.name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
+                  className="object-cover transition duration-700 group-hover:scale-110"
+                />
+              </div>
               {/* Overlay */}
               <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
 

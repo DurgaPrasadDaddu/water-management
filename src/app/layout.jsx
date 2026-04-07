@@ -4,16 +4,20 @@ import "../styles/animations.css";
 import Header from "@/components/layout/Header";
 import { Inter, Poppins } from "next/font/google";
 import { organizationSchema, localBusinessSchema } from "@/lib/schema";
-import FloatingWrapper from "@/components/FloatingWrapper";
+import dynamic from "next/dynamic";
+
+const FloatingWrapper = dynamic(() => import("@/components/FloatingWrapper"));
 
 export const inter = Inter({
   subsets: ["latin"],
   variable: "--font-inter",
+  display: "swap",
 });
+
 
 export const poppins = Poppins({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
+  weight: ["400", "600"], // reduced weights
   variable: "--font-poppins",
   display: "swap",
 });
@@ -52,7 +56,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} ${poppins.variable}`}>
+      <body className={inter.variable}>
         <Header />
         <main >
         {children}

@@ -27,7 +27,7 @@ export default function MarketSegmentSection() {
     <SectionWrapper>
       <Container>
         <SectionHeading
-        variant="product"
+          variant="product"
           tag="Our Expertise in Market Segments"
           title={
             <>
@@ -46,32 +46,26 @@ export default function MarketSegmentSection() {
             <Link
               key={index}
               href={item.slug}
-              className="group relative rounded-2xl overflow-hidden h-[280px] shadow-md hover:shadow-2xl transition duration-500"
+              className="group relative rounded-2xl overflow-hidden shadow-md hover:shadow-2xl transition duration-500"
             >
-        
-              <div className="group relative aspect-[4/3] overflow-hidden rounded-xl">
+              <div className="relative w-full h-[220px] sm:h-[260px] md:h-[300px] rounded-2xl overflow-hidden group">
                 <Image
                   src={item.image}
                   alt={item.name}
                   fill
+                  sizes="(max-width: 768px) 100vw, 33vw"
                   className="object-cover transition duration-700 group-hover:scale-110"
-                  sizes="(max-width: 768px) 100vw, 580px"
                 />
+
+                {/* Overlay */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
+
+                {/* Text */}
+                <div className="absolute bottom-4 left-4 text-white">
+                  <h3 className="text-lg font-semibold">{item.name}</h3>
+                  <div className="w-10 h-[2px] bg-blue-400 mt-2" />
+                </div>
               </div>
-              {/* Dark Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent"></div>
-
-              {/* Content */}
-              <div className="absolute bottom-0 p-6">
-                <h3 className="text-white text-xl font-semibold tracking-wide group-hover:text-[#00A3E0] transition">
-                  {item.name}
-                </h3>
-
-                <div className="mt-3 w-10 h-[2px] bg-[#00A3E0] group-hover:w-16 transition-all duration-300"></div>
-              </div>
-
-              {/* Hover Border Effect */}
-              <div className="absolute inset-0 border border-transparent group-hover:border-[#00A3E0]/40 rounded-2xl transition"></div>
             </Link>
           ))}
         </div>

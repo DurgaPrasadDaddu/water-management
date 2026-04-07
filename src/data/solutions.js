@@ -334,7 +334,7 @@ sustainable and eco-friendly operations`,
       mobileImage: "/images/solutions/stp-mobile.webp",
     },
 
-    overview: `The Sewage Treatment Plant (STP) is designed using advanced MBBR (Moving Bed Biofilm Reactor) / SBR 
+    overview: `The Sewage Treatment Plant (STP) is designed using advanced MBBR (Moving Bed Biofilm Reactor) / SBR / MBR 
 technology to ensure efficient and reliable wastewater treatment. The system effectively reduces organic load and 
 pollutants, producing treated water that meets statutory norms for safe reuse or compliant discharge. 
 
@@ -1033,28 +1033,28 @@ At Hyaline Enviro Engineers Pvt. Ltd., we provide complete turnkey solutions for
   },
   {
     slug: "ro-edi-system",
-    name: "RO + EDI Water Treatment System",
+    name: "RO-2 + EDI Water Treatment System",
     tagline:
       "High-purity water generation using Reverse Osmosis and Electro Deionization",
 
     hero: {
-      title: "RO + EDI High Purity Water Systems",
+      title: "RO-2 + EDI High Purity Water Systems",
       subtitle:
         "Advanced demineralization solutions by Hyaline Enviro Engineers",
       image: "/images/solutions/ro-edi-system.webp",
       mobileImage: "/images/solutions/ro-edi-mobile.webp",
     },
 
-    overview: `RO + EDI (Reverse Osmosis + Electro Deionization) is an advanced water purification system designed to produce ultra-pure water for critical industrial applications. The RO system removes dissolved salts, organic matter, and impurities, while the EDI unit further polishes the water by removing remaining ions using electrically charged resins and membranes without the need for chemical regeneration.
+    overview: `RO-2 + EDI (Reverse Osmosis + Electro Deionization) is an advanced water purification system designed to produce ultra-pure water for critical industrial applications. The RO system removes dissolved salts, organic matter, and impurities, while the EDI unit further polishes the water by removing remaining ions using electrically charged resins and membranes without the need for chemical regeneration.
 
-This combination ensures consistent production of high-purity water with low conductivity, making it ideal for industries requiring stringent water quality standards. RO + EDI systems are widely used in pharmaceuticals, power plants, electronics, and other high-tech industries where ultrapure water is essential. At Hyaline Enviro Engineers Pvt. Ltd., we provide customized, energy-efficient, and reliable RO + EDI solutions with complete turnkey execution and after-sales support.`,
+This combination ensures consistent production of high-purity water with low conductivity, making it ideal for industries requiring stringent water quality standards. RO-2 + EDI systems are widely used in pharmaceuticals, power plants, electronics, and other high-tech industries where ultrapure water is essential. At Hyaline Enviro Engineers Pvt. Ltd., we provide customized, energy-efficient, and reliable RO-2 + EDI solutions with complete turnkey execution and after-sales support.`,
 
     problemSolution: [
       {
         problem:
           "Industries require ultra-pure water, but conventional systems fail to meet strict quality standards.",
         solution:
-          "Our RO + EDI systems produce ultra-high purity water with very low conductivity, ideal for critical applications.",
+          "Our RO-2 + EDI systems produce ultra-high purity water with very low conductivity, ideal for critical applications.",
       },
       {
         problem:
@@ -1090,7 +1090,7 @@ This combination ensures consistent production of high-purity water with low con
         problem:
           "Complex system integration and lack of customization lead to inefficiencies.",
         solution:
-          "We provide fully customized RO + EDI solutions tailored to your water quality and industrial requirements.",
+          "We provide fully customized RO-2 + EDI solutions tailored to your water quality and industrial requirements.",
       },
       {
         problem:
@@ -1101,7 +1101,7 @@ This combination ensures consistent production of high-purity water with low con
     ],
     whatWeProvide: [
       "Complete system design and engineering",
-      "RO + EDI system manufacturing and supply",
+      "RO-2 + EDI system manufacturing and supply",
       "Installation and commissioning",
       "Automation and control integration",
       "Operation & maintenance support",
@@ -1147,7 +1147,7 @@ This combination ensures consistent production of high-purity water with low con
     seo: {
       title: "RO EDI System Manufacturers in India | High Purity Water Systems",
       description:
-        "Advanced RO + EDI systems for ultrapure water generation in pharmaceutical, power, and industrial applications.",
+        "Advanced RO-2 + EDI systems for ultrapure water generation in pharmaceutical, power, and industrial applications.",
       keywords: [
         "RO EDI system",
         "electro deionization system",
@@ -1158,9 +1158,9 @@ This combination ensures consistent production of high-purity water with low con
 
     faq: [
       {
-        question: "What is an RO + EDI system?",
+        question: "What is an RO-2 + EDI system?",
         answer:
-          "RO + EDI is a water purification system where Reverse Osmosis removes dissolved salts and EDI further removes remaining ions to produce ultra-pure water without chemicals.",
+          "RO-2 + EDI is a water purification system where Reverse Osmosis removes dissolved salts and EDI further removes remaining ions to produce ultra-pure water without chemicals.",
       },
       {
         question: "What is the purpose of EDI in water treatment?",
@@ -1168,12 +1168,12 @@ This combination ensures consistent production of high-purity water with low con
           "EDI removes residual ions from RO-treated water using electrically charged membranes and resins, ensuring high purity without chemical regeneration.",
       },
       {
-        question: "Where are RO + EDI systems used?",
+        question: "Where are RO-2 + EDI systems used?",
         answer:
           "These systems are used in pharmaceuticals, power plants, electronics manufacturing, laboratories, and industries requiring ultra-pure water.",
       },
       {
-        question: "What are the advantages of RO + EDI systems?",
+        question: "What are the advantages of RO-2 + EDI systems?",
         answer:
           "They provide consistent high-purity water, eliminate chemical usage, reduce operating costs, and ensure environmentally friendly operation.",
       },
@@ -1188,27 +1188,27 @@ This combination ensures consistent production of high-purity water with low con
           "EDI systems typically produce water with very low conductivity (as low as 0.1 µS/cm), suitable for high-purity applications.",
       },
       {
-        question: "What is the cost of an RO + EDI system?",
+        question: "What is the cost of an RO-2 + EDI system?",
         answer:
           "The cost depends on system capacity, feed water quality, and application requirements. We provide customized solutions based on your needs.",
       },
       {
-        question: "Do you provide turnkey RO + EDI solutions?",
+        question: "Do you provide turnkey RO-2 + EDI solutions?",
         answer:
           "Yes, we offer complete turnkey solutions including design, supply, installation, commissioning, and maintenance support.",
       },
       {
-        question: "How long does it take to install an RO + EDI system?",
+        question: "How long does it take to install an RO-2 + EDI system?",
         answer:
           "Installation timelines vary based on system size, typically ranging from a few weeks to a couple of months.",
       },
       {
-        question: "Why choose Hyaline Enviro Engineers for RO + EDI systems?",
+        question: "Why choose Hyaline Enviro Engineers for RO-2 + EDI systems?",
         answer:
           "We provide advanced engineering solutions, reliable system performance, and complete end-to-end support across India.",
       },
       {
-        question: "Can I get a customized RO + EDI system?",
+        question: "Can I get a customized RO-2 + EDI system?",
         answer:
           "Yes, we design customized systems based on your water quality, capacity, and industry requirements. Contact us for consultation.",
       },
@@ -1217,6 +1217,168 @@ This combination ensures consistent production of high-purity water with low con
     cta: {
       title: "Need High Purity Water Solution?",
       button: "Request a Quote",
+    },
+  },
+  {
+    slug: "fire-fighting-system",
+    name: "Fire Fighting System",
+    tagline:
+      "Comprehensive fire protection systems for safety, compliance, and risk prevention",
+
+    hero: {
+      title: "Fire Fighting & Protection Systems",
+      subtitle:
+        "Reliable fire safety engineering solutions by Hyaline Enviro Engineers",
+      image: "/images/services/fire.webp",
+      mobileImage: "/images/services/fire.webp",
+    },
+
+    overview: `Our Fire Fighting Systems are designed to provide complete protection against fire hazards in residential, commercial, and industrial environments. 
+
+We offer end-to-end fire protection solutions including fire hydrant systems, sprinkler systems, fire alarm systems, and pump rooms, ensuring quick response and effective control during emergencies. 
+
+The project scope covers system design, supply, installation, testing, and commissioning in compliance with national and international fire safety standards. Our systems ensure reliable performance, rapid detection, and efficient fire suppression, safeguarding lives and assets.`,
+
+    problemSolution: [
+      {
+        problem:
+          "Lack of proper fire safety systems increases risk to life and property.",
+        solution:
+          "We design and install complete fire protection systems to ensure maximum safety and rapid emergency response.",
+      },
+      {
+        problem:
+          "Non-compliance with fire safety regulations can lead to legal penalties and project delays.",
+        solution:
+          "Our systems are designed as per fire safety norms and standards, ensuring full compliance and approvals.",
+      },
+      {
+        problem:
+          "Delayed fire detection and response can result in severe damage.",
+        solution:
+          "We integrate advanced fire alarm and detection systems for instant alerts and faster action.",
+      },
+      {
+        problem:
+          "Inadequate water pressure or system failure during emergencies.",
+        solution:
+          "We provide robust pump systems and hydrant networks to ensure consistent pressure and reliability.",
+      },
+      {
+        problem: "Manual fire control systems are slow and inefficient.",
+        solution:
+          "Our automated sprinkler systems activate instantly to control fire spread without human intervention.",
+      },
+      {
+        problem:
+          "Poor maintenance leads to system failure during critical situations.",
+        solution:
+          "We offer regular inspection and maintenance services to ensure system readiness at all times.",
+      },
+      {
+        problem:
+          "Complex building layouts make fire safety system design challenging.",
+        solution:
+          "We deliver customized fire protection solutions tailored to your building structure and requirements.",
+      },
+      {
+        problem:
+          "High risk in industrial environments with flammable materials.",
+        solution:
+          "We design specialized fire suppression systems for industrial safety and hazard control.",
+      },
+    ],
+
+    whatWeProvide: [
+      "Design and engineering of fire protection systems",
+      "Fire hydrant and sprinkler systems installation",
+      "Fire alarm and detection systems",
+      "Pump room setup and integration",
+      "Testing, commissioning, and certification",
+      "Operation & maintenance services",
+    ],
+
+    process: [
+      "Site assessment and risk analysis",
+      "System design and planning",
+      "Installation and piping network setup",
+      "Testing and commissioning",
+    ],
+
+    benefits: [
+      "Enhanced safety for people and assets",
+      "Compliance with fire safety regulations",
+      "Quick fire detection and suppression",
+      "Reliable and automated operation",
+    ],
+
+    applications: [
+      "Residential apartments",
+      "Commercial buildings",
+      "Hospitals",
+      "Industrial facilities",
+      "Warehouses",
+      "Hotels",
+    ],
+
+    industries: [
+      "Residential",
+      "Commercial",
+      "Industrial",
+      "Healthcare",
+      "Hospitality",
+    ],
+
+    whyChooseUs: [
+      "Expertise in fire safety engineering",
+      "Compliance with industry standards",
+      "Reliable and high-performance systems",
+    ],
+
+    seo: {
+      title:
+        "Fire Fighting System Contractors in India | Fire Protection Solutions",
+      description:
+        "Complete fire fighting and protection systems including hydrants, sprinklers, alarms, and pump systems.",
+      keywords: ["fire fighting system", "fire protection", "hydrant system"],
+    },
+
+    faq: [
+      {
+        question: "What is a fire fighting system?",
+        answer:
+          "A fire fighting system is a combination of equipment and infrastructure designed to detect, control, and extinguish fires in buildings and industrial facilities.",
+      },
+      {
+        question: "What are the main components of a fire protection system?",
+        answer:
+          "It includes fire hydrants, sprinkler systems, fire alarms, pumps, pipelines, and control panels.",
+      },
+      {
+        question: "Where are fire fighting systems required?",
+        answer:
+          "They are required in residential apartments, commercial buildings, industries, hospitals, and warehouses.",
+      },
+      {
+        question: "Are fire fighting systems mandatory?",
+        answer:
+          "Yes, most building regulations require fire protection systems for safety and compliance.",
+      },
+      {
+        question: "How often should fire systems be maintained?",
+        answer:
+          "Regular inspections and maintenance are recommended to ensure system reliability and readiness.",
+      },
+      {
+        question: "Do you provide installation and maintenance?",
+        answer:
+          "Yes, we offer complete services including design, installation, testing, and maintenance.",
+      },
+    ],
+
+    cta: {
+      title: "Need Fire Fighting Solution?",
+      button: "Request Quote",
     },
   },
 ];
