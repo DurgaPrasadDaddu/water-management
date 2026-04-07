@@ -147,7 +147,7 @@
 //     { name: "Gruner", image: "/clients/gruner.webp" },
 //     { name: "MTAR Tech", image: "/clients/mtar-tech.webp" },
 //     { name: "MTAR", image: "/clients/mtar.webp" },
-    
+
 //   ];
 
 //   const duplicated = [...clients, ...clients];
@@ -190,7 +190,7 @@
 //         />
 
 //         {/* Carousel */}
-//         <div  
+//         <div
 //           className="mt-14 overflow-hidden"
 //           onMouseEnter={() => setIsPaused(true)}
 //           onMouseLeave={() => setIsPaused(false)}
@@ -209,8 +209,8 @@
 //                 className="shrink-0 flex items-center justify-center group"
 //               >
 //                 {/* Logo Card */}
-//                 <div className="w-[160px] h-[90px] flex items-center justify-center bg-white 
-//                                 rounded-xl border border-gray-100 shadow-sm 
+//                 <div className="w-[160px] h-[90px] flex items-center justify-center bg-white
+//                                 rounded-xl border border-gray-100 shadow-sm
 //                                 hover:shadow-md transition-all duration-300">
 //                   <Image
 //                     src={client.image}
@@ -246,7 +246,7 @@ import Image from "next/image";
 import SectionWrapper from "../../ui/SectionWrapper";
 import SectionHeading from "../../ui/SectionHeading";
 import Container from "../../ui/Container";
-import "../../../styles/animations.css"
+import "../../../styles/animations.css";
 
 export default function ClientsSection() {
   const clients = [
@@ -256,7 +256,13 @@ export default function ClientsSection() {
     { name: "KIA Motors", image: "/clients/kia.jpg" },
     { name: "Dr Reddy's", image: "/clients/dr-reddys.jpg" },
     { name: "Vivimed", image: "/clients/vivimed.jpg" },
+    { name: "Praneeth", image: "/clients/praneeth.webp" },
+    { name: "Ramoji Film City", image: "/clients/ramoji-filim-city.webp" },
     { name: "Bharat Biotech", image: "/clients/bharat.jpg" },
+    { name: "My Home", image: "/clients/myhome.webp" },
+    { name: "MTAR", image: "/clients/mtar.webp" },
+    { name: "BSK", image: "/clients/bsk.webp" },
+    { name: "BBM", image: "/clients/bbm.jpg" },
     { name: "LT", image: "/clients/lt.jpg" },
     { name: "GeneSys", image: "/clients/genesys.jpg" },
     { name: "SOS Children's Villages", image: "/clients/sos.jpg" },
@@ -265,22 +271,14 @@ export default function ClientsSection() {
     { name: "CB Group", image: "/clients/cb.jpg" },
     { name: "IBPIL", image: "/clients/ibpil.jpg" },
     { name: "Emami", image: "/clients/emami.jpg" },
-    { name: "BBM", image: "/clients/bbm.jpg" },
-    { name: "BSK", image: "/clients/bsk.webp" },
     { name: "Enmax", image: "/clients/enmax.webp" },
-    { name: "My Home", image: "/clients/myhome.webp" },
-    { name: "Praneeth", image: "/clients/praneeth.webp" },
-    { name: "Ramoji Film City", image: "/clients/ramoji-filim-city.webp" },
     { name: "Siddartha", image: "/clients/siddartha.webp" },
     { name: "Vidur", image: "/clients/vidur.webp" },
-    { name: "Azad", image: "/clients/azad.webp" },
-    { name: "Fuzen Group", image: "/clients/fuzen-group.webp" },
+    { name: "Azad", image: "/clients/azad-color.webp" },
+    // { name: "Fuzen Group", image: "/clients/fuzen-group.webp" },
     { name: "Gruner", image: "/clients/gruner.webp" },
-    { name: "MTAR Tech", image: "/clients/mtar-tech.webp" },
-    { name: "MTAR", image: "/clients/mtar.webp" },
   ];
 
-  // 🔥 Split for hierarchy
   const featured = clients.slice(0, 6);
   const row1 = clients.slice(6, 18);
   const row2 = clients.slice(18);
@@ -296,77 +294,106 @@ export default function ClientsSection() {
               <span className="text-[#00A3E0]">Industry Leaders</span>
             </>
           }
-          description="We proudly collaborate with top organizations across industries, delivering reliable and scalable solutions."
+          description={`Hyaline Enviro Engineers has successfully delivered water treatment and environmental engineering solutions across diverse industries including pharmaceuticals, chemicals, power plants, and manufacturing sectors. Our proven expertise ensures reliability, compliance, and long-term performance.`}
         />
 
-        {/* 🔥 Featured Clients (Static Premium Row) */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 items-center mt-14">
+        {/* 🔥 Featured */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 mt-14">
           {featured.map((client, i) => (
-            <div
-              key={i}
-              className="flex items-center justify-center  transition duration-500"
-            >
+            <div key={i} className="flex justify-center">
               <Image
                 src={client.image}
                 alt={client.name}
                 width={150}
                 height={80}
-                className="object-contain"
+                className="object-contain h-[70px] w-auto "
               />
             </div>
           ))}
         </div>
 
-        {/* 🔥 Marquee Section */}
+        {/* 🔥 Marquee */}
         <div className="relative mt-16">
-          {/* Row 1 (Left → Right) */}
+          {/* Row 1 */}
           <div className="overflow-hidden">
-            <div className="flex gap-16 animate-marquee">
-              {[...row1, ...row1].map((client, i) => (
-                <div key={i} className="shrink-0">
-                  <Image
-                    src={client.image}
-                    alt={client.name}
-                    width={120}
-                    height={60}
-                    className="object-contain  transition duration-300"
-                  />
-                </div>
-              ))}
+            <div className="flex w-max animate-marquee">
+              {/* ORIGINAL */}
+              <div className="flex gap-16">
+                {row1.map((client, i) => (
+                  <div key={`r1-o-${i}`} className="shrink-0">
+                    <Image
+                      src={client.image}
+                      alt={client.name}
+                      width={120}
+                      height={60}
+                      className="h-[60px] w-auto object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+
+              {/* DUPLICATE */}
+              <div className="flex gap-16">
+                {row1.map((client, i) => (
+                  <div key={`r1-d-${i}`} className="shrink-0">
+                    <Image
+                      src={client.image}
+                      alt={client.name}
+                      width={120}
+                      height={60}
+                      className="h-[60px] w-auto object-contain "
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
 
-          {/* Row 2 (Right → Left) */}
+          {/* Row 2 */}
           <div className="overflow-hidden mt-10">
-            <div className="flex gap-16 animate-marquee-reverse">
-              {[...row2, ...row2].map((client, i) => (
-                <div key={i} className="shrink-0">
-                  <Image
-                    src={client.image}
-                    alt={client.name}
-                    width={120}
-                    height={60}
-                    className="object-contain  transition duration-300"
-                  />
-                </div>
-              ))}
+            <div className="flex w-max animate-marquee-reverse">
+              {/* ORIGINAL */}
+              <div className="flex gap-16">
+                {row2.map((client, i) => (
+                  <div key={`r2-o-${i}`} className="shrink-0">
+                    <Image
+                      src={client.image}
+                      alt={client.name}
+                      width={120}
+                      height={60}
+                      className="h-[60px] w-auto object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
+
+              {/* DUPLICATE */}
+              <div className="flex gap-16">
+                {row2.map((client, i) => (
+                  <div key={`r2-d-${i}`} className="shrink-0">
+                    <Image
+                      src={client.image}
+                      alt={client.name}
+                      width={120}
+                      height={60}
+                      className="h-[70px] w-auto object-contain"
+                    />
+                  </div>
+                ))}
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Footer Trust Line */}
+        {/* Footer */}
         <div className="text-center mt-14">
-          <p className="text-gray-700 text-base">
+          <p className="text-gray-700">
             Serving{" "}
-            <span className="text-[#00A3E0] font-semibold">
-              400+ clients
-            </span>{" "}
-            across industries with proven excellence.
+            <span className="text-[#00A3E0] font-semibold">400+ clients</span>{" "}
+            across multiple industries with trusted solutions.
           </p>
         </div>
       </Container>
-
-      
     </SectionWrapper>
   );
 }
