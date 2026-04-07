@@ -328,7 +328,7 @@ export default function ContactPage() {
                   />
                 </svg>
               }
-              address="Survey No: 737/2, Near MSR Convention Garden, Devar Yamjal (V), Medchal-Malkajgiri, Telangana – 500078"
+              address="Survey No: 737/2, Near MSR Convention Garden, Devar Yamjal (V), Shamirpet Mandal, Medchal-Malkajgiri District, Telangana – 500078"
               phones={["+91 93907 01234"]}
               email="sales@hyalineenviro.com"
               gradient="bg-gradient-to-br from-[#0f3460] to-[#16213e]"

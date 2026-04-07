@@ -93,9 +93,8 @@ const Footer = () => {
                 <p className="text-sm sm:text-sm md:text-base leading-relaxed">
                   Survey No: 737/2, Near MSR Convention Garden,
                   <br />
-                  Beside MYUR Bar & Restaurant,
-                  <br />
-                  Devar Yamjal (V), Medchal, Telangana - 500078.
+                  Devar Yamjal (V), Shamirpet (M) <br />
+                  Medchal-Malkajgiri (District), Telangana - 500078.
                 </p>
 
                 <p className="mt-2 text-sm sm:text-sm md:text-base">
