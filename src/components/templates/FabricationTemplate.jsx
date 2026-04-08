@@ -396,12 +396,12 @@ export default function FabricationTemplate({ data, relatedProducts = [] }) {
               </Link>
 
               <Link
-                 href="tel:+919553753337"
-                className="inline-flex items-center gap-2 text-white text-sm font-medium px-6 py-2.5 border border-white/25 hover:border-white/50 hover:bg-white/5 transition-all duration-300"
-                style={{ borderRadius: "var(--radius-md)" }}
-              >
-                <PhoneIcon /> Talk to Us
-              </Link>
+                  href="/Brochure/hyaline-fabrications.pdf"
+                  download
+                  className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-white/25 text-white text-sm font-medium hover:bg-white/10 transition"
+                >
+                  Download Brochure
+                </Link>
             </div>
           </div>
         </div>

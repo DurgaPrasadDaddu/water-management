@@ -188,7 +188,7 @@ import Link from "next/link";
 import Container from "@/components/ui/Container";
 import Breadcrumbs from "@/components/ui/Breadcrumbs";
 import { products } from "@/data/products";
-import { ChevronRight } from "lucide-react";
+import { ChevronRight, PhoneIcon } from "lucide-react";
 import Button from "../ui/Button";
 
 //  INLINE SVG ICON SYSTEM  (zero external dependency)
@@ -542,14 +542,14 @@ export default function ProductTemplate({ product }) {
                 >
                   Request a Quote →
                 </Link>
-
-                <a
-                  href="/Brochure/hyaline-brochure.pdf"
-                  download
-                  className="inline-flex items-center gap-2 px-6 py-3 rounded-xl border border-white/25 text-white text-sm font-medium backdrop-blur hover:bg-white/10 transition"
-                >
-                  Download Brochure <ChevronRight size={15} />
-                </a>
+                <Link
+                 href="tel:+919553753337"
+                className="inline-flex items-center gap-2 text-white text-sm font-medium px-6 py-2.5 border border-white/25 hover:border-white/50 hover:bg-white/5 transition-all duration-300"
+                style={{ borderRadius: "var(--radius-md)" }}
+              >
+                <PhoneIcon /> Talk to Our Experts
+              </Link>
+               
               </div>
             </div>
 

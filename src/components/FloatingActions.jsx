@@ -70,7 +70,7 @@ export default function FloatingActions() {
 
           {/* Button */}
           <a
-            href="/brochure/hyaline-brochure.pdf"
+            href="/brochure/hyaline-catalouge.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="absolute inset-0 cursor-pointer"

@@ -566,7 +566,7 @@ export default function SolutionTemplate({ data }) {
                 </Button>
 
                 <a
-                  href="/Brochure/hyaline-brochure.pdf"
+                  href="/Brochure/hyaline-solutions.pdf"
                   download
                   className="inline-flex items-center gap-2 px-5 py-3 rounded-xl border border-white/25 text-white text-sm font-medium hover:bg-white/10 transition"
                 >

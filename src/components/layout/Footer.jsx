@@ -8,7 +8,7 @@ import { socialLinks } from "@/data/socialLinks";
 const Footer = () => {
   return (
     // <footer className="bg-[var(--color-dark)] text-gray-300 pt-12 sm:pt-16 pb-8 px-4  sm:px-6">
-    <footer className="bg-[var(--color-dark)] text-white/90 pt-12 pb-8 px-8 sm:px-6 lg:px-16">
+    <footer className="bg-[var(--color-dark)] text-white/90 pt-12 pb-8 px-8 md:px-19 lg:px-20">
       <div className="max-w-7xl mx-auto grid grid-cols-12 gap-4 md:gap-10 text-center lg:text-left">
         {/* LEFT BLOCK */}
         <div className="col-span-12 lg:col-span-4 flex flex-col items-center justify-center space-y-6 sm:space-y-8 text-left">
