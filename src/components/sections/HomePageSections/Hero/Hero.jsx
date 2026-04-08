@@ -78,7 +78,7 @@ export default function Hero() {
               <span className="text-slate-200 font-semibold">
                 water and wastewater solutions
               </span>{" "}
-              for industrial, commercial AND residential applications, specialising in MTP, STP,
+              for industrial, commercial AND residential applications, specialising in MEE, STP,
               ETP, UF + RO Plants, ZLD & industrial fabrication works across India.
             </p>
 
