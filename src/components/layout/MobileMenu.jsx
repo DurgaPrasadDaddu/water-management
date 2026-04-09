@@ -268,7 +268,7 @@ export default function MobileMenu() {
                           }
                         `}
                       >
-                        <div className="ml-3 pl-4 border-l border-gray-200 space-y-1">
+                        <div className="ml-3 pl-4 border-l border-[var(--border)] space-y-1">
                           {item.children.map((sub) => {
                             const isSubActive = pathname === sub.href;
 

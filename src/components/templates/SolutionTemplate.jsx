@@ -298,7 +298,7 @@
 //                   whileInView={{ opacity: 1, y: 0 }}
 //                   transition={{ delay: i * 0.2 }}
 //                   viewport={{ once: true }}
-//                   className="flex-1 bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-md transition"
+//                   className="flex-1 bg-white border border-[var(--border)] rounded-xl p-6 shadow-sm hover:shadow-md transition"
 //                 >
 //                   {/* STEP NUMBER */}
 //                   <div className="text-[#00A3E0] font-semibold text-sm mb-2">
@@ -876,7 +876,7 @@ export default function SolutionTemplate({ data }) {
                 {...fadeUp(i * 0.1)}
                 className="relative group"
               >
-                <div className="flex gap-4 p-5 rounded-xl border border-gray-200 bg-white shadow-sm backdrop-blur-md transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
+                <div className="flex gap-4 p-5 rounded-xl border border-[var(--border)] bg-white shadow-sm backdrop-blur-md transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
                   {/* Number */}
                   <div className="flex flex-col items-center">
                     <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#00A3E0] to-[#8DC63F] flex items-center justify-center font-bold text-white text-sm shadow-md">

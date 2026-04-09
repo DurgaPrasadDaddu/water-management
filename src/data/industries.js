@@ -5,6 +5,7 @@ export const marketSegments = {
     title: "Industrial Sector",
     slug: "industrial",
     image: "/images/marketsegments/industrial.webp",
+    alt:"Industrial Solutions",
     metaTitle:
       "Industrial Water Treatment Solutions | Hyaline Enviro Engineers",
     metaDescription:
@@ -170,6 +171,7 @@ export const marketSegments = {
   commercial: {
     title: "Commercial & Institutional",
     image: "/images/marketsegments/commercial.webp",
+    alt:"Commercial Related Image",
     slug: "commercial",
     metaTitle:
       "Commercial Water Treatment Solutions | Hyaline Enviro Engineers",
@@ -387,6 +389,7 @@ With expertise in RO, UF, STP, and ETP systems, Hyaline Enviro Engineers Pvt. Lt
   government: {
     title: "Government & Municipal",
     image: "/images/marketsegments/government.webp",
+    alt:"Government related Projects Image",
     slug: "government",
     metaTitle: "Municipal Water Treatment Solutions | Hyaline Enviro Engineers",
     metaDescription:

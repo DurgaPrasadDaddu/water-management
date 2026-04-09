@@ -425,7 +425,7 @@ const ProcessStep = ({ step, index, total, isActive, onClick,  activeStep, onHov
             ${
               isActive
                 ? "bg-[#00A3E0] text-white shadow-[0_0_0_6px_rgba(0,163,224,0.15)] scale-110"
-                : "bg-white text-gray-400 border-2 border-gray-200 group-hover:border-[#00A3E0] group-hover:text-[#00A3E0]"
+                : "bg-white text-gray-400 border-2 border-[var(--border)] group-hover:border-[#00A3E0] group-hover:text-[#00A3E0]"
             }
           `}
           style={
@@ -1121,7 +1121,7 @@ export default function ServiceTemplate({ service }) {
                   <div
                     key={i}
                     className={`group bg-white rounded-2xl border transition-all duration-300 overflow-hidden
-                      ${openFaq === i ? "border-[#00A3E0]/30 shadow-lg shadow-[#00A3E0]/5" : "border-gray-100 hover:border-gray-200 shadow-sm"}`}
+                      ${openFaq === i ? "border-[#00A3E0]/30 shadow-lg shadow-[#00A3E0]/5" : "border-gray-100 hover:border-[var(--border)] shadow-sm"}`}
                   >
                     <button
                       onClick={() => setOpenFaq(openFaq === i ? null : i)}

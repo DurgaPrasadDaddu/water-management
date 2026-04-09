@@ -550,7 +550,7 @@ export default function IndustryDetailsTemplate({
                 )}
                 {/* Floating trust pill */}
                 <div className="absolute bottom-5 left-5">
-                  <div className="inline-flex items-center gap-2 bg-white/96 backdrop-blur-sm border border-gray-200 shadow-lg rounded-xl px-4 py-2.5">
+                  <div className="inline-flex items-center gap-2 bg-white/96 backdrop-blur-sm border border-[var(--border)] shadow-lg rounded-xl px-4 py-2.5">
                     <span className="w-2 h-2 rounded-full bg-[#8DC63F] animate-pulse" />
                     <span
                       style={{ fontFamily: "var(--font-poppins)" }}
@@ -588,7 +588,7 @@ export default function IndustryDetailsTemplate({
                 ].map((c) => (
                   <span
                     key={c.l}
-                    className="inline-flex items-center gap-2 bg-[#F9FAFB] border border-gray-200 hover:border-[#00A3E0]/50 hover:bg-blue-50/60 text-[#4B5563] text-sm font-medium px-4 py-2 rounded-[6px] transition-all duration-200 cursor-default"
+                    className="inline-flex items-center gap-2 bg-[#F9FAFB] border border-[var(--border)] hover:border-[#00A3E0]/50 hover:bg-blue-50/60 text-[#4B5563] text-sm font-medium px-4 py-2 rounded-[6px] transition-all duration-200 cursor-default"
                   >
                     {c.e} {c.l}
                   </span>
@@ -633,7 +633,7 @@ export default function IndustryDetailsTemplate({
                       ? t === "problems"
                         ? "bg-red-50 border-red-200 text-red-600"
                         : "bg-blue-50 border-[#00A3E0]/30 text-[#00A3E0]"
-                      : "bg-white border-gray-200 text-[#4B5563]"
+                      : "bg-white border-[var(--border)] text-[#4B5563]"
                   }`}
                 >
                   {t === "problems" ? "⚠️ Challenges" : "✅ Solutions"}

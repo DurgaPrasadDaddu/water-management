@@ -220,7 +220,7 @@ const Badge = ({ label, variant = "blue" }) => {
   const styles = {
     blue: "bg-sky-100 text-sky-700 border border-sky-200",
     green: "bg-emerald-100 text-emerald-700 border border-emerald-200",
-    gray: "bg-gray-100 text-gray-600 border border-gray-200",
+    gray: "bg-gray-100 text-gray-600 border border-[var(--border)]",
   };
   return (
     <span
@@ -611,7 +611,7 @@ export default function ListingPageTemplate({
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder={`Search ${title.toLowerCase()}...`}
-                className="w-full pl-9 pr-4 py-2 text-sm bg-gray-50 border border-gray-200 rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00A3E0]/30 focus:border-[#00A3E0] transition-all placeholder-gray-400"
+                className="w-full pl-9 pr-4 py-2 text-sm bg-gray-50 border border-[var(--border)] rounded-lg focus:outline-none focus:ring-2 focus:ring-[#00A3E0]/30 focus:border-[#00A3E0] transition-all placeholder-gray-400"
               />
             </div>
 
@@ -627,7 +627,7 @@ export default function ListingPageTemplate({
                         "px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 border",
                         activeCategory === cat
                           ? "bg-[#00A3E0] text-white border-[#00A3E0] shadow-sm shadow-sky-200"
-                          : "bg-white text-gray-500 border-gray-200 hover:border-[#00A3E0] hover:text-[#00A3E0]",
+                          : "bg-white text-gray-500 border-[var(--border)] hover:border-[#00A3E0] hover:text-[#00A3E0]",
                       )}
                     >
                       {cat}
@@ -647,7 +647,7 @@ export default function ListingPageTemplate({
                         "px-3 py-1 rounded-full text-xs font-semibold tracking-wide transition-all duration-200 border",
                         activeIndustry === ind
                           ? "bg-emerald-500 text-white border-emerald-500 shadow-sm shadow-emerald-100"
-                          : "bg-white text-gray-500 border-gray-200 hover:border-emerald-500 hover:text-emerald-600",
+                          : "bg-white text-gray-500 border-[var(--border)] hover:border-emerald-500 hover:text-emerald-600",
                       )}
                     >
                       {ind}

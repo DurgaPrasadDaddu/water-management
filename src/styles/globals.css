@@ -3,13 +3,20 @@
 /* ---------- ROOT DESIGN SYSTEM ---------- */
 
 :root {
-  --color-primary: #19b3da;
+  --bg-light: #F9FAFB;
+  --border: #E5E7EB;
+  /* --color-primary: #19b3da; */
+  --color-primary: #0284C7;       /* darker = accessible */
+  --color-primary-hover: #0369A1;
   --color-secondary: #8DC63F;
 
-  --color-dark: #1F2937;
-  --color-text: #4B5563;
+   --color-dark: #1F2937;
+  /*-color-text: #4B5563;
   --color-light: #F9FAFB;
-  --color-white: #FFFFFF;
+  --color-white: #FFFFFF; */
+  --text-primary: #111827;
+  --text-secondary: #374151;
+  --text-muted: #6B7280;
 
   --color-accent: #0284C7;
 
@@ -29,8 +36,8 @@
 
 body {
   font-family: var(--font-body);
-  color: var(--color-text);
-  background: var(--color-white);
+  color: var(--text-primary);
+  /* background: var(--color-white); */
   line-height: 1.6;
 }
 
@@ -61,6 +68,7 @@ h4 { font-size: 1.25rem; }
 p {
   font-family: var(--font-body);
   line-height: 1.7;
+  
 }
 
 /* ---------- SECTION ---------- */

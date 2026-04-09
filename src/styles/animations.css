@@ -11,7 +11,7 @@
   transform: scale(1.1);
 }
 
-@keyframes dropFade {
+/* @keyframes dropFade {
   from {
     opacity: 0;
     transform: translateY(20px) scale(0.95);
@@ -25,8 +25,8 @@
 .animate-dropFade {
   animation: dropFade 0.7s ease forwards;
   will-change: transform, opacity;
-}
-
+} */
+ 
 /* client carousel animations */
 @keyframes marquee {
   0% {

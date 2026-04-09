@@ -1,6 +1,7 @@
+import { AlertTriangle } from "lucide-react";
 import Image from "next/image";
 
-export default function Banner({ title, description, image }) {
+export default function Banner({ title, description, image, alt }) {
   return (
     <section className="flex flex-col md:flex-row h-auto md:h-[320px] overflow-hidden">
       {/* LEFT CONTENT */}
@@ -19,7 +20,7 @@ export default function Banner({ title, description, image }) {
 
       {/* RIGHT IMAGE */}
       <div className="relative w-full md:w-[40%] h-[200px] sm:h-[250px] md:h-full">
-        <Image src={image} alt={title} fill className="object-cover" priority />
+        <Image src={image} alt={alt} fill className="object-cover" priority />
       </div>
     </section>
   );

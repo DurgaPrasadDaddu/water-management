@@ -62,14 +62,12 @@ export default function Navbar() {
               href="/contact"
               className="
                 hidden lg:inline-flex items-center gap-1.5
-                bg-[var(--color-primary)]
-                text-white
+                bg-[var(--color-primary)]  hover:bg-[var(--color-primary-hover)] text-white
                 px-4 lg:px-5 py-1.5 lg:py-2
                 rounded-md
                 text-sm lg:text-[15px]
                 font-medium tracking-wide
                 transition-all duration-300
-                hover:bg-[var(--color-accent)]
                 hover:shadow-md
               "
             >

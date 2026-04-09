@@ -88,14 +88,14 @@ export default function ServicesSection() {
                     ${
                       isActive
                         ? "bg-gradient-to-r from-[#00A3E0] via-[#0096C8] to-[#8DC63F] text-white shadow-xl"
-                        : "bg-white hover:bg-[#F3F4F6] border-gray-200"
+                        : "bg-white hover:bg-[#F3F4F6] border-[var(--border)]"
                     }
                   `}
                 >
                   <div className="flex items-start gap-4">
                     <span
                       className={`text-lg font-semibold ${
-                        isActive ? "text-white/90" : "text-gray-400"
+                        isActive ? "text-white/90" : "text-[var(--text-secondary)]"
                       }`}
                     >
                       {String(index + 1).padStart(2, "0")}
@@ -122,7 +122,7 @@ export default function ServicesSection() {
                       className={`transition-transform ${
                         isActive
                           ? "translate-x-2 opacity-80"
-                          : "opacity-0 group-hover:opacity-100 group-hover:translate-x-2 text-gray-400"
+                          : "opacity-0 group-hover:opacity-100 group-hover:translate-x-2 text-[var(--text-secondary)]"
                       }`}
                     >
                       →

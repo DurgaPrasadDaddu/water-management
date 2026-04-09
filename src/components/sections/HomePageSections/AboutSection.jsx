@@ -118,10 +118,9 @@ export default function AboutSection() {
                 className="
                   inline-flex items-center gap-2
                   px-6 py-3 rounded-xl
-                  bg-[color:var(--color-primary)]
-                  text-white/90 font-medium
+                  bg-[var(--color-primary)] text-white 
+                  hover:bg-[var(--color-primary-hover)] font-medium
                   shadow-lg
-                  hover:bg-[color:var(--color-accent)]
                   hover:shadow-xl
                   transition duration-300
                 "

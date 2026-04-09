@@ -47,7 +47,7 @@ function ValueCard({ item }) {
   const Icon = item.icon;
 
   return (
-    <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-gray-200">
+    <div className="bg-white rounded-xl p-6 md:p-8 shadow-sm hover:shadow-md transition-all duration-300 border border-[var(--border)]">
       
       {/* Icon */}
       <div className="mb-5">

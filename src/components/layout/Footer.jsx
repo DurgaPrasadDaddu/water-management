@@ -8,7 +8,7 @@ import { socialLinks } from "@/data/socialLinks";
 const Footer = () => {
   return (
     // <footer className="bg-[var(--color-dark)] text-gray-300 pt-12 sm:pt-16 pb-8 px-4  sm:px-6">
-    <footer className="bg-[var(--color-dark)] text-white/90 pt-12 pb-8 px-8 md:px-19 lg:px-20">
+    <footer className="bg-[var(--color-dark)] text-white/90 pt-12 pb-8 px-8 md:px-19">
       <div className="max-w-7xl mx-auto grid grid-cols-12 gap-4 md:gap-10 text-center lg:text-left">
         {/* LEFT BLOCK */}
         <div className="col-span-12 lg:col-span-4 flex flex-col items-center justify-center space-y-6 sm:space-y-8 text-left">
@@ -104,7 +104,7 @@ const Footer = () => {
 
                 <p className="mt-2 text-sm sm:text-sm md:text-base">
                   <a
-                    href="tel:+919347605167"
+                    href="tel:+917207425404"
                     className="
                     inline-flex items-center
                     min-h-[44px] px-3 py-2
@@ -114,7 +114,7 @@ const Footer = () => {
                     break-all
                   "
                   >
-                    📞 <span>+91-9347605167</span>
+                    📞 <span>+91-7207425404</span>
                   </a>
                   <br />
                 </p>
@@ -133,17 +133,26 @@ const Footer = () => {
 
           {/* SOCIAL */}
           <div className="flex items-center justify-center lg:justify-start gap-3 sm:gap-4">
-            {socialLinks.map(({ icon: Icon, url }, i) => (
-              <a
-                key={i}
-                href={url}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="p-2 rounded-full bg-white/5 hover:bg-[var(--color-primary)] transition-all duration-300 cursor-pointer"
-              >
-                <Icon className="text-gray-300 hover:text-white text-sm sm:text-base" />
-              </a>
-            ))}
+            {socialLinks.map((item, index) => {
+              const Icon = item.icon;
+
+              return (
+                 <a
+                  key={index}
+                  href={item.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label={item.label}
+                  className="border border-[var(--color-primary)] rounded-full p-2 
+                  transition duration-300 
+                  hover:-translate-y-1
+                  focus:outline-none focus:ring-2 focus:ring-[var(--color-primary)]"
+                >
+                  <Icon size={18} />
+                  <span className="sr-only">{item.label}</span>
+                </a>
+              );
+            })}
           </div>
         </div>
 

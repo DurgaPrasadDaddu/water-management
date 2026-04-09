@@ -10,6 +10,7 @@ export default function MarketSegmentTemplate({ data }) {
         title={data.title}
         description={data.shortDescription}
         image={data.image}
+        alt={data.alt}
       />
 
       {/* Heading Section */}

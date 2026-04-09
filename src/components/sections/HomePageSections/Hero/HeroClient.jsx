@@ -139,8 +139,7 @@ function DropCard({ stat, index }) {
   return (
     <div
       className="group relative w-[138px] h-[150px] flex-shrink-0 
-      opacity-0 translate-y-5 animate-dropFade"
-      style={{ animationDelay: `${index * 360}ms` }}
+      opacity-100 translate-y-0"
     >
       <div
         className="absolute inset-0 backdrop-blur-xl border transition-all duration-500 

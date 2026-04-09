@@ -870,7 +870,7 @@ The RO system then removes dissolved salts, organic matter, and impurities, prod
       title: "Packaged Drinking Water Plant Solutions",
       subtitle:
         "End-to-end drinking water plant solutions by Hyaline Enviro Engineers",
-      image: "/images/solutions/drinking-water.jpeg",
+      image: "/images/solutions/drinking-water.webp",
       mobileImage: "/images/solutions/drinking-water-mobile.webp",
     },
 
@@ -1229,8 +1229,8 @@ This combination ensures consistent production of high-purity water with low con
       title: "Fire Fighting & Protection Systems",
       subtitle:
         "Reliable fire safety engineering solutions by Hyaline Enviro Engineers",
-      image: "/images/services/fire.webp",
-      mobileImage: "/images/services/fire.webp",
+      image: "/images/solutions/fire.webp",
+      mobileImage: "/images/solutions/fire-mobile.webp",
     },
 
     overview: `Our Fire Fighting Systems are designed to provide complete protection against fire hazards in residential, commercial, and industrial environments. 

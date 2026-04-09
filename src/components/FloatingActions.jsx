@@ -28,8 +28,9 @@ export default function FloatingActions() {
           {/* WhatsApp */}
           <a
             href="https://wa.me/919553753337"
-            target="_blank"
-            rel="noopener noreferrer"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat with us on WhatsApp"
             className="relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-110 transition"
           >
             <Image
@@ -45,6 +46,7 @@ export default function FloatingActions() {
           {/* Email */}
           <a
             href="mailto:info@hyalineenviro.com"
+            aria-label="Send email to Hyaline Enviro Engineers"
             className="flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-110 transition"
           >
             <MailIcon size={22} />
@@ -73,6 +75,7 @@ export default function FloatingActions() {
             href="/brochure/hyaline-catalouge.pdf"
             target="_blank"
             rel="noopener noreferrer"
+            aria-label="Send email to Hyaline Enviro Engineers"
             className="absolute inset-0 cursor-pointer"
           >
             {/* Shape */}
@@ -102,6 +105,7 @@ export default function FloatingActions() {
           
           <button
             onClick={scrollToTop}
+            aria-label="Scroll to top"
             className="pointer-events-auto w-14 h-14 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-blue-900/80 via-cyan-600/60 to-blue-700/50 backdrop-blur-2xl border border-white/20 shadow-xl flex items-center justify-center hover:scale-110 transition"
           >
             <ArrowUp size={24} className="text-white" />
