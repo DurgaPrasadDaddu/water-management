@@ -63,7 +63,7 @@ const Footer = () => {
                   >
                     📞 <span>+91-7981123366</span>
                   </a>
-                  <br />
+                  {/* <br />
                   <a
                     href="tel:+919553753337"
                     className="
@@ -76,7 +76,7 @@ const Footer = () => {
                   "
                   >
                     📞 <span>+91-9553753337</span>
-                  </a>
+                  </a> */}
                 </p>
 
                 <p className="text-[color:var(--color-primary)] text-sm sm:text-sm md:text-base mt-1 break-all">
