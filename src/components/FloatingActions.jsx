@@ -28,9 +28,9 @@ export default function FloatingActions() {
           {/* WhatsApp */}
           <a
             href="https://wa.me/919553753337"
-  target="_blank"
-  rel="noopener noreferrer"
-  aria-label="Chat with us on WhatsApp"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="Chat with us on WhatsApp"
             className="relative flex items-center justify-center w-12 h-12 md:w-14 md:h-14 rounded-full bg-[#25D366] text-white shadow-xl hover:scale-110 transition"
           >
             <Image
@@ -73,9 +73,9 @@ export default function FloatingActions() {
           {/* Button */}
           <a
             href="/brochure/hyaline-catalouge.pdf"
-            target="_blank"
+            download
             rel="noopener noreferrer"
-            aria-label="Send email to Hyaline Enviro Engineers"
+            aria-label="Download Hyaline Catalogue"
             className="absolute inset-0 cursor-pointer"
           >
             {/* Shape */}

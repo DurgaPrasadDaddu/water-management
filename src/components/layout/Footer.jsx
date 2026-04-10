@@ -8,10 +8,10 @@ import { socialLinks } from "@/data/socialLinks";
 const Footer = () => {
   return (
     // <footer className="bg-[var(--color-dark)] text-gray-300 pt-12 sm:pt-16 pb-8 px-4  sm:px-6">
-    <footer className="bg-[var(--color-dark)] text-white/90 pt-12 pb-8 px-8 md:px-19">
-      <div className="max-w-7xl mx-auto grid grid-cols-12 gap-4 md:gap-10 text-center lg:text-left">
+    <footer className="bg-[var(--color-dark)] text-white/90 pt-12 pb-8 px-9 md:pl-19">
+      <div className="max-w-7xl mx-auto grid grid-cols-12 gap-2 md:gap-10 text-center lg:text-left">
         {/* LEFT BLOCK */}
-        <div className="col-span-12 lg:col-span-4 flex flex-col items-center justify-center space-y-6 sm:space-y-8 text-left">
+        <div className="col-span-12 xl:col-span-4 flex flex-col items-center justify-center space-y-6 sm:space-y-8 text-left">
           <div className="px-4">
             <Link href="/">
               <Image
@@ -28,7 +28,7 @@ const Footer = () => {
 
           {/* ADDRESS */}
           <div className="w-full space-y-4 iems-center">
-            <h4 className="text-[color:var(--color-primary)] font-semibold text-sm sm:text-base tracking-wide">
+            <h4 className="text-[color:var(--color-primary)] font-semibold text-sm sm:text-base tracking-wide text-center">
               ADDRESS
             </h4>
 
@@ -157,7 +157,7 @@ const Footer = () => {
         </div>
 
         {/* ABOUT */}
-        <div className="col-span-12 md:col-span-6 lg:col-span-2 text-left">
+        <div className="col-span-12 md:col-span-3 xl:col-span-2 text-left">
           <h4 className="text-[color:var(--color-primary)] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
             ABOUT
           </h4>
@@ -168,8 +168,10 @@ const Footer = () => {
               "fabrication",
               "products",
               "services",
+              "channel-partners",
               "careers",
               "contact",
+              
             ].map((item) => (
               <li key={item}>
                 <Link
@@ -183,7 +185,9 @@ const Footer = () => {
           </ul>
         </div>
 
-        <div className="col-span-12 md:col-span-6 lg:col-span-3 text-left space-y-6">
+
+        {/* SOLUTIONS and SERVICES */}
+        <div className="col-span-12 md:col-span-5 xl:col-span-4 space-y-6 text-left">
           {/* SOLUTIONS */}
           <div>
             <h4 className="text-[color:var(--color-primary)] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
@@ -191,7 +195,7 @@ const Footer = () => {
             </h4>
 
             <ul className="space-y-1.5 sm:space-y-2 text-sm sm:text-sm md:text-base">
-              {solutions?.slice(0, 5).map((item) => (
+              {solutions.map((item) => (
                 <li key={item.slug}>
                   <Link
                     href={`/solutions/${item.slug}`}
@@ -226,7 +230,7 @@ const Footer = () => {
         </div>
 
         {/* PRODUCTS */}
-        <div className="col-span-12 md:col-span-6 lg:col-span-3 text-left">
+        <div className="col-span-12 md:col-span-4 xl:col-span-2 text-left">
           <h4 className="text-[color:var(--color-primary)] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
             PRODUCTS
           </h4>
