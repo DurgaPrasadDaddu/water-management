@@ -935,10 +935,10 @@ export default function IndustryDetailsTemplate({
               {/* Contact row */}
               <div className="flex flex-wrap justify-center gap-6 mt-8">
                 <a
-                  href="tel:+919553753337"
+                  href="tel:+917981123366"
                   className="inline-flex items-center gap-2 text-white/45 hover:text-[#00A3E0] text-sm transition-colors duration-200"
                 >
-                  <IconPhone size={13} /> +91 9553753337
+                  <IconPhone size={13} /> +91 7981123366
                 </a>
                 <span className="text-white/15">|</span>
                 <a

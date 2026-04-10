@@ -248,7 +248,7 @@ export default function ContactPage() {
                   </p>
                   <div className="flex flex-col gap-2">
                     <a
-                      href="tel:+919553753337"
+                      href="tel:+917981123366"
                       className="flex items-center gap-2.5 bg-white hover:bg-slate-50 border border-slate-200 rounded-xl px-4 py-3 text-sm font-bold text-slate-700 transition-all duration-200 hover:border-slate-300 hover:shadow-sm"
                     >
                       <svg
@@ -305,7 +305,7 @@ export default function ContactPage() {
                 </svg>
               }
               address="Plot no: 61, Jayaram Bhavan, Ground Floor, Road no: 1, Green Park Avenue, Behind Chennai Shopping Mall, Suchitra Circle, Hyderabad – 500067"
-              phones={["+91 7981123366", "+91 9553753337"]}
+              phones={["+91 7981123366"]}
               email="info@hyalineenviro.com"
               gradient="bg-gradient-to-br from-[#0a1e3c] to-[#0e2d5a]"
             />
@@ -329,7 +329,7 @@ export default function ContactPage() {
                 </svg>
               }
               address="Survey No: 737/2, Near MSR Convention Garden, Devar Yamjal (V), Shamirpet Mandal, Medchal-Malkajgiri District, Telangana – 500078"
-              phones={["+91 93907 01234"]}
+              phones={["+91 7207425404"]}
               email="sales@hyalineenviro.com"
               gradient="bg-gradient-to-br from-[#0f3460] to-[#16213e]"
             />
