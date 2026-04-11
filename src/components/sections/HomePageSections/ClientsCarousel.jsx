@@ -278,7 +278,8 @@ export default function ClientsSection() {
     // { name: "Fuzen Group", image: "/clients/fuzen-group.webp" },
     { name: "Gruner", image: "/clients/gruner.webp" },
   ];
-
+  const LOGO_BOX =
+    "relative w-[140px] h-[70px] flex items-center justify-center";
   const featured = clients.slice(0, 6);
   const row1 = clients.slice(6, 18);
   const row2 = clients.slice(18);
@@ -301,13 +302,15 @@ export default function ClientsSection() {
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-10 mt-14">
           {featured.map((client, i) => (
             <div key={i} className="flex justify-center">
-              <Image
-                src={client.image}
-                alt={client.name}
-                width={150}
-                height={80}
-                className="object-contain h-[70px] w-auto "
-              />
+              <div className={LOGO_BOX}>
+                <Image
+                  src={client.image}
+                  alt={client.name}
+                  fill
+                  className="object-contain"
+                  sizes="140px"
+                />
+              </div>
             </div>
           ))}
         </div>
@@ -320,14 +323,19 @@ export default function ClientsSection() {
               {/* ORIGINAL */}
               <div className="flex gap-16">
                 {row1.map((client, i) => (
-                  <div key={`r1-o-${i}`} className="shrink-0">
-                    <Image
-                      src={client.image}
-                      alt={client.name}
-                      width={120}
-                      height={60}
-                      className="h-[60px] w-auto object-contain"
-                    />
+                  <div
+                    key={`r1-o-${i}`}
+                    className="shrink-0 flex items-center justify-center"
+                  >
+                    <div className={LOGO_BOX}>
+                      <Image
+                        src={client.image}
+                        alt={client.name}
+                        fill
+                        className="object-contain"
+                        sizes="140px"
+                      />
+                    </div>
                   </div>
                 ))}
               </div>
@@ -336,13 +344,15 @@ export default function ClientsSection() {
               <div className="flex gap-16">
                 {row1.map((client, i) => (
                   <div key={`r1-d-${i}`} className="shrink-0">
-                    <Image
-                      src={client.image}
-                      alt={client.name}
-                      width={120}
-                      height={60}
-                      className="h-[60px] w-auto object-contain "
-                    />
+                    <div className={LOGO_BOX}>
+                      <Image
+                        src={client.image}
+                        alt={client.name}
+                        fill
+                        className="object-contain"
+                        sizes="140px"
+                      />
+                    </div>
                   </div>
                 ))}
               </div>
@@ -356,13 +366,15 @@ export default function ClientsSection() {
               <div className="flex gap-16">
                 {row2.map((client, i) => (
                   <div key={`r2-o-${i}`} className="shrink-0">
-                    <Image
-                      src={client.image}
-                      alt={client.name}
-                      width={120}
-                      height={60}
-                      className="h-[60px] w-auto object-contain"
-                    />
+                    <div className={LOGO_BOX}>
+                      <Image
+                        src={client.image}
+                        alt={client.name}
+                        fill
+                        className="object-contain"
+                        sizes="140px"
+                      />
+                    </div>
                   </div>
                 ))}
               </div>
@@ -371,13 +383,15 @@ export default function ClientsSection() {
               <div className="flex gap-16">
                 {row2.map((client, i) => (
                   <div key={`r2-d-${i}`} className="shrink-0">
-                    <Image
-                      src={client.image}
-                      alt={client.name}
-                      width={120}
-                      height={60}
-                      className="h-[70px] w-auto object-contain"
-                    />
+                    <div className={LOGO_BOX}>
+                      <Image
+                        src={client.image}
+                        alt={client.name}
+                        fill
+                        className="object-contain"
+                        sizes="140px"
+                      />
+                    </div>
                   </div>
                 ))}
               </div>
