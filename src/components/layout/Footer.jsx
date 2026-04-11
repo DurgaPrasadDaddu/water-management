@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className="bg-[var(--color-dark)] text-white/90 pt-12 pb-8 px-9 md:pl-19">
       <div className="max-w-7xl mx-auto grid grid-cols-12 gap-2 md:gap-10 text-center lg:text-left">
         {/* LEFT BLOCK */}
-        <div className="col-span-12 xl:col-span-4 flex flex-col items-center justify-center space-y-6 sm:space-y-8 text-left">
+        <div className="col-span-12  flex flex-col items-center justify-center space-y-6 sm:space-y-8 text-left">
           <div className="px-4">
             <Link href="/">
               <Image
@@ -32,14 +32,14 @@ const Footer = () => {
               ADDRESS
             </h4>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 break-words">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6">
               {/* Corporate */}
-              <div className="text-white/80 leading-relaxed">
+              <div className="text-white/80 leading-relaxed flex  flex-col justify-center items-center">
                 <p className="text-[color:var(--color-primary)]  font-medium text-sm sm:text-sm md:text-base mb-1">
                   Corporate Office
                 </p>
 
-                <p className="text-sm sm:text-sm md:text-base leading-relaxed">
+                <p className="text-sm sm:text-sm md:text-base text-center">
                   Plot no : 61, Jayaram Bhavan, Ground Floor,
                   <br />
                   Road no : 1, Green Park Avenue,
@@ -90,12 +90,12 @@ const Footer = () => {
               </div>
 
               {/* Factory */}
-              <div className="text-white/80 leading-relaxed">
+              <div className="text-white/80 flex  flex-col justify-center items-center">
                 <p className="font-medium text-[color:var(--color-primary)]  text-sm sm:text-sm md:text-base mb-1">
                   Factory Address
                 </p>
 
-                <p className="text-sm sm:text-sm md:text-base leading-relaxed">
+                <p className="text-sm sm:text-sm md:text-base text-center">
                   Survey No: 737/2, Near MSR Convention Garden,
                   <br />
                   Devar Yamjal (V), Shamirpet (M) <br />
@@ -137,7 +137,7 @@ const Footer = () => {
               const Icon = item.icon;
 
               return (
-                 <a
+                <a
                   key={index}
                   href={item.url}
                   target="_blank"
@@ -171,7 +171,6 @@ const Footer = () => {
               "channel-partners",
               "careers",
               "contact",
-              
             ].map((item) => (
               <li key={item}>
                 <Link
@@ -185,9 +184,8 @@ const Footer = () => {
           </ul>
         </div>
 
-
         {/* SOLUTIONS and SERVICES */}
-        <div className="col-span-12 md:col-span-5 xl:col-span-4 space-y-6 text-left">
+        <div className="col-span-12 md:col-span-3 xl:col-span-4 space-y-6 text-left">
           {/* SOLUTIONS */}
           <div>
             <h4 className="text-[color:var(--color-primary)] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
@@ -207,7 +205,9 @@ const Footer = () => {
               ))}
             </ul>
           </div>
-
+        </div>
+        {/* SERVICES */}
+        <div className="col-span-12 md:col-span-3 xl:col-span-4 space-y-6 text-left">
           {/* SERVICES */}
           <div>
             <h4 className="text-[color:var(--color-primary)] font-semibold mb-2 sm:mb-3 text-sm sm:text-base">
@@ -228,9 +228,8 @@ const Footer = () => {
             </ul>
           </div>
         </div>
-
         {/* PRODUCTS */}
-        <div className="col-span-12 md:col-span-4 xl:col-span-2 text-left">
+        <div className="col-span-12 md:col-span-3 xl:col-span-2 text-left">
           <h4 className="text-[color:var(--color-primary)] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
             PRODUCTS
           </h4>
