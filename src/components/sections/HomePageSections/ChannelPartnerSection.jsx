@@ -96,9 +96,7 @@ export default function ChannelPartnerSection() {
           >
             Become a Channel Partner
           </Link>
-        </div>
-
-        <MobileCTA href="/channel-partners" label="Become a Partner" />
+        </div> 
       </Container>
     </SectionWrapper>
   );

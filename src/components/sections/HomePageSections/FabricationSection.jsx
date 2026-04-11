@@ -138,7 +138,7 @@ export default function FabricationSection() {
           to meet industry-specific operational requirements with precision and
           reliability.
         </div>
-        <MobileCTA href="/fabrications" label="View All Fabrications" />
+        <MobileCTA href="/fabrication" label="View All Fabrications" />
       </Container>
     </section>
   );

@@ -13,19 +13,73 @@ export default function ContactForm({ SERVICES }) {
   });
   const [submitted, setSubmitted] = useState(false);
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
+  const [website, setWebsite] = useState("");
 
   const handleChange = (e) => {
-    setFormData((prev) => ({ ...prev, [e.target.id]: e.target.value }));
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.id]: e.target.value,
+    }));
+    setError("");
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
-    await new Promise((r) => setTimeout(r, 1200));
-    setLoading(false);
-    setSubmitted(true);
-  };
 
+    if (loading) return;
+
+    // 🚫 SPAM CHECK
+    if (website) {
+      return setError("Submission failed. Try again.");
+    }
+
+    // 🔐 VALIDATION
+    if (!formData.fullName.trim()) return setError("Name is required");
+    if (!formData.email.trim()) return setError("Email is required");
+
+    if (!/^\d{10,}$/.test(formData.phone)) {
+      return setError("Enter valid phone number");
+    }
+
+    if (!formData.service) return setError("Select a service");
+    if (!formData.message.trim()) return setError("Message is required");
+
+    try {
+      setLoading(true);
+      setError("");
+
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      if (!res.ok) {
+        setError("Server issue. Please try again later.");
+        return;
+      }
+
+      const result = await res.json();
+
+      if (!result.success) {
+        setError(result.error || "Failed to send message");
+        setLoading(false);
+        return;
+      }
+
+      // ✅ SUCCESS (slight delay)
+      setTimeout(() => {
+        setSubmitted(true);
+      }, 500);
+    } catch (err) {
+      setError("Network error. Please try again.");
+    } finally {
+      setLoading(false);
+    }
+  };
   return (
     <div>
       <div className="bg-white rounded-3xl shadow-xl shadow-slate-200/60 overflow-hidden border border-slate-100">
@@ -56,7 +110,7 @@ export default function ContactForm({ SERVICES }) {
               </svg>
             </div>
             <h3 className="text-xl font-black text-slate-900 mb-2">
-              Message Received!
+              Message Sent Successfully 🎉
             </h3>
             <p className="text-slate-500 text-sm max-w-xs">
               Thank you for reaching out. One of our engineers will contact you
@@ -65,6 +119,7 @@ export default function ContactForm({ SERVICES }) {
             <button
               onClick={() => {
                 setSubmitted(false);
+                setError("");
                 setFormData({
                   fullName: "",
                   email: "",
@@ -81,6 +136,13 @@ export default function ContactForm({ SERVICES }) {
           </div>
         ) : (
           <form onSubmit={handleSubmit} className="px-8 py-8 space-y-5">
+            {/* 🛡️ Honeypot (spam protection) */}
+            <input
+              type="text"
+              value={website}
+              onChange={(e) => setWebsite(e.target.value)}
+              className="hidden"
+            />
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
               <div className="flex flex-col gap-1.5">
                 <label
@@ -129,6 +191,8 @@ export default function ContactForm({ SERVICES }) {
                 <input
                   id="phone"
                   type="tel"
+                  maxLength={10}
+                  inputMode="numeric"
                   placeholder="Enter Your Working Number"
                   required
                   value={formData.phone}
@@ -236,6 +300,9 @@ export default function ContactForm({ SERVICES }) {
                 third parties.
               </span>
             </div>
+            {error && (
+              <p className="text-red-500 text-sm text-center">{error}</p>
+            )}
 
             <button
               type="submit"
@@ -287,6 +354,24 @@ export default function ContactForm({ SERVICES }) {
           </form>
         )}
       </div>
+    </div>
+  );
+}
+
+function Input({ id, label, value, onChange, required, type = "text" }) {
+  return (
+    <div>
+      <label className="text-sm font-medium">
+        {label} {required && "*"}
+      </label>
+      <input
+        id={id}
+        type={type}
+        value={value}
+        onChange={onChange}
+        required={required}
+        className="w-full border rounded-lg px-3 py-2 mt-1"
+      />
     </div>
   );
 }

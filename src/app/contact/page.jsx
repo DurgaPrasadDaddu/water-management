@@ -385,7 +385,7 @@ export default function ContactPage() {
 
       {/* ─── BOTTOM CTA BANNER ────────────────────────────────── */}
       <section className="bg-[#0a1628] py-16">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
+        <div className="max-w-7xl mx-auto px-6 lg:px-15">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8">
             <div>
               <h2 className="text-2xl md:text-3xl font-black text-white leading-snug">

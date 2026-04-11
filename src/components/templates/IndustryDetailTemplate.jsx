@@ -159,103 +159,23 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useState } from "react";
+import {
+  ChevronRight,
+  ArrowRight,
+  AlertTriangle,
+  Check,
+  Shield,
+  IndianRupee,
+  Leaf,
+  Droplets,
+  Search,
+  Settings,
+  Zap,
+  Phone,
+  Mail,
+} from "lucide-react";
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   ICON PRIMITIVES
-───────────────────────────────────────────────────────────────────────────── */
-
-const Svg = ({ children, size = 20, className = "" }) => (
-  <svg
-    width={size}
-    height={size}
-    viewBox="0 0 24 24"
-    fill="none"
-    stroke="currentColor"
-    strokeWidth="2"
-    strokeLinecap="round"
-    strokeLinejoin="round"
-    className={className}
-  >
-    {children}
-  </svg>
-);
-
-const IconChevronRight = (p) => (
-  <Svg {...p}>
-    <path d="M9 18l6-6-6-6" />
-  </Svg>
-);
-const IconArrowRight = (p) => (
-  <Svg {...p}>
-    <path d="M5 12h14M12 5l7 7-7 7" />
-  </Svg>
-);
-const IconAlert = (p) => (
-  <Svg {...p}>
-    <path d="M10.29 3.86L1.82 18a2 2 0 001.71 3h16.94a2 2 0 001.71-3L13.71 3.86a2 2 0 00-3.42 0z" />
-    <line x1="12" y1="9" x2="12" y2="13" />
-    <line x1="12" y1="17" x2="12.01" y2="17" />
-  </Svg>
-);
-const IconCheck = (p) => (
-  <Svg {...p}>
-    <path d="M20 6L9 17l-5-5" />
-  </Svg>
-);
-const IconShield = (p) => (
-  <Svg {...p}>
-    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" />
-  </Svg>
-);
-const IconDollar = (p) => (
-  <Svg {...p}>
-    <line x1="12" y1="1" x2="12" y2="23" />
-    <path d="M17 5H9.5a3.5 3.5 0 000 7h5a3.5 3.5 0 010 7H6" />
-  </Svg>
-);
-const IconLeaf = (p) => (
-  <Svg {...p}>
-    <path d="M17 8C8 10 5.9 16.17 3.82 19.34L5 21l2-1c2.54-.5 9-3 11.5-7.5C21 9 19 7 17 8z" />
-  </Svg>
-);
-const IconDroplets = (p) => (
-  <Svg {...p}>
-    <path d="M7 16.3c2.2 0 4-1.83 4-4.05 0-1.16-.57-2.26-1.71-3.19S7.29 6.75 7 5.3c-.29 1.45-1.14 2.84-2.29 3.76S3 11.1 3 12.25c0 2.22 1.8 4.05 4 4.05z" />
-    <path d="M12.56 6.6A10.97 10.97 0 0014 3.02c.5 2.5 2 4.9 4 6.5s3 3.5 3 5.5a6.98 6.98 0 01-11.91 4.97" />
-  </Svg>
-);
-const IconSearch = (p) => (
-  <Svg {...p}>
-    <circle cx="11" cy="11" r="7" />
-    <line x1="16.5" y1="16.5" x2="22" y2="22" />
-  </Svg>
-);
-const IconCog = (p) => (
-  <Svg {...p}>
-    <circle cx="12" cy="12" r="3" />
-    <path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-4 0v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83-2.83l.06-.06A1.65 1.65 0 004.68 15a1.65 1.65 0 00-1.51-1H3a2 2 0 010-4h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 012.83-2.83l.06.06A1.65 1.65 0 009 4.68a1.65 1.65 0 001-1.51V3a2 2 0 014 0v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 2.83l-.06.06A1.65 1.65 0 0019.4 9a1.65 1.65 0 001.51 1H21a2 2 0 010 4h-.09a1.65 1.65 0 00-1.51 1z" />
-  </Svg>
-);
-const IconZap = (p) => (
-  <Svg {...p}>
-    <path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z" />
-  </Svg>
-);
-const IconPhone = (p) => (
-  <Svg {...p}>
-    <path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07A19.5 19.5 0 013.07 9.87a19.79 19.79 0 01-3.07-8.67A2 2 0 012 .84h3a2 2 0 012 1.72c.127.96.361 1.903.7 2.81a2 2 0 01-.45 2.11L6.09 8.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0122 16.92z" />
-  </Svg>
-);
-const IconMail = (p) => (
-  <Svg {...p}>
-    <path d="M4 4h16c1.1 0 2 .9 2 2v12a2 2 0 01-2 2H4a2 2 0 01-2-2V6c0-1.1.9-2 2-2z" />
-    <polyline points="22,6 12,13 2,6" />
-  </Svg>
-);
-
-/* ─────────────────────────────────────────────────────────────────────────────
-   SEGMENT CONFIG
-───────────────────────────────────────────────────────────────────────────── */
+//  SEGMENT CONFIG
 
 const SEGMENT = {
   industrial: {
@@ -275,15 +195,13 @@ const SEGMENT = {
   },
 };
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   APPROACH STEPS
-───────────────────────────────────────────────────────────────────────────── */
+//  APPROACH STEPS
 
 const STEPS = [
   {
     no: "01",
     title: "Analysis",
-    Icon: IconSearch,
+    Icon: Search,
     iconBg: "bg-[#00A3E0]",
     cardBorder: "border-blue-100",
     cardHover: "hover:border-[#00A3E0]/40",
@@ -294,7 +212,7 @@ const STEPS = [
   {
     no: "02",
     title: "Design",
-    Icon: IconCog,
+    Icon: Settings,
     iconBg: "bg-violet-500",
     cardBorder: "border-violet-100",
     cardHover: "hover:border-violet-400/40",
@@ -305,7 +223,7 @@ const STEPS = [
   {
     no: "03",
     title: "Implementation",
-    Icon: IconZap,
+    Icon: Zap,
     iconBg: "bg-amber-500",
     cardBorder: "border-amber-100",
     cardHover: "hover:border-amber-400/40",
@@ -316,7 +234,7 @@ const STEPS = [
   {
     no: "04",
     title: "Optimization",
-    Icon: IconShield,
+    Icon: Shield,
     iconBg: "bg-[#8DC63F]",
     cardBorder: "border-green-100",
     cardHover: "hover:border-[#8DC63F]/40",
@@ -326,13 +244,11 @@ const STEPS = [
   },
 ];
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   BENEFITS
-───────────────────────────────────────────────────────────────────────────── */
+//  BENEFITS
 
 const BENEFITS = [
   {
-    Icon: IconShield,
+    Icon: Shield,
     title: "Regulatory Compliance",
     desc: "Meet CPCB, SPCB & international discharge standards confidently.",
     iconBg: "bg-blue-50",
@@ -340,7 +256,7 @@ const BENEFITS = [
     border: "border-blue-100",
   },
   {
-    Icon: IconDollar,
+    Icon: IndianRupee,
     title: "Cost Reduction",
     desc: "Lower OPEX through energy-efficient design and intelligent automation.",
     iconBg: "bg-green-50",
@@ -348,7 +264,7 @@ const BENEFITS = [
     border: "border-green-100",
   },
   {
-    Icon: IconDroplets,
+    Icon: Droplets,
     title: "Water Reuse",
     desc: "Recover and recycle treated water for secondary industrial processes.",
     iconBg: "bg-sky-50",
@@ -356,7 +272,7 @@ const BENEFITS = [
     border: "border-sky-100",
   },
   {
-    Icon: IconLeaf,
+    Icon: Leaf,
     title: "Sustainability Goals",
     desc: "Align ESG commitments with ZLD mandates and greener operational footprints.",
     iconBg: "bg-lime-50",
@@ -365,9 +281,7 @@ const BENEFITS = [
   },
 ];
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   SHARED: SECTION LABEL
-───────────────────────────────────────────────────────────────────────────── */
+//  SHARED: SECTION LABEL
 
 const SectionLabel = ({ text }) => (
   <div className="flex items-center justify-center gap-2 mb-4">
@@ -381,9 +295,7 @@ const SectionLabel = ({ text }) => (
   </div>
 );
 
-/* ─────────────────────────────────────────────────────────────────────────────
-   MAIN COMPONENT
-───────────────────────────────────────────────────────────────────────────── */
+//  MAIN COMPONENT
 
 export default function IndustryDetailsTemplate({
   segment = "industrial",
@@ -440,7 +352,6 @@ export default function IndustryDetailsTemplate({
         {/* Brand blue left-edge accent */}
         <div className="absolute left-0 top-0 h-full w-1 bg-gradient-to-b from-transparent via-[#00A3E0] to-transparent opacity-80" />
 
-       
         <div className="relative z-10 w-full container-custom pb-16 lg:pb-24 pt-16 md:pl-18">
           {/* Breadcrumb */}
           <nav className="flex items-center flex-wrap gap-1.5 text-sm text-white/50 mb-7 mt-5">
@@ -450,14 +361,14 @@ export default function IndustryDetailsTemplate({
             >
               Home
             </Link>
-            <IconChevronRight size={13} />
+            <ChevronRight size={13} />
             <Link
               href="/market-segments/industrial"
               className="hover:text-white transition-colors duration-200"
             >
               Industries
             </Link>
-            <IconChevronRight size={13} />
+            <ChevronRight size={13} />
             <span className="text-white/80">{name}</span>
           </nav>
 
@@ -491,7 +402,7 @@ export default function IndustryDetailsTemplate({
               className="group inline-flex items-center gap-2.5 bg-[#00A3E0] hover:bg-[#0284C7] text-white font-semibold px-7 py-3.5 rounded-[10px] text-sm transition-all duration-300 shadow-lg shadow-[#00A3E0]/30 hover:-translate-y-0.5"
             >
               Get a Free Consultation
-              <IconArrowRight
+              <ArrowRight
                 size={16}
                 className="group-hover:translate-x-1 transition-transform duration-200"
               />
@@ -646,7 +557,7 @@ export default function IndustryDetailsTemplate({
               <div className={tab === "solutions" ? "hidden lg:block" : ""}>
                 <div className="flex items-center gap-3 mb-5">
                   <div className="p-2.5 bg-red-50 border border-red-100 rounded-[10px]">
-                    <IconAlert size={18} className="text-red-500" />
+                    <AlertTriangle size={18} className="text-red-500" />
                   </div>
                   <div>
                     <h3
@@ -667,7 +578,7 @@ export default function IndustryDetailsTemplate({
                       className="group flex items-start gap-4 bg-white border border-gray-100 hover:border-red-200 hover:bg-red-50/30 rounded-[10px] px-5 py-4 shadow-sm hover:shadow-md transition-all duration-200"
                     >
                       <div className="flex-shrink-0 w-8 h-8 bg-red-50 border border-red-100 group-hover:bg-red-100 rounded-lg flex items-center justify-center mt-0.5 transition-colors duration-200">
-                        <IconAlert size={13} className="text-red-500" />
+                        <AlertTriangle size={18} className="text-red-500" />
                       </div>
                       <p className="text-[#4B5563] text-sm leading-[1.7]">
                         {str(p)}
@@ -681,7 +592,7 @@ export default function IndustryDetailsTemplate({
               <div className={tab === "problems" ? "hidden lg:block" : ""}>
                 <div className="flex items-center gap-3 mb-5">
                   <div className="p-2.5 bg-green-50 border border-green-100 rounded-[10px]">
-                    <IconCheck size={18} className="text-[#8DC63F]" />
+                    <Check size={18} className="text-[#8DC63F]" />
                   </div>
                   <div>
                     <h3
@@ -702,7 +613,7 @@ export default function IndustryDetailsTemplate({
                       className="group flex items-start gap-4 bg-white border border-gray-100 hover:border-green-200 hover:bg-green-50/30 rounded-[10px] px-5 py-4 shadow-sm hover:shadow-md transition-all duration-200"
                     >
                       <div className="flex-shrink-0 w-8 h-8 bg-green-50 border border-green-100 group-hover:bg-green-100 rounded-lg flex items-center justify-center mt-0.5 transition-colors duration-200">
-                        <IconCheck size={13} className="text-[#8DC63F]" />
+                        <Check size={18} className="text-[#8DC63F]" />
                       </div>
                       <p className="text-[#4B5563] text-sm leading-[1.7]">
                         {str(s)}
@@ -733,7 +644,7 @@ export default function IndustryDetailsTemplate({
                   href="/contact"
                   className="flex-shrink-0 inline-flex items-center gap-2 bg-white text-[#00A3E0] hover:bg-[#F9FAFB] font-bold px-6 py-3 rounded-[10px] text-sm transition-all duration-200 shadow-md whitespace-nowrap"
                 >
-                  Request Assessment <IconArrowRight size={14} />
+                  Request Assessment <ArrowRight size={14} />
                 </Link>
               </div>
             </div>
@@ -904,7 +815,7 @@ export default function IndustryDetailsTemplate({
                   className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#00A3E0] hover:bg-[#0284C7] text-white font-bold px-10 py-4 rounded-[10px] text-base transition-all duration-300 shadow-xl shadow-[#00A3E0]/25 hover:-translate-y-0.5"
                 >
                   Get a Quote
-                  <IconArrowRight
+                  <ArrowRight
                     size={17}
                     className="group-hover:translate-x-1 transition-transform duration-200"
                   />
@@ -913,7 +824,7 @@ export default function IndustryDetailsTemplate({
                   href="tel:+917981123366"
                   className="group w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-white/10 hover:bg-white/18 border border-white/20 hover:border-white/40 text-white font-bold px-10 py-4 rounded-[10px] text-base transition-all duration-300 backdrop-blur-sm"
                 >
-                  <IconPhone size={17} className="text-[#8DC63F]" />
+                  <Phone size={17} className="text-[#8DC63F]" />
                   Talk to an Expert
                 </Link>
               </div>
@@ -938,14 +849,14 @@ export default function IndustryDetailsTemplate({
                   href="tel:+917981123366"
                   className="inline-flex items-center gap-2 text-white/45 hover:text-[#00A3E0] text-sm transition-colors duration-200"
                 >
-                  <IconPhone size={13} /> +91 7981123366
+                  <Phone size={13} /> +91 7981123366
                 </a>
                 <span className="text-white/15">|</span>
                 <a
                   href="mailto:info@hyalineenviro.com"
                   className="inline-flex items-center gap-2 text-white/45 hover:text-[#00A3E0] text-sm transition-colors duration-200"
                 >
-                  <IconMail size={13} /> info@hyalineenviro.com
+                  <Mail size={13} /> info@hyalineenviro.com
                 </a>
               </div>
             </div>
