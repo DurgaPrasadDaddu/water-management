@@ -29,6 +29,7 @@ export default function Hero() {
           alt="Water treatment plant"
           fill
           priority
+          fetchPriority="high"
           sizes="(max-width: 768px) 100vw"
           className="object-cover object-center block md:hidden"
         />
