@@ -157,7 +157,7 @@ const Footer = () => {
         </div>
 
         {/* ABOUT */}
-        <div className="col-span-12 md:col-span-3 xl:col-span-2 text-left">
+        <div className="col-span-12 md:col-span-6 xl:col-span-2 text-left">
           <h4 className="text-[color:var(--color-primary)] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
             ABOUT
           </h4>
@@ -185,7 +185,7 @@ const Footer = () => {
         </div>
 
         {/* SOLUTIONS and SERVICES */}
-        <div className="col-span-12 md:col-span-3 xl:col-span-4 space-y-6 text-left">
+        <div className="col-span-12 md:col-span-6 xl:col-span-4 space-y-6 text-left">
           {/* SOLUTIONS */}
           <div>
             <h4 className="text-[color:var(--color-primary)] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
@@ -207,7 +207,7 @@ const Footer = () => {
           </div>
         </div>
         {/* SERVICES */}
-        <div className="col-span-12 md:col-span-3 xl:col-span-4 space-y-6 text-left">
+        <div className="col-span-12 md:col-span-6 xl:col-span-4 space-y-6 text-left">
           {/* SERVICES */}
           <div>
             <h4 className="text-[color:var(--color-primary)] font-semibold mb-2 sm:mb-3 text-sm sm:text-base">
@@ -229,7 +229,7 @@ const Footer = () => {
           </div>
         </div>
         {/* PRODUCTS */}
-        <div className="col-span-12 md:col-span-3 xl:col-span-2 text-left">
+        <div className="col-span-12 md:col-span-6 xl:col-span-2 text-left">
           <h4 className="text-[color:var(--color-primary)] font-semibold mb-3 sm:mb-4 text-sm sm:text-base">
             PRODUCTS
           </h4>

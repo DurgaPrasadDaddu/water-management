@@ -31,7 +31,7 @@ export default function Hero() {
           priority
           fetchPriority="high"
           sizes="(max-width: 768px) 100vw"
-          className="object-cover object-center block md:hidden"
+          className="object-cover object-center block lg:hidden"
         />
 
         <Image
