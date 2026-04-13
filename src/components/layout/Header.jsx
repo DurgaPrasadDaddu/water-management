@@ -1,33 +1,3 @@
-// "use client";
-
-// import { useEffect, useState } from "react";
-// import TopBar from "./TopBar";
-// import Navbar from "./Navbar";
-
-// export default function Header() {
-//   const [scrolled, setScrolled] = useState(false);
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       setScrolled(window.scrollY > 20);
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
-
-//   return (
-//     <header
-//       className={`sticky top-0 z-999 transition-all duration-300 pb-4
-//       ${scrolled ? "bg-white shadow-lg" : "bg-white"}`}
-//     >
-//       <TopBar />
-//       <Navbar />
-//     </header>
-//   );
-// }
-
 "use client";
 
 import { useEffect, useState } from "react";
@@ -53,16 +23,27 @@ export default function Header() {
     return () => {
       isMounted = false; //prevent state update after unmount
       window.removeEventListener("scroll", handleScroll);
+      console.log(document.scrollingElement)
     };
   }, []);
+ 
 
   return (
-    <header
-      className={`sticky top-0 z-[999] transition-all duration-300
-  ${scrolled ? "bg-white/95 backdrop-blur-md shadow-md" : "bg-white"}`}
-    >
+    <header className="sticky top-0 z-50 w-full">
       <TopBar />
       <Navbar />
     </header>
   );
 }
+
+// export default function Test() {
+//   return (
+//     <>
+//       <header className="sticky top-0 bg-red-500 z-50">
+//         STICKY TEST
+//       </header>
+
+//       <div style={{ height: "2000px" }}></div>
+//     </>
+//   );
+// }

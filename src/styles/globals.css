@@ -89,6 +89,12 @@ p {
 
 /* ---------- SAFETY ---------- */
 
-html, body {
-  overflow-x: hidden;
+
+
+html {
+  height: 100%;
+}
+
+body {
+  min-height: 100%;
 }

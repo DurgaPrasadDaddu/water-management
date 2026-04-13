@@ -56,9 +56,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.variable}>
+      <body className={`${inter.variable} flex flex-col min-h-screen`}>
         <Header />
-        <main >
+        <main className="flex-1 overflow-visible" >
         {children}
         </main>
         <Footer />

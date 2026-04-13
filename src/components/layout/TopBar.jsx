@@ -1,10 +1,9 @@
-import Link from "next/link";
 import { Mail, Phone } from "lucide-react";
 import { socialLinks } from "@/data/socialLinks";
 
 export default function TopBar() {
   return (
-    <div className="hidden lg:block w-full bg-[linear-gradient(297deg,#00A3E0_65%,#FFFFFF_35%)]">
+    <div className="hidden lg:block w-full md:bg-[linear-gradient(297deg,#00A3E0_55%,#FFFFFF_45%)] xl:md:bg-[linear-gradient(297deg,#00A3E0_55%,#FFFFFF_45%)]">
       <div className="max-w-7xl mx-auto px-6 flex items-center justify-between h-11">
         {/* LEFT MESSAGE */}
         <p className="text-base text-[var(--color-accent)] font-bold tracking-wide">
