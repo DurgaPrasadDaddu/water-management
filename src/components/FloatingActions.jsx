@@ -72,7 +72,7 @@ export default function FloatingActions() {
 
           {/* Button */}
           <a
-            href="/Brochure/hyaline-catalouge.pdf"
+            href="/Brochure/hyaline-catalouge-latest.pdf"
             download
             rel="noopener noreferrer"
             aria-label="Download Hyaline Catalogue"
