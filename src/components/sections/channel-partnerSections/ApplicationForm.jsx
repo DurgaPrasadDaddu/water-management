@@ -34,7 +34,7 @@ export default function ApplicationForm() {
     setApiError("");
   };
 
-  // ✅ STEP VALIDATION
+  //  STEP VALIDATION
   const validateStep = () => {
     const e = {};
 
@@ -59,11 +59,11 @@ export default function ApplicationForm() {
     return Object.keys(e).length === 0;
   };
 
-  // 🔐 FINAL VALIDATION
+  //  FINAL VALIDATION
   const validateBeforeSubmit = () => {
     if (!data.name.trim()) return "Name is required";
     if (!data.company.trim()) return "Company is required";
-    if (!data.phone.trim() || !/^\d{10,}$/.test(data.phone))
+    if (!/^\d{10,}$/.test(data.phone))
       return "Valid phone number required";
 
     if (!data.email.trim()) return "Email is required";

@@ -29,12 +29,12 @@ export default function ContactForm({ SERVICES }) {
 
     if (loading) return;
 
-    // 🚫 SPAM CHECK
+    //  SPAM CHECK
     if (website) {
       return setError("Submission failed. Try again.");
     }
 
-    // 🔐 VALIDATION
+    //  VALIDATION
     if (!formData.fullName.trim()) return setError("Name is required");
     if (!formData.email.trim()) return setError("Email is required");
 
