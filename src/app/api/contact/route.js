@@ -4,14 +4,7 @@ export async function POST(req) {
   try {
     const body = await req.json();
 
-    const {
-      fullName,
-      email,
-      phone,
-      company,
-      service,
-      message,
-    } = body;
+    const { fullName, email, phone, company, service, message } = body;
 
     // 🔐 REQUIRED VALIDATION
     if (!fullName || !email || !phone || !service || !message) {
@@ -57,9 +50,10 @@ export async function POST(req) {
     `;
 
     const result = await sendMail({
-      to: "info@hyalineenviro.com",
+      type: "contact",
       subject: "New Contact Enquiry 📩",
       html,
+      replyTo: email,
     });
 
     if (!result.success) {
@@ -73,7 +67,6 @@ export async function POST(req) {
       success: true,
       message: "Message sent successfully",
     });
-
   } catch (error) {
     console.error("Contact API Error:", error);
 
