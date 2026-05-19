@@ -7,7 +7,7 @@ export async function POST(req) {
     const { fullName, email, phone, company, service, message } = body;
 
     // 🔐 REQUIRED VALIDATION
-    if (!fullName || !email || !phone || !service || !message) {
+    if (!fullName || !email || !phone || !service || !message ) {
       return Response.json({
         success: false,
         error: "Please fill all required fields",

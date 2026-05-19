@@ -35,8 +35,6 @@ const getAccessToken = async () => {
   return data.access_token;
 };
 
-
-
 // export async function sendMail({ type, subject, html, replyTo }) {
 //   try {
 //     const token = await getAccessToken();
@@ -136,19 +134,27 @@ export async function sendMail({ type, subject, html, replyTo }) {
     const { FROM_EMAIL } = process.env;
     if (!FROM_EMAIL) throw new Error("Missing FROM_EMAIL in ENV");
 
+    console.log("=== MAIL DEBUG START ===");
+
+    console.log("TYPE:", type);
+
     // ==================== TO RECIPIENT ====================
     const toMap = {
       contact: "hr@hyalineenviro.com",
-      partner: "tenders@hyalineenviro.com",
+      partner: "info@hyalineenviro.com",
     };
-
+    console.log("TO MAP:", toMap);
     const to = toMap[type];
 
-    console.log("MAIL TYPE:", type);
-console.log("TO EMAIL:", to);
+    console.log("RESOLVED TO:", to);
 
     if (!to) {
-      throw new Error(`Invalid mail type: ${type}`);
+      console.error("INVALID TYPE:", type);
+
+      return {
+        success: false,
+        error: `Invalid mail type: ${type}`,
+      };
     }
 
     // ==================== REPLY-TO VALIDATION ====================
@@ -201,7 +207,7 @@ console.log("TO EMAIL:", to);
           "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
-      }
+      },
     );
 
     if (!res.ok) {
@@ -212,10 +218,8 @@ console.log("TO EMAIL:", to);
 
     console.log("✅ MAIL SENT successfully");
     return { success: true };
-
   } catch (err) {
     console.error("❌ MAIL SERVICE ERROR:", err.message);
     return { success: false, error: err.message };
   }
 }
- 
