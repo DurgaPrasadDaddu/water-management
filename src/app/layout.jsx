@@ -5,6 +5,8 @@ import Header from "@/components/layout/Header";
 import { Inter, Poppins } from "next/font/google";
 import { organizationSchema, localBusinessSchema } from "@/lib/schema";
 import dynamic from "next/dynamic";
+import MetaPixel from "@/components/layout/MetaPixel";
+
 
 const FloatingWrapper = dynamic(() => import("@/components/FloatingWrapper"));
 
@@ -57,6 +59,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${inter.variable} flex flex-col min-h-screen`}>
+        <MetaPixel />
         <Header />
         <main className="flex-1 overflow-visible" >
         {children}
