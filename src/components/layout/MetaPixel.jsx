@@ -19,7 +19,6 @@ export default function MetaPixel() {
 
           fbq('init', '1633334354396986');
           fbq('track', 'PageView');
-          fbq('track', 'Lead');
         `}
       </Script>
 

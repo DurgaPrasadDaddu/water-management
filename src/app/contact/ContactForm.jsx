@@ -1,5 +1,6 @@
 "use client";
 
+import { trackLead } from "@/lib/MetaPixel";
 import { useState } from "react";
 
 export default function ContactForm({ SERVICES }) {
@@ -69,6 +70,8 @@ export default function ContactForm({ SERVICES }) {
         setLoading(false);
         return;
       }
+
+      trackLead();
 
       // ✅ SUCCESS (slight delay)
       setTimeout(() => {

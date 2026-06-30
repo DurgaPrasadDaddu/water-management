@@ -4,6 +4,7 @@ import { useState } from "react";
 import Container from "@/components/ui/Container";
 import SectionWrapper from "@/components/ui/SectionWrapper";
 import SectionHeading from "@/components/ui/SectionHeading";
+import { trackLead } from "@/lib/MetaPixel";
 
 export default function ApplicationForm() {
   const [step, setStep] = useState(1);
@@ -118,6 +119,7 @@ export default function ApplicationForm() {
           return;
         }
 
+        trackLead();
         // ✅ SUCCESS DELAY
         setSuccessDelay(true);
 
