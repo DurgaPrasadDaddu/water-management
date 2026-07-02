@@ -1,3 +1,229 @@
+// const getAccessToken = async () => {
+//   const { TENANT_ID, CLIENT_ID, CLIENT_SECRET } = process.env;
+
+//   if (!TENANT_ID || !CLIENT_ID || !CLIENT_SECRET) {
+//     throw new Error("Missing Graph ENV variables");
+//   }
+
+//   const res = await fetch(
+//     `https://login.microsoftonline.com/${TENANT_ID}/oauth2/v2.0/token`,
+//     {
+//       method: "POST",
+//       headers: {
+//         "Content-Type": "application/x-www-form-urlencoded",
+//       },
+//       body: new URLSearchParams({
+//         client_id: CLIENT_ID,
+//         client_secret: CLIENT_SECRET,
+//         scope: "https://graph.microsoft.com/.default",
+//         grant_type: "client_credentials",
+//       }),
+//     },
+//   );
+
+//   const data = await res.json();
+//   console.log("Access token acquired");
+
+//   // console.log("🔍 TOKEN RESPONSE:", data); // 🔥 VERY IMPORTANT
+
+//   if (!res.ok || !data.access_token) {
+//     throw new Error(
+//       data.error_description || data.error || "Failed to get access token",
+//     );
+//   }
+
+//   return data.access_token;
+// };
+
+// // export async function sendMail({ type, subject, html, replyTo }) {
+// //   try {
+// //     const token = await getAccessToken();
+
+// //     const { FROM_EMAIL } = process.env;
+
+// //     if (!FROM_EMAIL) {
+// //       throw new Error("Missing FROM_EMAIL in ENV");
+// //     }
+
+// //     const toMap = {
+// //       contact: "admin@hyalineenviro.com",
+// //       partner: "admin@hyalineenviro.com",
+// //     };
+
+// //     const to = toMap[type];
+
+// //     if (!to) {
+// //       throw new Error("Invalid mail type");
+// //     }
+
+// //     // CLEAN replyTo
+// //     const cleanReplyTo = replyTo?.trim().toLowerCase();
+
+// //     // OPTIONAL VALIDATION
+// //     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+// //     const payload = {
+// //       message: {
+// //         subject,
+// //         body: {
+// //           contentType: "HTML",
+// //           content: html,
+// //         },
+// //         toRecipients: [
+// //           {
+// //             emailAddress: {
+// //               address: to,
+// //             },
+// //           },
+// //         ],
+// //       },
+// //       saveToSentItems: true,
+// //     };
+
+// //     // ADD replyTo ONLY if valid
+// //     if (cleanReplyTo && emailRegex.test(cleanReplyTo)) {
+// //       payload.message.replyTo = [
+// //         {
+// //           emailAddress: {
+// //             address: cleanReplyTo,
+// //           },
+// //         },
+// //       ];
+// //     }
+
+// //     console.log(
+// //       "MAIL PAYLOAD:",
+// //       JSON.stringify(payload, null, 2)
+// //     );
+
+// //     const res = await fetch(
+// //       `https://graph.microsoft.com/v1.0/users/${FROM_EMAIL}/sendMail`,
+// //       {
+// //         method: "POST",
+// //         headers: {
+// //           Authorization: `Bearer ${token}`,
+// //           "Content-Type": "application/json",
+// //         },
+// //         body: JSON.stringify(payload),
+// //       }
+// //     );
+
+// //     if (!res.ok) {
+// //       const error = await res.text();
+// //       console.error("GRAPH MAIL ERROR:", error);
+// //       return { success: false, error };
+// //     }
+
+// //     console.log("MAIL SENT via Graph");
+
+// //     return { success: true };
+// //   } catch (err) {
+// //     console.error("MAIL ERROR:", err.message);
+
+// //     return {
+// //       success: false,
+// //       error: err.message,
+// //     };
+// //   }
+// // }
+
+// export async function sendMail({ type, subject, html, replyTo }) {
+//   try {
+//     const token = await getAccessToken();
+
+//     const { FROM_EMAIL } = process.env;
+//     if (!FROM_EMAIL) throw new Error("Missing FROM_EMAIL in ENV");
+
+//     console.log("=== MAIL DEBUG START ===");
+
+//     console.log("TYPE:", type);
+
+//     // ==================== TO RECIPIENT ====================
+//     const toMap = {
+//       contact: "sales@hyalineenviro.com",
+//       partner: "info@hyalineenviro.com",
+//     };
+//     console.log("TO MAP:", toMap);
+//     const to = toMap[type];
+
+//     console.log("RESOLVED TO:", to);
+
+//     if (!to) {
+//       console.error("INVALID TYPE:", type);
+
+//       return {
+//         success: false,
+//         error: `Invalid mail type: ${type}`,
+//       };
+//     }
+
+//     // ==================== REPLY-TO VALIDATION ====================
+//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+//     let cleanReplyTo = null;
+
+//     if (replyTo) {
+//       cleanReplyTo = String(replyTo).trim().toLowerCase();
+//       if (!emailRegex.test(cleanReplyTo)) {
+//         console.warn(`⚠️ Invalid replyTo skipped: ${replyTo}`);
+//         cleanReplyTo = null;
+//       }
+//     }
+
+//     // ==================== BUILD PAYLOAD ====================
+//     const payload = {
+//       message: {
+//         subject: subject || "No Subject",
+//         body: {
+//           contentType: "HTML",
+//           content: html || "<p>No content</p>",
+//         },
+//         toRecipients: [
+//           {
+//             emailAddress: { address: to },
+//           },
+//         ],
+//       },
+//       saveToSentItems: true,
+//     };
+
+//     // Add replyTo only if valid
+//     if (cleanReplyTo) {
+//       payload.message.replyTo = [
+//         {
+//           emailAddress: { address: cleanReplyTo },
+//         },
+//       ];
+//     }
+
+//     console.log("📧 MAIL PAYLOAD:", JSON.stringify(payload, null, 2));
+
+//     // ==================== SEND EMAIL ====================
+//     const res = await fetch(
+//       `https://graph.microsoft.com/v1.0/users/${FROM_EMAIL}/sendMail`,
+//       {
+//         method: "POST",
+//         headers: {
+//           Authorization: `Bearer ${token}`,
+//           "Content-Type": "application/json",
+//         },
+//         body: JSON.stringify(payload),
+//       },
+//     );
+
+//     if (!res.ok) {
+//       const errorText = await res.text();
+//       console.error("❌ GRAPH MAIL ERROR:", errorText);
+//       return { success: false, error: errorText };
+//     }
+
+//     console.log("✅ MAIL SENT successfully");
+//     return { success: true };
+//   } catch (err) {
+//     console.error("❌ MAIL SERVICE ERROR:", err.message);
+//     return { success: false, error: err.message };
+//   }
+// } 
+
 const getAccessToken = async () => {
   const { TENANT_ID, CLIENT_ID, CLIENT_SECRET } = process.env;
 
@@ -18,186 +244,144 @@ const getAccessToken = async () => {
         scope: "https://graph.microsoft.com/.default",
         grant_type: "client_credentials",
       }),
-    },
+    }
   );
 
   const data = await res.json();
-  console.log("Access token acquired");
-
-  // console.log("🔍 TOKEN RESPONSE:", data); // 🔥 VERY IMPORTANT
 
   if (!res.ok || !data.access_token) {
     throw new Error(
-      data.error_description || data.error || "Failed to get access token",
+      data.error_description ||
+        data.error ||
+        "Failed to get access token"
     );
   }
 
   return data.access_token;
 };
 
-// export async function sendMail({ type, subject, html, replyTo }) {
-//   try {
-//     const token = await getAccessToken();
-
-//     const { FROM_EMAIL } = process.env;
-
-//     if (!FROM_EMAIL) {
-//       throw new Error("Missing FROM_EMAIL in ENV");
-//     }
-
-//     const toMap = {
-//       contact: "admin@hyalineenviro.com",
-//       partner: "admin@hyalineenviro.com",
-//     };
-
-//     const to = toMap[type];
-
-//     if (!to) {
-//       throw new Error("Invalid mail type");
-//     }
-
-//     // CLEAN replyTo
-//     const cleanReplyTo = replyTo?.trim().toLowerCase();
-
-//     // OPTIONAL VALIDATION
-//     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-//     const payload = {
-//       message: {
-//         subject,
-//         body: {
-//           contentType: "HTML",
-//           content: html,
-//         },
-//         toRecipients: [
-//           {
-//             emailAddress: {
-//               address: to,
-//             },
-//           },
-//         ],
-//       },
-//       saveToSentItems: true,
-//     };
-
-//     // ADD replyTo ONLY if valid
-//     if (cleanReplyTo && emailRegex.test(cleanReplyTo)) {
-//       payload.message.replyTo = [
-//         {
-//           emailAddress: {
-//             address: cleanReplyTo,
-//           },
-//         },
-//       ];
-//     }
-
-//     console.log(
-//       "MAIL PAYLOAD:",
-//       JSON.stringify(payload, null, 2)
-//     );
-
-//     const res = await fetch(
-//       `https://graph.microsoft.com/v1.0/users/${FROM_EMAIL}/sendMail`,
-//       {
-//         method: "POST",
-//         headers: {
-//           Authorization: `Bearer ${token}`,
-//           "Content-Type": "application/json",
-//         },
-//         body: JSON.stringify(payload),
-//       }
-//     );
-
-//     if (!res.ok) {
-//       const error = await res.text();
-//       console.error("GRAPH MAIL ERROR:", error);
-//       return { success: false, error };
-//     }
-
-//     console.log("MAIL SENT via Graph");
-
-//     return { success: true };
-//   } catch (err) {
-//     console.error("MAIL ERROR:", err.message);
-
-//     return {
-//       success: false,
-//       error: err.message,
-//     };
-//   }
-// }
-
-export async function sendMail({ type, subject, html, replyTo }) {
+export async function sendMail({
+  type,
+  subject,
+  html,
+  replyTo,
+}) {
   try {
     const token = await getAccessToken();
 
     const { FROM_EMAIL } = process.env;
-    if (!FROM_EMAIL) throw new Error("Missing FROM_EMAIL in ENV");
 
-    console.log("=== MAIL DEBUG START ===");
+    if (!FROM_EMAIL) {
+      throw new Error("Missing FROM_EMAIL in ENV");
+    }
 
-    console.log("TYPE:", type);
+    // =====================================================
+    // EMAIL ROUTING CONFIGURATION
+    // =====================================================
 
-    // ==================== TO RECIPIENT ====================
-    const toMap = {
-      contact: "hr@hyalineenviro.com",
-      partner: "info@hyalineenviro.com",
+    const mailConfig = {
+      contact: {
+        to: ["sales@hyalineenviro.com"],
+
+        cc: [
+          "admin@hyalineenviro.com",
+          "naresh@hyalineenviro.com",
+          "yashwanth@hyalineenviro.com",
+          "Marketing@hyalineenviro.com",
+        ],
+
+        bcc: [],
+      },
+
+      partner: {
+        to: ["info@hyalineenviro.com"],
+
+        cc: [
+          "admin@hyalineenviro.com",
+          "naresh@hyalineenviro.com",
+          "yashwanth@hyalineenviro.com",
+          "Marketing@hyalineenviro.com",
+        ],
+
+        bcc: [],
+      },
     };
-    console.log("TO MAP:", toMap);
-    const to = toMap[type];
 
-    console.log("RESOLVED TO:", to);
+    const config = mailConfig[type];
 
-    if (!to) {
-      console.error("INVALID TYPE:", type);
-
+    if (!config) {
       return {
         success: false,
         error: `Invalid mail type: ${type}`,
       };
     }
 
-    // ==================== REPLY-TO VALIDATION ====================
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    const mapRecipients = (emails = []) =>
+      [...new Set(emails)]
+        .map(email => String(email).trim().toLowerCase())
+        .filter(email => emailRegex.test(email))
+        .map(email => ({
+          emailAddress: {
+            address: email,
+          },
+        }));
+
+    const toRecipients = mapRecipients(config.to);
+    const ccRecipients = mapRecipients(config.cc);
+    const bccRecipients = mapRecipients(config.bcc);
+
     let cleanReplyTo = null;
 
     if (replyTo) {
-      cleanReplyTo = String(replyTo).trim().toLowerCase();
-      if (!emailRegex.test(cleanReplyTo)) {
-        console.warn(`⚠️ Invalid replyTo skipped: ${replyTo}`);
-        cleanReplyTo = null;
+      const email = String(replyTo).trim().toLowerCase();
+
+      if (emailRegex.test(email)) {
+        cleanReplyTo = email;
+      } else {
+        console.warn("Invalid replyTo skipped:", replyTo);
       }
     }
 
-    // ==================== BUILD PAYLOAD ====================
     const payload = {
       message: {
         subject: subject || "No Subject",
+
         body: {
           contentType: "HTML",
-          content: html || "<p>No content</p>",
+          content: html || "<p>No Content</p>",
         },
-        toRecipients: [
-          {
-            emailAddress: { address: to },
-          },
-        ],
+
+        toRecipients,
       },
+
       saveToSentItems: true,
     };
 
-    // Add replyTo only if valid
+    if (ccRecipients.length) {
+      payload.message.ccRecipients = ccRecipients;
+    }
+
+    if (bccRecipients.length) {
+      payload.message.bccRecipients = bccRecipients;
+    }
+
     if (cleanReplyTo) {
       payload.message.replyTo = [
         {
-          emailAddress: { address: cleanReplyTo },
+          emailAddress: {
+            address: cleanReplyTo,
+          },
         },
       ];
     }
 
-    console.log("📧 MAIL PAYLOAD:", JSON.stringify(payload, null, 2));
+    console.log("=================================================");
+    console.log("Sending Mail");
+    console.log(JSON.stringify(payload, null, 2));
+    console.log("=================================================");
 
-    // ==================== SEND EMAIL ====================
     const res = await fetch(
       `https://graph.microsoft.com/v1.0/users/${FROM_EMAIL}/sendMail`,
       {
@@ -207,19 +391,31 @@ export async function sendMail({ type, subject, html, replyTo }) {
           "Content-Type": "application/json",
         },
         body: JSON.stringify(payload),
-      },
+      }
     );
 
     if (!res.ok) {
-      const errorText = await res.text();
-      console.error("❌ GRAPH MAIL ERROR:", errorText);
-      return { success: false, error: errorText };
+      const error = await res.text();
+
+      console.error("Graph Error:", error);
+
+      return {
+        success: false,
+        error,
+      };
     }
 
-    console.log("✅ MAIL SENT successfully");
-    return { success: true };
+    console.log("Mail Sent Successfully");
+
+    return {
+      success: true,
+    };
   } catch (err) {
-    console.error("❌ MAIL SERVICE ERROR:", err.message);
-    return { success: false, error: err.message };
+    console.error("Mail Service Error:", err);
+
+    return {
+      success: false,
+      error: err.message,
+    };
   }
 }

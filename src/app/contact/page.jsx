@@ -143,7 +143,7 @@ export default function ContactPage() {
           {/* Desktop Image */}
           <Image
             src="/Banners/contact-bg-desktop.webp"
-            alt="Contact Background"
+            alt="Contcct Background"
             fill
             sizes="100vw"
             className="object-cover opacity-20 hidden md:block"

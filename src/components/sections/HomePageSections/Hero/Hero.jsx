@@ -61,7 +61,7 @@ export default function Hero() {
             {/* Heading */}
             <h1 className="font-extrabold leading-[1.05] tracking-tight">
               <span className="block text-white text-3xl sm:text-4xl md:text-5xl lg:text-[3.5rem] xl:text-[4rem]">
-                Industrial
+                Industrial & Commercial
               </span>
 
               <span className="block text-cyan-400 text-2xl sm:text-3xl md:text-4xl lg:text-[2.8rem] xl:text-[3.2rem] mt-1">
